@@ -29,30 +29,17 @@
         private void InitializeComponent()
         {
             this.menu = new System.Windows.Forms.MenuStrip();
-            this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.MenuTitulo = new System.Windows.Forms.MenuStrip();
             this.Titulo = new System.Windows.Forms.Label();
-            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
             // 
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iconMenuItem1});
             this.menu.Location = new System.Drawing.Point(0, 89);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(800, 24);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
-            // 
-            // iconMenuItem1
-            // 
-            this.iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconMenuItem1.IconColor = System.Drawing.Color.Black;
-            this.iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMenuItem1.Name = "iconMenuItem1";
-            this.iconMenuItem1.Size = new System.Drawing.Size(119, 20);
-            this.iconMenuItem1.Text = "iconMenuItem1";
             // 
             // MenuTitulo
             // 
@@ -90,8 +77,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
-            this.menu.ResumeLayout(false);
-            this.menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,6 +87,5 @@
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.MenuStrip MenuTitulo;
         private System.Windows.Forms.Label Titulo;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
     }
 }
