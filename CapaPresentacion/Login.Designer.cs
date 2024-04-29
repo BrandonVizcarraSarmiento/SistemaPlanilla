@@ -37,6 +37,7 @@
             this.lblClave = new System.Windows.Forms.Label();
             this.btnIngresar = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.btnRegistrarse = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +120,7 @@
             this.btnIngresar.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIngresar.IconSize = 21;
-            this.btnIngresar.Location = new System.Drawing.Point(223, 326);
+            this.btnIngresar.Location = new System.Drawing.Point(210, 336);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(81, 33);
             this.btnIngresar.TabIndex = 7;
@@ -150,12 +151,34 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnRegistrarse
+            // 
+            this.btnRegistrarse.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarse.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegistrarse.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnRegistrarse.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegistrarse.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRegistrarse.IconSize = 21;
+            this.btnRegistrarse.Location = new System.Drawing.Point(201, 405);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(103, 33);
+            this.btnRegistrarse.TabIndex = 9;
+            this.btnRegistrarse.Text = "Registrarse";
+            this.btnRegistrarse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistrarse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegistrarse.UseVisualStyleBackColor = false;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(493, 450);
+            this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lblClave);
@@ -186,5 +209,6 @@
         private System.Windows.Forms.Label lblClave;
         private FontAwesome.Sharp.IconButton btnIngresar;
         private FontAwesome.Sharp.IconButton btnCancelar;
+        private FontAwesome.Sharp.IconButton btnRegistrarse;
     }
 }

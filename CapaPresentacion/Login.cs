@@ -36,5 +36,13 @@ namespace CapaPresentacion
             txtClave.Text = "";
             this.Show();
         }
+
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            Registrase formRegistrase = new Registrase();
+            formRegistrase.Show();
+            this.Hide();
+            formRegistrase.FormClosing += frm_Cerrar;
+        }
     }
 }
