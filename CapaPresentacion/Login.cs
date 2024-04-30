@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CapaNegocio;
+using CapaEntidad;
+
 namespace CapaPresentacion
 {
     public partial class Login : Form
@@ -24,11 +27,22 @@ namespace CapaPresentacion
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Inicio form = new Inicio();
-            form.Show();
-            this.Hide();
+            List<Usuario> TEST = new CN_Usuario().Listar();
+            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Correo == txtCorreo.Text && u.Clave == txtClave.Text).FirstOrDefault();
 
-            form.FormClosing += frm_Cerrar;
+            if(ousuario != null)
+            {
+                Inicio form = new Inicio();
+                form.Show();
+                this.Hide();
+
+                form.FormClosing += frm_Cerrar;
+            }
+            else
+            {
+                MessageBox.Show("NO SE ENCONTRO EL USURIO", "Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+
         }
         private void frm_Cerrar(object sender, FormClosingEventArgs e)
         {
