@@ -53,6 +53,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vistas Asistencias\FrmAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Asistencias\FrmAsistencias.Designer.cs">
+      <DependentUpon>FrmAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas Banco\FrmBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Banco\FrmBanco.Designer.cs">
+      <DependentUpon>FrmBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas Cargo\FrmCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Cargo\FrmCargo.Designer.cs">
+      <DependentUpon>FrmCargo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +91,39 @@
     <Compile Include="Registrase.Designer.cs">
       <DependentUpon>Registrase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas Conceptos\FrmConceptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Conceptos\FrmConceptos.Designer.cs">
+      <DependentUpon>FrmConceptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas Empleados\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Empleados\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas FondoPension\FrmFondoPension.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas FondoPension\FrmFondoPension.Designer.cs">
+      <DependentUpon>FrmFondoPension.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas Planillas\FrmPlanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Planillas\FrmPlanillas.Designer.cs">
+      <DependentUpon>FrmPlanillas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vistas Asistencias\FrmAsistencias.resx">
+      <DependentUpon>FrmAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Banco\FrmBanco.resx">
+      <DependentUpon>FrmBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Cargo\FrmCargo.resx">
+      <DependentUpon>FrmCargo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +142,18 @@
     </Compile>
     <EmbeddedResource Include="Registrase.resx">
       <DependentUpon>Registrase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Conceptos\FrmConceptos.resx">
+      <DependentUpon>FrmConceptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Empleados\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas FondoPension\FrmFondoPension.resx">
+      <DependentUpon>FrmFondoPension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Planillas\FrmPlanillas.resx">
+      <DependentUpon>FrmPlanillas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -119,5 +182,6 @@
   <ItemGroup>
     <None Include="Resources\Logo ET.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

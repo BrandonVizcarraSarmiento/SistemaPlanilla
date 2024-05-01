@@ -10,7 +10,7 @@ namespace CapaEntidad
     {
         public int Id { get; set; }
         public Rol oRol {  get; set; }
-        public string NombreMneu { get; set; }
+        public string NombreMenu { get; set; }
         public string FechaRegistro { get; set; }
 
     }

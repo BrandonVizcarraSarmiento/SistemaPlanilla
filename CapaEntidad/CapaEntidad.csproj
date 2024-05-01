@@ -41,8 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asistencia.cs" />
+    <Compile Include="Banco.cs" />
+    <Compile Include="Cargo.cs" />
+    <Compile Include="Concepto.cs" />
+    <Compile Include="DetallePlanilla.cs" />
+    <Compile Include="Empleado.cs" />
+    <Compile Include="FondoPension.cs" />
     <Compile Include="Permiso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResumenPlanilla.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
