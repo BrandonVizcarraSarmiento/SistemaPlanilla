@@ -42,12 +42,15 @@
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsu = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panelContenUsuario = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.panelTitulo.SuspendLayout();
+            this.panelContenUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -80,7 +83,7 @@
             this.btnPlanillas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPlanillas.IconSize = 30;
             this.btnPlanillas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlanillas.Location = new System.Drawing.Point(0, 322);
+            this.btnPlanillas.Location = new System.Drawing.Point(0, 316);
             this.btnPlanillas.Name = "btnPlanillas";
             this.btnPlanillas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnPlanillas.Size = new System.Drawing.Size(218, 37);
@@ -103,7 +106,7 @@
             this.btnAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAsistencias.IconSize = 30;
             this.btnAsistencias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAsistencias.Location = new System.Drawing.Point(0, 285);
+            this.btnAsistencias.Location = new System.Drawing.Point(0, 279);
             this.btnAsistencias.Name = "btnAsistencias";
             this.btnAsistencias.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAsistencias.Size = new System.Drawing.Size(218, 37);
@@ -149,7 +152,7 @@
             this.btnEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEmpleados.IconSize = 30;
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(0, 248);
+            this.btnEmpleados.Location = new System.Drawing.Point(0, 242);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEmpleados.Size = new System.Drawing.Size(218, 37);
@@ -172,7 +175,7 @@
             this.btnConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConceptos.IconSize = 30;
             this.btnConceptos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConceptos.Location = new System.Drawing.Point(0, 211);
+            this.btnConceptos.Location = new System.Drawing.Point(0, 205);
             this.btnConceptos.Name = "btnConceptos";
             this.btnConceptos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnConceptos.Size = new System.Drawing.Size(218, 37);
@@ -195,7 +198,7 @@
             this.btnFondoPension.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFondoPension.IconSize = 30;
             this.btnFondoPension.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFondoPension.Location = new System.Drawing.Point(0, 174);
+            this.btnFondoPension.Location = new System.Drawing.Point(0, 168);
             this.btnFondoPension.Name = "btnFondoPension";
             this.btnFondoPension.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnFondoPension.Size = new System.Drawing.Size(218, 37);
@@ -218,7 +221,7 @@
             this.btnCargo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCargo.IconSize = 30;
             this.btnCargo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCargo.Location = new System.Drawing.Point(0, 137);
+            this.btnCargo.Location = new System.Drawing.Point(0, 131);
             this.btnCargo.Name = "btnCargo";
             this.btnCargo.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCargo.Size = new System.Drawing.Size(218, 37);
@@ -241,7 +244,7 @@
             this.btnBanco.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBanco.IconSize = 30;
             this.btnBanco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBanco.Location = new System.Drawing.Point(0, 100);
+            this.btnBanco.Location = new System.Drawing.Point(0, 94);
             this.btnBanco.Name = "btnBanco";
             this.btnBanco.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnBanco.Size = new System.Drawing.Size(218, 37);
@@ -259,7 +262,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(218, 100);
+            this.panel2.Size = new System.Drawing.Size(218, 94);
             this.panel2.TabIndex = 0;
             // 
             // btnMenu
@@ -290,10 +293,11 @@
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelTitulo.Controls.Add(this.lblUsuario);
-            this.panelTitulo.Controls.Add(this.label1);
+            this.panelTitulo.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panelTitulo.Controls.Add(this.panelContenUsuario);
+            this.panelTitulo.Controls.Add(this.lblTitulo);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelTitulo.Location = new System.Drawing.Point(218, 0);
             this.panelTitulo.Name = "panelTitulo";
             this.panelTitulo.Size = new System.Drawing.Size(942, 69);
@@ -303,30 +307,52 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(854, 24);
+            this.lblUsuario.Location = new System.Drawing.Point(86, 8);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(56, 16);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Nombre";
             // 
-            // label1
+            // lblUsu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(783, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario:";
+            this.lblUsu.AutoSize = true;
+            this.lblUsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsu.Location = new System.Drawing.Point(15, 8);
+            this.lblUsu.Name = "lblUsu";
+            this.lblUsu.Size = new System.Drawing.Size(65, 16);
+            this.lblUsu.TabIndex = 0;
+            this.lblUsu.Text = "Usuario:";
             // 
             // panelContenedor
             // 
+            this.panelContenedor.AutoSize = true;
+            this.panelContenedor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(218, 69);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(942, 489);
             this.panelContenedor.TabIndex = 3;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(20, 20);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(254, 32);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Sistema planilla";
+            // 
+            // panelContenUsuario
+            // 
+            this.panelContenUsuario.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panelContenUsuario.Controls.Add(this.lblUsu);
+            this.panelContenUsuario.Controls.Add(this.lblUsuario);
+            this.panelContenUsuario.Location = new System.Drawing.Point(765, 20);
+            this.panelContenUsuario.Name = "panelContenUsuario";
+            this.panelContenUsuario.Size = new System.Drawing.Size(152, 32);
+            this.panelContenUsuario.TabIndex = 3;
             // 
             // Inicio
             // 
@@ -346,7 +372,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
+            this.panelContenUsuario.ResumeLayout(false);
+            this.panelContenUsuario.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -363,10 +392,12 @@
         private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.PictureBox imgLogo;
         private System.Windows.Forms.Panel panelTitulo;
-        private System.Windows.Forms.Panel panelContenedor;
         private FontAwesome.Sharp.IconButton btnPlanillas;
         private FontAwesome.Sharp.IconButton btnAsistencias;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsu;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Panel panelContenUsuario;
     }
 }

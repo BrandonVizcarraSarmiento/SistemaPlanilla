@@ -28,84 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTituloSeccion = new System.Windows.Forms.Label();
             this.dtgvBanco = new System.Windows.Forms.DataGridView();
-            this.btnNuevoBanco = new FontAwesome.Sharp.IconButton();
-            this.btnEliminarBanco = new FontAwesome.Sharp.IconButton();
             this.btnEditarBanco = new FontAwesome.Sharp.IconButton();
+            this.btnEliminarBanco = new FontAwesome.Sharp.IconButton();
+            this.btnNuevoBanco = new FontAwesome.Sharp.IconButton();
             this.btnBuscarBanco = new FontAwesome.Sharp.IconButton();
             this.txtBuscarBanco = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBanco)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.IndianRed;
+            this.panel2.Controls.Add(this.lblTituloSeccion);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(684, 90);
+            this.panel2.TabIndex = 14;
+            // 
+            // lblTituloSeccion
+            // 
+            this.lblTituloSeccion.AutoSize = true;
+            this.lblTituloSeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloSeccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTituloSeccion.Location = new System.Drawing.Point(39, 30);
+            this.lblTituloSeccion.Name = "lblTituloSeccion";
+            this.lblTituloSeccion.Size = new System.Drawing.Size(111, 31);
+            this.lblTituloSeccion.TabIndex = 0;
+            this.lblTituloSeccion.Text = "Bancos";
             // 
             // dtgvBanco
             // 
+            this.dtgvBanco.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvBanco.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgvBanco.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgvBanco.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dtgvBanco.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvBanco.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvBanco.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvBanco.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dtgvBanco.ColumnHeadersHeight = 30;
             this.dtgvBanco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvBanco.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvBanco.DefaultCellStyle = dataGridViewCellStyle23;
             this.dtgvBanco.EnableHeadersVisualStyles = false;
             this.dtgvBanco.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvBanco.Location = new System.Drawing.Point(85, 132);
+            this.dtgvBanco.Location = new System.Drawing.Point(149, 63);
+            this.dtgvBanco.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvBanco.Name = "dtgvBanco";
             this.dtgvBanco.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvBanco.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvBanco.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dtgvBanco.RowHeadersWidth = 51;
             this.dtgvBanco.RowTemplate.Height = 24;
-            this.dtgvBanco.Size = new System.Drawing.Size(578, 303);
+            this.dtgvBanco.Size = new System.Drawing.Size(434, 223);
             this.dtgvBanco.TabIndex = 0;
             // 
-            // btnNuevoBanco
+            // btnEditarBanco
             // 
-            this.btnNuevoBanco.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnNuevoBanco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevoBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnNuevoBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevoBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevoBanco.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            this.btnNuevoBanco.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevoBanco.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevoBanco.IconSize = 21;
-            this.btnNuevoBanco.Location = new System.Drawing.Point(85, 466);
-            this.btnNuevoBanco.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNuevoBanco.Name = "btnNuevoBanco";
-            this.btnNuevoBanco.Size = new System.Drawing.Size(108, 41);
-            this.btnNuevoBanco.TabIndex = 8;
-            this.btnNuevoBanco.Text = "Nuevo";
-            this.btnNuevoBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevoBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevoBanco.UseVisualStyleBackColor = false;
+            this.btnEditarBanco.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEditarBanco.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEditarBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEditarBanco.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnEditarBanco.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEditarBanco.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditarBanco.IconSize = 21;
+            this.btnEditarBanco.Location = new System.Drawing.Point(151, 14);
+            this.btnEditarBanco.Name = "btnEditarBanco";
+            this.btnEditarBanco.Size = new System.Drawing.Size(81, 33);
+            this.btnEditarBanco.TabIndex = 10;
+            this.btnEditarBanco.Text = "Editar";
+            this.btnEditarBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditarBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditarBanco.UseVisualStyleBackColor = false;
             // 
             // btnEliminarBanco
             // 
+            this.btnEliminarBanco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarBanco.BackColor = System.Drawing.Color.IndianRed;
             this.btnEliminarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -115,39 +150,39 @@
             this.btnEliminarBanco.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarBanco.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarBanco.IconSize = 21;
-            this.btnEliminarBanco.Location = new System.Drawing.Point(520, 466);
-            this.btnEliminarBanco.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarBanco.Location = new System.Drawing.Point(258, 14);
             this.btnEliminarBanco.Name = "btnEliminarBanco";
-            this.btnEliminarBanco.Size = new System.Drawing.Size(108, 41);
+            this.btnEliminarBanco.Size = new System.Drawing.Size(81, 33);
             this.btnEliminarBanco.TabIndex = 9;
             this.btnEliminarBanco.Text = "Eliminar";
             this.btnEliminarBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminarBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarBanco.UseVisualStyleBackColor = false;
             // 
-            // btnEditarBanco
+            // btnNuevoBanco
             // 
-            this.btnEditarBanco.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnEditarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEditarBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditarBanco.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.btnEditarBanco.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditarBanco.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditarBanco.IconSize = 21;
-            this.btnEditarBanco.Location = new System.Drawing.Point(316, 466);
-            this.btnEditarBanco.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditarBanco.Name = "btnEditarBanco";
-            this.btnEditarBanco.Size = new System.Drawing.Size(108, 41);
-            this.btnEditarBanco.TabIndex = 10;
-            this.btnEditarBanco.Text = "Editar";
-            this.btnEditarBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditarBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditarBanco.UseVisualStyleBackColor = false;
+            this.btnNuevoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevoBanco.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnNuevoBanco.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevoBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnNuevoBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevoBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevoBanco.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.btnNuevoBanco.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevoBanco.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevoBanco.IconSize = 21;
+            this.btnNuevoBanco.Location = new System.Drawing.Point(44, 14);
+            this.btnNuevoBanco.Name = "btnNuevoBanco";
+            this.btnNuevoBanco.Size = new System.Drawing.Size(81, 33);
+            this.btnNuevoBanco.TabIndex = 8;
+            this.btnNuevoBanco.Text = "Nuevo";
+            this.btnNuevoBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevoBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNuevoBanco.UseVisualStyleBackColor = false;
             // 
             // btnBuscarBanco
             // 
+            this.btnBuscarBanco.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscarBanco.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnBuscarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -157,10 +192,9 @@
             this.btnBuscarBanco.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBuscarBanco.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscarBanco.IconSize = 21;
-            this.btnBuscarBanco.Location = new System.Drawing.Point(485, 44);
-            this.btnBuscarBanco.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarBanco.Location = new System.Drawing.Point(208, 17);
             this.btnBuscarBanco.Name = "btnBuscarBanco";
-            this.btnBuscarBanco.Size = new System.Drawing.Size(72, 34);
+            this.btnBuscarBanco.Size = new System.Drawing.Size(35, 23);
             this.btnBuscarBanco.TabIndex = 11;
             this.btnBuscarBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -168,39 +202,77 @@
             // 
             // txtBuscarBanco
             // 
-            this.txtBuscarBanco.Location = new System.Drawing.Point(226, 50);
+            this.txtBuscarBanco.Location = new System.Drawing.Point(19, 19);
+            this.txtBuscarBanco.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarBanco.Name = "txtBuscarBanco";
-            this.txtBuscarBanco.Size = new System.Drawing.Size(232, 22);
+            this.txtBuscarBanco.Size = new System.Drawing.Size(175, 20);
             this.txtBuscarBanco.TabIndex = 12;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.dtgvBanco);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 90);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(684, 393);
+            this.panel1.TabIndex = 13;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel3.Controls.Add(this.btnNuevoBanco);
+            this.panel3.Controls.Add(this.btnEditarBanco);
+            this.panel3.Controls.Add(this.btnEliminarBanco);
+            this.panel3.Location = new System.Drawing.Point(179, 307);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(380, 64);
+            this.panel3.TabIndex = 13;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.Controls.Add(this.txtBuscarBanco);
+            this.panel4.Controls.Add(this.btnBuscarBanco);
+            this.panel4.Location = new System.Drawing.Point(239, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(262, 52);
+            this.panel4.TabIndex = 14;
             // 
             // FrmBanco
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.txtBuscarBanco);
-            this.Controls.Add(this.btnBuscarBanco);
-            this.Controls.Add(this.btnEditarBanco);
-            this.Controls.Add(this.btnEliminarBanco);
-            this.Controls.Add(this.btnNuevoBanco);
-            this.Controls.Add(this.dtgvBanco);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(684, 483);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "FrmBanco";
             this.Text = "FrmBanco";
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBanco)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblTituloSeccion;
         private System.Windows.Forms.DataGridView dtgvBanco;
-        private FontAwesome.Sharp.IconButton btnNuevoBanco;
-        private FontAwesome.Sharp.IconButton btnEliminarBanco;
         private FontAwesome.Sharp.IconButton btnEditarBanco;
+        private FontAwesome.Sharp.IconButton btnEliminarBanco;
+        private FontAwesome.Sharp.IconButton btnNuevoBanco;
         private FontAwesome.Sharp.IconButton btnBuscarBanco;
         private System.Windows.Forms.TextBox txtBuscarBanco;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
