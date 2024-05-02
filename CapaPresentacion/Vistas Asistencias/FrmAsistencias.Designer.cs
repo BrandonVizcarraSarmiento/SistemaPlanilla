@@ -100,7 +100,7 @@
             this.paneltitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitulo.Location = new System.Drawing.Point(0, 0);
             this.paneltitulo.Name = "paneltitulo";
-            this.paneltitulo.Size = new System.Drawing.Size(800, 80);
+            this.paneltitulo.Size = new System.Drawing.Size(567, 80);
             this.paneltitulo.TabIndex = 7;
             // 
             // panel1
@@ -112,7 +112,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 80);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 370);
+            this.panel1.Size = new System.Drawing.Size(567, 370);
             this.panel1.TabIndex = 8;
             // 
             // panel3
@@ -120,7 +120,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel3.Controls.Add(this.btnLimpiarAsistencias);
             this.panel3.Controls.Add(this.btnGuardarAsistencias);
-            this.panel3.Location = new System.Drawing.Point(182, 275);
+            this.panel3.Location = new System.Drawing.Point(92, 275);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(387, 51);
             this.panel3.TabIndex = 11;
@@ -173,7 +173,7 @@
             this.panel2.Controls.Add(this.cmbBoxMes);
             this.panel2.Controls.Add(this.cmbBoxAño);
             this.panel2.Controls.Add(this.lblAño);
-            this.panel2.Location = new System.Drawing.Point(182, 17);
+            this.panel2.Location = new System.Drawing.Point(92, 17);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(387, 39);
             this.panel2.TabIndex = 10;
@@ -200,18 +200,21 @@
             // 
             // dtgvAsistencia
             // 
+            this.dtgvAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvAsistencia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dtgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvAsistencia.Location = new System.Drawing.Point(182, 62);
+            this.dtgvAsistencia.Location = new System.Drawing.Point(50, 62);
             this.dtgvAsistencia.Name = "dtgvAsistencia";
-            this.dtgvAsistencia.Size = new System.Drawing.Size(387, 198);
+            this.dtgvAsistencia.Size = new System.Drawing.Size(468, 198);
             this.dtgvAsistencia.TabIndex = 9;
             // 
             // FrmAsistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(567, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.paneltitulo);
             this.Name = "FrmAsistencias";
