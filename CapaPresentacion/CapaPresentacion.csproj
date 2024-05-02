@@ -115,6 +115,12 @@
     <Compile Include="Vistas Planillas\FrmPlanillas.Designer.cs">
       <DependentUpon>FrmPlanillas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas Usuarios\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Usuarios\FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Vistas Asistencias\FrmAsistencias.resx">
       <DependentUpon>FrmAsistencias.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas Planillas\FrmPlanillas.resx">
       <DependentUpon>FrmPlanillas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Usuarios\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

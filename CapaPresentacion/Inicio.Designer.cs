@@ -41,11 +41,12 @@
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.panelTitulo = new System.Windows.Forms.Panel();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblUsu = new System.Windows.Forms.Label();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.panelContenUsuario = new System.Windows.Forms.Panel();
+            this.lblUsu = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
@@ -56,6 +57,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.panelMenu.Controls.Add(this.btnUsuarios);
             this.panelMenu.Controls.Add(this.btnPlanillas);
             this.panelMenu.Controls.Add(this.btnAsistencias);
             this.panelMenu.Controls.Add(this.btnSalir);
@@ -303,15 +305,15 @@
             this.panelTitulo.Size = new System.Drawing.Size(942, 69);
             this.panelTitulo.TabIndex = 2;
             // 
-            // lblUsuario
+            // panelContenUsuario
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(86, 8);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(56, 16);
-            this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "Nombre";
+            this.panelContenUsuario.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panelContenUsuario.Controls.Add(this.lblUsu);
+            this.panelContenUsuario.Controls.Add(this.lblUsuario);
+            this.panelContenUsuario.Location = new System.Drawing.Point(765, 20);
+            this.panelContenUsuario.Name = "panelContenUsuario";
+            this.panelContenUsuario.Size = new System.Drawing.Size(152, 32);
+            this.panelContenUsuario.TabIndex = 3;
             // 
             // lblUsu
             // 
@@ -322,6 +324,26 @@
             this.lblUsu.Size = new System.Drawing.Size(65, 16);
             this.lblUsu.TabIndex = 0;
             this.lblUsu.Text = "Usuario:";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(86, 8);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(56, 16);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "Nombre";
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(20, 20);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(254, 32);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Sistema planilla";
             // 
             // panelContenedor
             // 
@@ -334,25 +356,28 @@
             this.panelContenedor.Size = new System.Drawing.Size(942, 489);
             this.panelContenedor.TabIndex = 3;
             // 
-            // lblTitulo
+            // btnUsuarios
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(20, 20);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(254, 32);
-            this.lblTitulo.TabIndex = 2;
-            this.lblTitulo.Text = "Sistema planilla";
-            // 
-            // panelContenUsuario
-            // 
-            this.panelContenUsuario.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panelContenUsuario.Controls.Add(this.lblUsu);
-            this.panelContenUsuario.Controls.Add(this.lblUsuario);
-            this.panelContenUsuario.Location = new System.Drawing.Point(765, 20);
-            this.panelContenUsuario.Name = "panelContenUsuario";
-            this.panelContenUsuario.Size = new System.Drawing.Size(152, 32);
-            this.panelContenUsuario.TabIndex = 3;
+            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            this.btnUsuarios.IconColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuarios.IconSize = 30;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 353);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnUsuarios.Size = new System.Drawing.Size(218, 37);
+            this.btnUsuarios.TabIndex = 9;
+            this.btnUsuarios.Tag = "Usuarios";
+            this.btnUsuarios.Text = "   Usuarios";
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // Inicio
             // 
@@ -399,5 +424,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panelContenUsuario;
+        private FontAwesome.Sharp.IconButton btnUsuarios;
     }
 }

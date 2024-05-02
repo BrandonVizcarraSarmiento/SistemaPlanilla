@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using CapaEntidad;
+using CapaNegocio;
 using CapaPresentacion.Cargo;
 using CapaPresentacion.Vistas_Banco;
 using CapaPresentacion.Vistas_FondoPension;
@@ -16,6 +17,7 @@ using CapaPresentacion.Vistas_Conceptos;
 using CapaPresentacion.Vistas_Empleados;
 using CapaPresentacion.Vistas_Asistencias;
 using CapaPresentacion.Vistas_Planillas;
+using CapaPresentacion.Vistas_Usuarios;
 using FontAwesome.Sharp;
 
 namespace CapaPresentacion
@@ -65,6 +67,24 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            // Obtener la lista de permisos del usuario actual
+            List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.Id);
+
+            // Recorrer todos los controles en el panelMenu
+            foreach (Control control in panelMenu.Controls)
+            {
+                // Verificar si el control es un IconButton
+                if (control is IconButton iconButton)
+                {
+                    // Si el botón es diferente de btnSalir y el usuario no tiene permiso para este botón, ocultarlo
+                    if (iconButton.Name != "btnSalir" && !ListaPermisos.Any(m => m.NombreMenu == iconButton.Name))
+                    {
+                        iconButton.Visible = false;
+                    }
+                }
+            }
+
+            // Establecer el texto del label de usuario
             lblUsuario.Text = usuarioActual.Nombre;
         }
 
@@ -124,6 +144,10 @@ namespace CapaPresentacion
         private void btnPlanillas_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconButton)sender, new FrmPlanillas());
+        }
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconButton)sender, new FrmUsuarios());
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
