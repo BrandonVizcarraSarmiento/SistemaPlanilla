@@ -35,17 +35,17 @@
             this.cmbBoxAño = new System.Windows.Forms.ComboBox();
             this.paneltitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnLimpiarAsistencias = new FontAwesome.Sharp.IconButton();
             this.btnGuardarAsistencias = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCargarAsistencias = new FontAwesome.Sharp.IconButton();
             this.dtgvAsistencia = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnLimpiarAsistencias = new FontAwesome.Sharp.IconButton();
             this.paneltitulo.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTituloAsistencias
@@ -115,20 +115,50 @@
             this.panel1.Size = new System.Drawing.Size(800, 370);
             this.panel1.TabIndex = 8;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel3.Controls.Add(this.btnLimpiarAsistencias);
+            this.panel3.Controls.Add(this.btnGuardarAsistencias);
+            this.panel3.Location = new System.Drawing.Point(182, 275);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(387, 51);
+            this.panel3.TabIndex = 11;
+            // 
+            // btnLimpiarAsistencias
+            // 
+            this.btnLimpiarAsistencias.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLimpiarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiarAsistencias.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarAsistencias.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiarAsistencias.IconChar = FontAwesome.Sharp.IconChar.BroomBall;
+            this.btnLimpiarAsistencias.IconColor = System.Drawing.Color.White;
+            this.btnLimpiarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLimpiarAsistencias.IconSize = 21;
+            this.btnLimpiarAsistencias.Location = new System.Drawing.Point(219, 8);
+            this.btnLimpiarAsistencias.Name = "btnLimpiarAsistencias";
+            this.btnLimpiarAsistencias.Size = new System.Drawing.Size(99, 36);
+            this.btnLimpiarAsistencias.TabIndex = 9;
+            this.btnLimpiarAsistencias.Text = "Limpiar";
+            this.btnLimpiarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpiarAsistencias.UseVisualStyleBackColor = false;
+            // 
             // btnGuardarAsistencias
             // 
-            this.btnGuardarAsistencias.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnGuardarAsistencias.BackColor = System.Drawing.Color.Tan;
             this.btnGuardarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarAsistencias.FlatAppearance.BorderSize = 0;
             this.btnGuardarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarAsistencias.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarAsistencias.ForeColor = System.Drawing.Color.White;
             this.btnGuardarAsistencias.IconChar = FontAwesome.Sharp.IconChar.SdCard;
-            this.btnGuardarAsistencias.IconColor = System.Drawing.Color.Black;
+            this.btnGuardarAsistencias.IconColor = System.Drawing.Color.White;
             this.btnGuardarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarAsistencias.IconSize = 21;
-            this.btnGuardarAsistencias.Location = new System.Drawing.Point(50, 8);
+            this.btnGuardarAsistencias.Location = new System.Drawing.Point(57, 8);
             this.btnGuardarAsistencias.Name = "btnGuardarAsistencias";
-            this.btnGuardarAsistencias.Size = new System.Drawing.Size(99, 27);
+            this.btnGuardarAsistencias.Size = new System.Drawing.Size(99, 36);
             this.btnGuardarAsistencias.TabIndex = 10;
             this.btnGuardarAsistencias.Text = "Guardar";
             this.btnGuardarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -150,13 +180,13 @@
             // 
             // btnCargarAsistencias
             // 
-            this.btnCargarAsistencias.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnCargarAsistencias.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnCargarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargarAsistencias.FlatAppearance.BorderSize = 0;
             this.btnCargarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargarAsistencias.ForeColor = System.Drawing.Color.Black;
+            this.btnCargarAsistencias.ForeColor = System.Drawing.Color.White;
             this.btnCargarAsistencias.IconChar = FontAwesome.Sharp.IconChar.ArrowUpFromBracket;
-            this.btnCargarAsistencias.IconColor = System.Drawing.Color.Black;
+            this.btnCargarAsistencias.IconColor = System.Drawing.Color.White;
             this.btnCargarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCargarAsistencias.IconSize = 21;
             this.btnCargarAsistencias.Location = new System.Drawing.Point(264, 6);
@@ -177,36 +207,6 @@
             this.dtgvAsistencia.Size = new System.Drawing.Size(387, 198);
             this.dtgvAsistencia.TabIndex = 9;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel3.Controls.Add(this.btnLimpiarAsistencias);
-            this.panel3.Controls.Add(this.btnGuardarAsistencias);
-            this.panel3.Location = new System.Drawing.Point(182, 281);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(387, 45);
-            this.panel3.TabIndex = 11;
-            // 
-            // btnLimpiarAsistencias
-            // 
-            this.btnLimpiarAsistencias.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnLimpiarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarAsistencias.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarAsistencias.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpiarAsistencias.IconChar = FontAwesome.Sharp.IconChar.Briefcase;
-            this.btnLimpiarAsistencias.IconColor = System.Drawing.Color.Black;
-            this.btnLimpiarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLimpiarAsistencias.IconSize = 21;
-            this.btnLimpiarAsistencias.Location = new System.Drawing.Point(264, 8);
-            this.btnLimpiarAsistencias.Name = "btnLimpiarAsistencias";
-            this.btnLimpiarAsistencias.Size = new System.Drawing.Size(99, 27);
-            this.btnLimpiarAsistencias.TabIndex = 9;
-            this.btnLimpiarAsistencias.Text = "Limpiar";
-            this.btnLimpiarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpiarAsistencias.UseVisualStyleBackColor = false;
-            // 
             // FrmAsistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,10 +219,10 @@
             this.paneltitulo.ResumeLayout(false);
             this.paneltitulo.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
