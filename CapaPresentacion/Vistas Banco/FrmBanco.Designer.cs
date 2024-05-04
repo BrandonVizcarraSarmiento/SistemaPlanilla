@@ -34,19 +34,19 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTituloSeccion = new System.Windows.Forms.Label();
             this.dtgvBanco = new System.Windows.Forms.DataGridView();
-            this.btnEditarBanco = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnEliminarBanco = new FontAwesome.Sharp.IconButton();
+            this.btnEditarBanco = new FontAwesome.Sharp.IconButton();
             this.btnNuevoBanco = new FontAwesome.Sharp.IconButton();
+            this.panelBuscarBancos = new System.Windows.Forms.Panel();
             this.btnBuscarBanco = new FontAwesome.Sharp.IconButton();
             this.txtBuscarBanco = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelBuscarBancos = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBanco)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panelBuscarBancos.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panelBuscarBancos.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -117,26 +117,16 @@
             this.dtgvBanco.Size = new System.Drawing.Size(434, 223);
             this.dtgvBanco.TabIndex = 0;
             // 
-            // btnEditarBanco
+            // panel3
             // 
-            this.btnEditarBanco.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEditarBanco.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEditarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEditarBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditarBanco.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.btnEditarBanco.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditarBanco.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditarBanco.IconSize = 21;
-            this.btnEditarBanco.Location = new System.Drawing.Point(151, 14);
-            this.btnEditarBanco.Name = "btnEditarBanco";
-            this.btnEditarBanco.Size = new System.Drawing.Size(81, 33);
-            this.btnEditarBanco.TabIndex = 10;
-            this.btnEditarBanco.Text = "Editar";
-            this.btnEditarBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditarBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditarBanco.UseVisualStyleBackColor = false;
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel3.Controls.Add(this.btnNuevoBanco);
+            this.panel3.Controls.Add(this.btnEditarBanco);
+            this.panel3.Controls.Add(this.btnEliminarBanco);
+            this.panel3.Location = new System.Drawing.Point(179, 307);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(380, 64);
+            this.panel3.TabIndex = 13;
             // 
             // btnEliminarBanco
             // 
@@ -159,6 +149,27 @@
             this.btnEliminarBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarBanco.UseVisualStyleBackColor = false;
             // 
+            // btnEditarBanco
+            // 
+            this.btnEditarBanco.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEditarBanco.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEditarBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEditarBanco.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnEditarBanco.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEditarBanco.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditarBanco.IconSize = 21;
+            this.btnEditarBanco.Location = new System.Drawing.Point(151, 14);
+            this.btnEditarBanco.Name = "btnEditarBanco";
+            this.btnEditarBanco.Size = new System.Drawing.Size(81, 33);
+            this.btnEditarBanco.TabIndex = 10;
+            this.btnEditarBanco.Text = "Editar";
+            this.btnEditarBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditarBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditarBanco.UseVisualStyleBackColor = false;
+            // 
             // btnNuevoBanco
             // 
             this.btnNuevoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -179,6 +190,16 @@
             this.btnNuevoBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevoBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevoBanco.UseVisualStyleBackColor = false;
+            // 
+            // panelBuscarBancos
+            // 
+            this.panelBuscarBancos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelBuscarBancos.Controls.Add(this.txtBuscarBanco);
+            this.panelBuscarBancos.Controls.Add(this.btnBuscarBanco);
+            this.panelBuscarBancos.Location = new System.Drawing.Point(239, 6);
+            this.panelBuscarBancos.Name = "panelBuscarBancos";
+            this.panelBuscarBancos.Size = new System.Drawing.Size(262, 52);
+            this.panelBuscarBancos.TabIndex = 14;
             // 
             // btnBuscarBanco
             // 
@@ -220,27 +241,6 @@
             this.panel1.Size = new System.Drawing.Size(684, 393);
             this.panel1.TabIndex = 13;
             // 
-            // panelBuscarBancos
-            // 
-            this.panelBuscarBancos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panelBuscarBancos.Controls.Add(this.txtBuscarBanco);
-            this.panelBuscarBancos.Controls.Add(this.btnBuscarBanco);
-            this.panelBuscarBancos.Location = new System.Drawing.Point(239, 6);
-            this.panelBuscarBancos.Name = "panelBuscarBancos";
-            this.panelBuscarBancos.Size = new System.Drawing.Size(262, 52);
-            this.panelBuscarBancos.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel3.Controls.Add(this.btnNuevoBanco);
-            this.panel3.Controls.Add(this.btnEditarBanco);
-            this.panel3.Controls.Add(this.btnEliminarBanco);
-            this.panel3.Location = new System.Drawing.Point(179, 307);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(380, 64);
-            this.panel3.TabIndex = 13;
-            // 
             // FrmBanco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,10 +254,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBanco)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panelBuscarBancos.ResumeLayout(false);
             this.panelBuscarBancos.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -266,13 +266,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTituloSeccion;
         private System.Windows.Forms.DataGridView dtgvBanco;
+        private System.Windows.Forms.Panel panel3;
+        private FontAwesome.Sharp.IconButton btnNuevoBanco;
         private FontAwesome.Sharp.IconButton btnEditarBanco;
         private FontAwesome.Sharp.IconButton btnEliminarBanco;
-        private FontAwesome.Sharp.IconButton btnNuevoBanco;
-        private FontAwesome.Sharp.IconButton btnBuscarBanco;
-        private System.Windows.Forms.TextBox txtBuscarBanco;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelBuscarBancos;
+        private System.Windows.Forms.TextBox txtBuscarBanco;
+        private FontAwesome.Sharp.IconButton btnBuscarBanco;
+        private System.Windows.Forms.Panel panel1;
     }
 }
