@@ -34,19 +34,19 @@
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblConcepto = new System.Windows.Forms.Label();
             this.panelSegundoCargo = new System.Windows.Forms.Panel();
-            this.dtgvConceptos = new System.Windows.Forms.DataGridView();
-            this.panelBuscar = new System.Windows.Forms.Panel();
-            this.txtBuscarConceptos = new System.Windows.Forms.TextBox();
-            this.btnBuscarConceptos = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNuevosConceptos = new FontAwesome.Sharp.IconButton();
             this.btnEditarConceptos = new FontAwesome.Sharp.IconButton();
             this.btnEliminarConceptos = new FontAwesome.Sharp.IconButton();
+            this.panelBuscar = new System.Windows.Forms.Panel();
+            this.txtBuscarConceptos = new System.Windows.Forms.TextBox();
+            this.btnBuscarConceptos = new FontAwesome.Sharp.IconButton();
+            this.dtgvConceptos = new System.Windows.Forms.DataGridView();
             this.panelTitulo.SuspendLayout();
             this.panelSegundoCargo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvConceptos)).BeginInit();
-            this.panelBuscar.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panelBuscar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvConceptos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitulo
@@ -74,99 +74,14 @@
             // panelSegundoCargo
             // 
             this.panelSegundoCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panelSegundoCargo.Controls.Add(this.panel3);
             this.panelSegundoCargo.Controls.Add(this.dtgvConceptos);
+            this.panelSegundoCargo.Controls.Add(this.panel3);
             this.panelSegundoCargo.Controls.Add(this.panelBuscar);
             this.panelSegundoCargo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSegundoCargo.Location = new System.Drawing.Point(0, 87);
             this.panelSegundoCargo.Name = "panelSegundoCargo";
             this.panelSegundoCargo.Size = new System.Drawing.Size(684, 363);
             this.panelSegundoCargo.TabIndex = 18;
-            // 
-            // dtgvConceptos
-            // 
-            this.dtgvConceptos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvConceptos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgvConceptos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgvConceptos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.dtgvConceptos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvConceptos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvConceptos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvConceptos.ColumnHeadersHeight = 30;
-            this.dtgvConceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvConceptos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvConceptos.EnableHeadersVisualStyles = false;
-            this.dtgvConceptos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvConceptos.Location = new System.Drawing.Point(184, 59);
-            this.dtgvConceptos.Margin = new System.Windows.Forms.Padding(2);
-            this.dtgvConceptos.Name = "dtgvConceptos";
-            this.dtgvConceptos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvConceptos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgvConceptos.RowHeadersWidth = 51;
-            this.dtgvConceptos.RowTemplate.Height = 24;
-            this.dtgvConceptos.Size = new System.Drawing.Size(295, 218);
-            this.dtgvConceptos.TabIndex = 13;
-            // 
-            // panelBuscar
-            // 
-            this.panelBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panelBuscar.Controls.Add(this.txtBuscarConceptos);
-            this.panelBuscar.Controls.Add(this.btnBuscarConceptos);
-            this.panelBuscar.Location = new System.Drawing.Point(205, 8);
-            this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(247, 47);
-            this.panelBuscar.TabIndex = 19;
-            // 
-            // txtBuscarConceptos
-            // 
-            this.txtBuscarConceptos.Location = new System.Drawing.Point(19, 13);
-            this.txtBuscarConceptos.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBuscarConceptos.Name = "txtBuscarConceptos";
-            this.txtBuscarConceptos.Size = new System.Drawing.Size(175, 20);
-            this.txtBuscarConceptos.TabIndex = 12;
-            // 
-            // btnBuscarConceptos
-            // 
-            this.btnBuscarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBuscarConceptos.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnBuscarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnBuscarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscarConceptos.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarConceptos.IconSize = 21;
-            this.btnBuscarConceptos.Location = new System.Drawing.Point(200, 10);
-            this.btnBuscarConceptos.Name = "btnBuscarConceptos";
-            this.btnBuscarConceptos.Size = new System.Drawing.Size(35, 23);
-            this.btnBuscarConceptos.TabIndex = 11;
-            this.btnBuscarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarConceptos.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -242,6 +157,93 @@
             this.btnEliminarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarConceptos.UseVisualStyleBackColor = false;
             // 
+            // panelBuscar
+            // 
+            this.panelBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelBuscar.Controls.Add(this.txtBuscarConceptos);
+            this.panelBuscar.Controls.Add(this.btnBuscarConceptos);
+            this.panelBuscar.Location = new System.Drawing.Point(205, 8);
+            this.panelBuscar.Name = "panelBuscar";
+            this.panelBuscar.Size = new System.Drawing.Size(247, 47);
+            this.panelBuscar.TabIndex = 19;
+            // 
+            // txtBuscarConceptos
+            // 
+            this.txtBuscarConceptos.Location = new System.Drawing.Point(19, 13);
+            this.txtBuscarConceptos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscarConceptos.Name = "txtBuscarConceptos";
+            this.txtBuscarConceptos.Size = new System.Drawing.Size(175, 20);
+            this.txtBuscarConceptos.TabIndex = 12;
+            // 
+            // btnBuscarConceptos
+            // 
+            this.btnBuscarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscarConceptos.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnBuscarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscarConceptos.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarConceptos.IconSize = 21;
+            this.btnBuscarConceptos.Location = new System.Drawing.Point(200, 10);
+            this.btnBuscarConceptos.Name = "btnBuscarConceptos";
+            this.btnBuscarConceptos.Size = new System.Drawing.Size(35, 23);
+            this.btnBuscarConceptos.TabIndex = 11;
+            this.btnBuscarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarConceptos.UseVisualStyleBackColor = false;
+            // 
+            // dtgvConceptos
+            // 
+            this.dtgvConceptos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgvConceptos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvConceptos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgvConceptos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dtgvConceptos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvConceptos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvConceptos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvConceptos.ColumnHeadersHeight = 30;
+            this.dtgvConceptos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvConceptos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvConceptos.EnableHeadersVisualStyles = false;
+            this.dtgvConceptos.GridColor = System.Drawing.Color.SteelBlue;
+            this.dtgvConceptos.Location = new System.Drawing.Point(140, 73);
+            this.dtgvConceptos.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvConceptos.Name = "dtgvConceptos";
+            this.dtgvConceptos.ReadOnly = true;
+            this.dtgvConceptos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvConceptos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvConceptos.RowHeadersWidth = 51;
+            this.dtgvConceptos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.dtgvConceptos.RowTemplate.Height = 24;
+            this.dtgvConceptos.Size = new System.Drawing.Size(380, 204);
+            this.dtgvConceptos.TabIndex = 21;
+            // 
             // FrmConceptos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,10 +256,10 @@
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             this.panelSegundoCargo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvConceptos)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvConceptos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,10 +272,10 @@
         private System.Windows.Forms.Panel panelBuscar;
         private System.Windows.Forms.TextBox txtBuscarConceptos;
         private FontAwesome.Sharp.IconButton btnBuscarConceptos;
-        private System.Windows.Forms.DataGridView dtgvConceptos;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton btnNuevosConceptos;
         private FontAwesome.Sharp.IconButton btnEditarConceptos;
         private FontAwesome.Sharp.IconButton btnEliminarConceptos;
+        private System.Windows.Forms.DataGridView dtgvConceptos;
     }
 }
