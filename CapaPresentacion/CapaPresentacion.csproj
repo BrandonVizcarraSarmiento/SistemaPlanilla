@@ -116,6 +116,18 @@
     <Compile Include="Vistas Empleados\FrmEmpleados.Designer.cs">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas FondoPension\FrmAgregarFondoPension.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas FondoPension\FrmAgregarFondoPension.Designer.cs">
+      <DependentUpon>FrmAgregarFondoPension.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas FondoPension\FrmEditarFondoPension.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas FondoPension\FrmEditarFondoPension.Designer.cs">
+      <DependentUpon>FrmEditarFondoPension.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas FondoPension\FrmFondoPension.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas Empleados\FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas FondoPension\FrmAgregarFondoPension.resx">
+      <DependentUpon>FrmAgregarFondoPension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas FondoPension\FrmEditarFondoPension.resx">
+      <DependentUpon>FrmEditarFondoPension.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas FondoPension\FrmFondoPension.resx">
       <DependentUpon>FrmFondoPension.cs</DependentUpon>

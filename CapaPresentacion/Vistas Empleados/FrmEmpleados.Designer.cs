@@ -73,9 +73,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.dtgvEmpleado);
             this.panel1.Controls.Add(this.panelBuscarEmpleado);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.dtgvEmpleado);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 90);
             this.panel1.Name = "panel1";
@@ -199,7 +199,7 @@
             this.dtgvEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgvEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvEmpleado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgvEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dtgvEmpleado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -224,9 +224,10 @@
             this.dtgvEmpleado.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvEmpleado.EnableHeadersVisualStyles = false;
             this.dtgvEmpleado.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvEmpleado.Location = new System.Drawing.Point(149, 63);
+            this.dtgvEmpleado.Location = new System.Drawing.Point(162, 65);
             this.dtgvEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvEmpleado.Name = "dtgvEmpleado";
+            this.dtgvEmpleado.ReadOnly = true;
             this.dtgvEmpleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -237,9 +238,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvEmpleado.RowHeadersWidth = 51;
+            this.dtgvEmpleado.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
             this.dtgvEmpleado.RowTemplate.Height = 24;
-            this.dtgvEmpleado.Size = new System.Drawing.Size(550, 190);
-            this.dtgvEmpleado.TabIndex = 0;
+            this.dtgvEmpleado.Size = new System.Drawing.Size(515, 204);
+            this.dtgvEmpleado.TabIndex = 16;
             // 
             // FrmEmpleados
             // 
