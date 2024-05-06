@@ -26,14 +26,7 @@ namespace CapaPresentacion.Vistas_FondoPension
         // Método para cargar los datos en el DataGridView
         private void CargarDatos()
         {
-            try
-            {
-                dtgvFPension.DataSource = CN_FondoPension.ObtenerTodosFondosPension();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar datos: " + ex.Message);
-            }
+            dtgvFPension.DataSource = CN_FondoPension.ObtenerTodosFondosPension();
         }
 
         private void btnNuevoFPension_Click(object sender, EventArgs e)
@@ -48,63 +41,49 @@ namespace CapaPresentacion.Vistas_FondoPension
 
         private void btnEditarFPension_Click(object sender, EventArgs e)
         {
-            try
+            // Verifica si se ha seleccionado una fila
+            if (dtgvFPension.SelectedRows.Count > 0)
             {
-                // Verifica si se ha seleccionado una fila
-                if (dtgvFPension.SelectedRows.Count > 0)
-                {
-                    // Obtiene los datos de la fila seleccionada
-                    int id = Convert.ToInt32(dtgvFPension.SelectedRows[0].Cells["Id"].Value);
-                    string nombre = dtgvFPension.SelectedRows[0].Cells["Nombre"].Value.ToString();
-                    decimal porcentajeDescuento = Convert.ToDecimal(dtgvFPension.SelectedRows[0].Cells["PorcentajeDescuento"].Value);
+               // Obtiene los datos de la fila seleccionada
+               int id = Convert.ToInt32(dtgvFPension.SelectedRows[0].Cells["Id"].Value);
+               string nombre = dtgvFPension.SelectedRows[0].Cells["Nombre"].Value.ToString();
+               decimal porcentajeDescuento = Convert.ToDecimal(dtgvFPension.SelectedRows[0].Cells["PorcentajeDescuento"].Value);
 
-                    // Abre el formulario para editar fondo de pensión
-                    FrmEditarFondoPension editarForm = new FrmEditarFondoPension(id, nombre, porcentajeDescuento);
-                    editarForm.ShowDialog();
+               // Abre el formulario para editar fondo de pensión
+               FrmEditarFondoPension editarForm = new FrmEditarFondoPension(id, nombre, porcentajeDescuento);
+               editarForm.ShowDialog();
 
-                    // Recarga los datos después de editar el fondo de pensión
-                    CargarDatos();
-                }
-                else
-                {
-                    MessageBox.Show("Seleccione un registro para editar.");
-                }
+               // Recarga los datos después de editar el fondo de pensión
+               CargarDatos();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al intentar editar: " + ex.Message);
+               MessageBox.Show("Seleccione un registro para editar.");
             }
         }
 
         private void btnEliminarFPension_Click(object sender, EventArgs e)
         {
-            try
+            // Verifica si se ha seleccionado una fila
+            if (dtgvFPension.SelectedRows.Count > 0)
             {
-                // Verifica si se ha seleccionado una fila
-                if (dtgvFPension.SelectedRows.Count > 0)
+                // Pregunta al usuario si realmente desea eliminar el registro
+                DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
                 {
-                    // Pregunta al usuario si realmente desea eliminar el registro
-                    DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo);
-                    if (resultado == DialogResult.Yes)
-                    {
-                        // Obtiene el id del registro seleccionado
-                        int id = Convert.ToInt32(dtgvFPension.SelectedRows[0].Cells["Id"].Value);
+                    // Obtiene el id del registro seleccionado
+                    int id = Convert.ToInt32(dtgvFPension.SelectedRows[0].Cells["Id"].Value);
 
-                        // Llama al método para eliminar el registro
-                        CN_FondoPension.EliminarFondoPension(id);
+                    // Llama al método para eliminar el registro
+                    CN_FondoPension.EliminarFondoPension(id);
 
-                        // Vuelve a cargar los datos en el DataGridView
-                        CargarDatos();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Seleccione un registro para eliminar.");
+                    // Vuelve a cargar los datos en el DataGridView
+                    CargarDatos();
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al intentar eliminar: " + ex.Message);
+                MessageBox.Show("Seleccione un registro para eliminar.");
             }
         }
 
@@ -124,7 +103,7 @@ namespace CapaPresentacion.Vistas_FondoPension
                 else
                 {
                     // Mostrar los resultados en el DataGridView
-                    MostrarFondosPension(fondosPension);
+                    dtgvFPension.DataSource = fondosPension;
                 }
             }
             catch (ArgumentException ex)

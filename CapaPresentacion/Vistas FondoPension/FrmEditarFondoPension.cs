@@ -26,24 +26,40 @@ namespace CapaPresentacion.Vistas_FondoPension
 
         private void btnGuardarEditFPension_Click(object sender, EventArgs e)
         {
-            try
+            // Obtener los datos del formulario
+            string nombre = txtNombreFPension.Text;
+            string descuentoText = txtDescuentoFPension.Text;
+
+            // Validar si el descuento está vacío
+            if (string.IsNullOrWhiteSpace(descuentoText))
             {
-                // Obtener los datos del formulario
-                string nombre = txtNombreFPension.Text;
-                decimal descuento = decimal.Parse(txtDescuentoFPension.Text);
-
-                // Llamar al método de la capa de negocio para editar el fondo de pensión
-                CN_FondoPension.EditarFondoPension(IdFondoPension, nombre, descuento);
-
-                // Mostrar mensaje de éxito
-                MessageBox.Show("Fondo de pensión editado correctamente.");
-
-                // Cerrar el formulario después de guardar
-                this.Close();
+                MessageBox.Show("Por favor, ingrese un valor para el descuento.");
             }
-            catch (Exception ex)
+            else if (!decimal.TryParse(descuentoText, out decimal porcentajeDescuento))
             {
-                MessageBox.Show("Error al guardar fondo de pensión: " + ex.Message);
+                MessageBox.Show("El valor ingresado para el descuento no es válido.");
+            }
+            else
+            {
+                // Llamar al método de la capa de negocio para editar el fondo de pensión
+                try
+                {
+                    CN_FondoPension.EditarFondoPension(IdFondoPension, nombre, porcentajeDescuento);
+
+                    // Mostrar mensaje de éxito
+                    MessageBox.Show("Fondo de pensión editado correctamente.");
+
+                    // Cerrar el formulario después de guardar
+                    this.Close();
+                }
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al intentar editar el fondo de pensión: " + ex.Message);
+                }
             }
         }
 

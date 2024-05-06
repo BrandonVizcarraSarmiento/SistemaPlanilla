@@ -26,15 +26,14 @@ namespace CapaNegocio
         // Método para insertar un fondo de pensión
         public static void InsertarFondoPension(string nombre, decimal porcentajeDescuento)
         {
+            // Validar datos de entrada
+            if (string.IsNullOrWhiteSpace(nombre))
+                throw new ArgumentException("El nombre no puede estar vacío");
+
+            if (porcentajeDescuento < 0 || porcentajeDescuento > 100)
+                throw new ArgumentException("El porcentaje de descuento debe estar entre 0 y 100");
             try
             {
-                // Validar datos de entrada
-                if (string.IsNullOrWhiteSpace(nombre))
-                    throw new ArgumentException("El nombre no puede estar vacío");
-
-                if (porcentajeDescuento < 0 || porcentajeDescuento > 100)
-                    throw new ArgumentException("El porcentaje de descuento debe estar entre 0 y 100");
-
                 // Llamar al método de la capa de datos para insertar
                 CD_FondoPension.InsertarFondoPension(nombre, porcentajeDescuento);
             }

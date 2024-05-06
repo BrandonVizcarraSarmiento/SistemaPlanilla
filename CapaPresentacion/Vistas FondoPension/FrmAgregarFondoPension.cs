@@ -20,25 +20,42 @@ namespace CapaPresentacion.Vistas_FondoPension
 
         private void btnGuardarFPension_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Obtener los datos del formulario
-                string nombre = txtNombreFPension.Text;
-                decimal porcentajeDescuento = decimal.Parse(txtDescuentoFPension.Text);
+            // Obtener los datos del formulario
+            string nombre = txtNombreFPension.Text;
+            string descuentoText = txtDescuentoFPension.Text;
 
+            // Validar si el descuento está vacío
+            if (string.IsNullOrWhiteSpace(descuentoText))
+            {
+                MessageBox.Show("Por favor ingrese un valor para el descuento.");
+            }
+            else if (!decimal.TryParse(descuentoText, out decimal porcentajeDescuento))
+            {
+                MessageBox.Show("El valor ingresado para el descuento no es válido.");
+            }
+            else
+            {
                 // Llamar al método de la capa de negocio para insertar el fondo de pensión
-                CN_FondoPension.InsertarFondoPension(nombre, porcentajeDescuento);
+                try
+                {
+                    CN_FondoPension.InsertarFondoPension(nombre, porcentajeDescuento);
 
-                // Mostrar mensaje de éxito
-                MessageBox.Show("Fondo de pensión agregado correctamente.");
+                    // Mostrar mensaje de éxito
+                    MessageBox.Show("Fondo de pensión agregado correctamente.");
 
-                // Limpiar los campos después de guardar
-                LimpiarCampos();
+                    // Limpiar los campos después de guardar
+                    LimpiarCampos();
+                }
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al intentar guardar el fondo de pensión: " + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al guardar fondo de pensión: " + ex.Message);
-            }
+
         }
         // Método para limpiar los campos del formulario
         private void LimpiarCampos()
