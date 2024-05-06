@@ -115,10 +115,5 @@ namespace CapaPresentacion.Vistas_FondoPension
                 MessageBox.Show("Error al buscar fondos de pensión: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        // Método para mostrar los fondos de pensión en el DataGridView
-        private void MostrarFondosPension(List<FondoPension> fondosPension)
-        {
-            dtgvFPension.DataSource = fondosPension;
-        }
     }
 }
