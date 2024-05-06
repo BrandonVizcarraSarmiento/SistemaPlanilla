@@ -10,12 +10,10 @@ namespace CapaNegocio
 {
     public class CN_FondoPension
     {
-        // Método para obtener todos los fondos de pensión
         public static List<FondoPension> ObtenerTodosFondosPension()
         {
             try
             {
-                // Llamar al método de la capa de datos para obtener todos los fondos de pensión
                 return CD_FondoPension.ObtenerTodosFondosPension();
             }
             catch (Exception ex)
@@ -23,18 +21,26 @@ namespace CapaNegocio
                 throw new Exception("Error al obtener los fondos de pensión: " + ex.Message);
             }
         }
-        // Método para insertar un fondo de pensión
-        public static void InsertarFondoPension(string nombre, decimal porcentajeDescuento)
+        public static void InsertarFondoPension(string nombre, string descuentoText)
         {
-            // Validar datos de entrada
+            // Validar si el nombre está vacío
             if (string.IsNullOrWhiteSpace(nombre))
-                throw new ArgumentException("El nombre no puede estar vacío");
+                throw new ArgumentException("El nombre no puede estar vacío.");
 
+            // Validar si el descuento está vacío
+            if (string.IsNullOrWhiteSpace(descuentoText))
+                throw new ArgumentException("Por favor, ingrese un valor para el descuento.");
+
+            // Intentar convertir el descuento a decimal
+            if (!decimal.TryParse(descuentoText, out decimal porcentajeDescuento))
+                throw new ArgumentException("El valor ingresado para el descuento no es válido.");
+
+            // Validar el rango del descuento
             if (porcentajeDescuento < 0 || porcentajeDescuento > 100)
-                throw new ArgumentException("El porcentaje de descuento debe estar entre 0 y 100");
+                throw new ArgumentException("El porcentaje de descuento debe estar entre 0 y 100.");
+
             try
             {
-                // Llamar al método de la capa de datos para insertar
                 CD_FondoPension.InsertarFondoPension(nombre, porcentajeDescuento);
             }
             catch (Exception ex)
@@ -43,19 +49,26 @@ namespace CapaNegocio
             }
         }
 
-        // Método para editar un fondo de pensión
-        public static void EditarFondoPension(int id, string nombre, decimal porcentajeDescuento)
+        public static void EditarFondoPension(int id, string nombre, string descuentoText)
         {
+            // Validar si el nombre está vacío
+            if (string.IsNullOrWhiteSpace(nombre))
+                throw new ArgumentException("El nombre no puede estar vacío.");
+
+            // Validar si el descuento está vacío
+            if (string.IsNullOrWhiteSpace(descuentoText))
+                throw new ArgumentException("Por favor, ingrese un valor para el descuento.");
+
+            // Intentar convertir el descuento a decimal
+            if (!decimal.TryParse(descuentoText, out decimal porcentajeDescuento))
+                throw new ArgumentException("El valor ingresado para el descuento no es válido.");
+
+            // Validar el rango del descuento
+            if (porcentajeDescuento < 0 || porcentajeDescuento > 100)
+                throw new ArgumentException("El porcentaje de descuento debe estar entre 0 y 100.");
+
             try
             {
-                // Validar datos de entrada
-                if (string.IsNullOrWhiteSpace(nombre))
-                    throw new ArgumentException("El nombre no puede estar vacío");
-
-                if (porcentajeDescuento < 0 || porcentajeDescuento > 100)
-                    throw new ArgumentException("El porcentaje de descuento debe estar entre 0 y 100");
-
-                // Llamar al método de la capa de datos para editar
                 CD_FondoPension.EditarFondoPension(id, nombre, porcentajeDescuento);
             }
             catch (Exception ex)
@@ -64,12 +77,10 @@ namespace CapaNegocio
             }
         }
 
-        // Método para eliminar un fondo de pensión
         public static void EliminarFondoPension(int id)
         {
             try
             {
-                // Llamar al método de la capa de datos para eliminar
                 CD_FondoPension.EliminarFondoPension(id);
             }
             catch (Exception ex)
@@ -77,7 +88,6 @@ namespace CapaNegocio
                 throw new Exception("Error al eliminar fondo de pensión: " + ex.Message);
             }
         }
-        // Método para buscar fondos de pensión por nombre
         public static List<FondoPension> BuscarFondoPension(string nombre)
         {
             if (string.IsNullOrEmpty(nombre))
@@ -86,7 +96,6 @@ namespace CapaNegocio
             }
             try
             {
-                // Llamar al método en la capa de datos para buscar fondos de pensión por nombre
                 return CD_FondoPension.BuscarFondoPension(nombre);
             }
             catch (Exception ex)

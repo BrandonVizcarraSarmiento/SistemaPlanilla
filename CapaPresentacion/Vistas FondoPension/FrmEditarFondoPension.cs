@@ -18,7 +18,6 @@ namespace CapaPresentacion.Vistas_FondoPension
         public FrmEditarFondoPension(int id, string nombre, decimal descuento)
         {
             InitializeComponent();
-            // Asigna los valores recibidos a los controles del formulario
             IdFondoPension = id;
             txtNombreFPension.Text = nombre;
             txtDescuentoFPension.Text = descuento.ToString();
@@ -26,46 +25,27 @@ namespace CapaPresentacion.Vistas_FondoPension
 
         private void btnGuardarEditFPension_Click(object sender, EventArgs e)
         {
-            // Obtener los datos del formulario
             string nombre = txtNombreFPension.Text;
             string descuentoText = txtDescuentoFPension.Text;
 
-            // Validar si el descuento está vacío
-            if (string.IsNullOrWhiteSpace(descuentoText))
+            try
             {
-                MessageBox.Show("Por favor, ingrese un valor para el descuento.");
+                CN_FondoPension.EditarFondoPension(IdFondoPension, nombre, descuentoText);
+                MessageBox.Show("Fondo de pensión editado correctamente.");
+                this.Close();
             }
-            else if (!decimal.TryParse(descuentoText, out decimal porcentajeDescuento))
+            catch (ArgumentException ex)
             {
-                MessageBox.Show("El valor ingresado para el descuento no es válido.");
+                MessageBox.Show(ex.Message);
             }
-            else
+            catch (Exception ex)
             {
-                // Llamar al método de la capa de negocio para editar el fondo de pensión
-                try
-                {
-                    CN_FondoPension.EditarFondoPension(IdFondoPension, nombre, porcentajeDescuento);
-
-                    // Mostrar mensaje de éxito
-                    MessageBox.Show("Fondo de pensión editado correctamente.");
-
-                    // Cerrar el formulario después de guardar
-                    this.Close();
-                }
-                catch (ArgumentException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al intentar editar el fondo de pensión: " + ex.Message);
-                }
+                MessageBox.Show("Error al intentar editar el fondo de pensión: " + ex.Message);
             }
         }
 
         private void btnLimpiarFPension_Click(object sender, EventArgs e)
         {
-            // Limpiar los campos del formulario
             txtNombreFPension.Text = "";
             txtDescuentoFPension.Text = "";
         }

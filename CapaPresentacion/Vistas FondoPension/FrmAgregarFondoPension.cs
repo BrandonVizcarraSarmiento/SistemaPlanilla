@@ -20,44 +20,26 @@ namespace CapaPresentacion.Vistas_FondoPension
 
         private void btnGuardarFPension_Click(object sender, EventArgs e)
         {
-            // Obtener los datos del formulario
             string nombre = txtNombreFPension.Text;
             string descuentoText = txtDescuentoFPension.Text;
 
-            // Validar si el descuento está vacío
-            if (string.IsNullOrWhiteSpace(descuentoText))
+            try
             {
-                MessageBox.Show("Por favor ingrese un valor para el descuento.");
+                CN_FondoPension.InsertarFondoPension(nombre, descuentoText);
+
+                MessageBox.Show("Fondo de pensión agregado correctamente.");
+
+                LimpiarCampos();
             }
-            else if (!decimal.TryParse(descuentoText, out decimal porcentajeDescuento))
+            catch (ArgumentException ex)
             {
-                MessageBox.Show("El valor ingresado para el descuento no es válido.");
+                MessageBox.Show(ex.Message);
             }
-            else
+            catch (Exception ex)
             {
-                // Llamar al método de la capa de negocio para insertar el fondo de pensión
-                try
-                {
-                    CN_FondoPension.InsertarFondoPension(nombre, porcentajeDescuento);
-
-                    // Mostrar mensaje de éxito
-                    MessageBox.Show("Fondo de pensión agregado correctamente.");
-
-                    // Limpiar los campos después de guardar
-                    LimpiarCampos();
-                }
-                catch (ArgumentException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al intentar guardar el fondo de pensión: " + ex.Message);
-                }
+                MessageBox.Show("Error al intentar guardar el fondo de pensión: " + ex.Message);
             }
-
         }
-        // Método para limpiar los campos del formulario
         private void LimpiarCampos()
         {
             txtNombreFPension.Text = "";
