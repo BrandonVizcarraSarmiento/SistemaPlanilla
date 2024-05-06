@@ -92,6 +92,18 @@
     <Compile Include="Registrase.Designer.cs">
       <DependentUpon>Registrase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas Cargo\FrmCargoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Cargo\FrmCargoEditar.Designer.cs">
+      <DependentUpon>FrmCargoEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas Cargo\FrmCargoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Cargo\FrmCargoNuevo.Designer.cs">
+      <DependentUpon>FrmCargoNuevo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas Conceptos\FrmConceptos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,12 @@
     </Compile>
     <EmbeddedResource Include="Registrase.resx">
       <DependentUpon>Registrase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Cargo\FrmCargoEditar.resx">
+      <DependentUpon>FrmCargoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Cargo\FrmCargoNuevo.resx">
+      <DependentUpon>FrmCargoNuevo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas Conceptos\FrmConceptos.resx">
       <DependentUpon>FrmConceptos.cs</DependentUpon>
