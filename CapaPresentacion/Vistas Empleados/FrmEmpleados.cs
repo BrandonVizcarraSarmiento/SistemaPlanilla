@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
+using CapaPresentacion.Vistas_Empleados;
 
 namespace CapaPresentacion.Vistas_Empleados
 {
@@ -21,43 +22,14 @@ namespace CapaPresentacion.Vistas_Empleados
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
-            CargarDatos();
+            CN_Empleados cnEmpleados = new CN_Empleados();
+            dtgvEmpleado.DataSource = cnEmpleados.MostrarEmpleados();
         }
-        private void CargarDatos()
+
+        private void btnNuevoEmpleado_Click(object sender, EventArgs e)
         {
-            var empleados = CN_Empleados.ObtenerTodosEmpleado();
-
-            // Añadir columnas para las propiedades de Empleado
-            dtgvEmpleado.Columns.Add("Id", "ID");
-            dtgvEmpleado.Columns.Add("DNI", "DNI");
-            dtgvEmpleado.Columns.Add("Nombres", "Nombres");
-            dtgvEmpleado.Columns.Add("Apellidos", "Apellidos");
-            dtgvEmpleado.Columns.Add("FechaInicioContrato", "Fecha Inicio Contrato");
-            dtgvEmpleado.Columns.Add("FechaFinContrato", "Fecha Fin Contrato");
-            dtgvEmpleado.Columns.Add("CuentaBancaria", "Cuenta Bancaria");
-
-            // Añadir columnas para las propiedades de Banco, FondoPension y Cargo
-            dtgvEmpleado.Columns.Add("NombreBanco", "Banco");
-            dtgvEmpleado.Columns.Add("NombreFondoPension", "Fondo de Pension");
-            dtgvEmpleado.Columns.Add("NombreCargo", "Cargo");
-
-            // Llenar el DataGridView con los datos de los empleados
-            foreach (var empleado in empleados)
-            {
-                dtgvEmpleado.Rows.Add(
-                    empleado.Id,
-                    empleado.DNI,
-                    empleado.Nombres,
-                    empleado.Apellidos,
-                    empleado.FechaInicioContrato,
-                    empleado.FechaFinContrato,
-                    empleado.CuentaBancaria,
-                    empleado.oBanco.Nombre,
-                    empleado.oFondoPension.Nombre,
-                    empleado.oCargo.Nombre
-                );
-            }
+            FrmAgregarEmpleado agregarForm = new FrmAgregarEmpleado();
+            agregarForm.ShowDialog();
         }
-
     }
 }

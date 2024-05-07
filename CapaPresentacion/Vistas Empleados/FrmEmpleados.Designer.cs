@@ -84,6 +84,7 @@
             // 
             // dtgvEmpleado
             // 
+            this.dtgvEmpleado.AllowUserToAddRows = false;
             this.dtgvEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -112,7 +113,7 @@
             this.dtgvEmpleado.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvEmpleado.EnableHeadersVisualStyles = false;
             this.dtgvEmpleado.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvEmpleado.Location = new System.Drawing.Point(64, 65);
+            this.dtgvEmpleado.Location = new System.Drawing.Point(81, 65);
             this.dtgvEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvEmpleado.Name = "dtgvEmpleado";
             this.dtgvEmpleado.ReadOnly = true;
@@ -128,7 +129,7 @@
             this.dtgvEmpleado.RowHeadersWidth = 51;
             this.dtgvEmpleado.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
             this.dtgvEmpleado.RowTemplate.Height = 24;
-            this.dtgvEmpleado.Size = new System.Drawing.Size(677, 204);
+            this.dtgvEmpleado.Size = new System.Drawing.Size(645, 204);
             this.dtgvEmpleado.TabIndex = 16;
             // 
             // panelBuscarEmpleado
@@ -200,6 +201,7 @@
             this.btnNuevoEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevoEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevoEmpleado.UseVisualStyleBackColor = false;
+            this.btnNuevoEmpleado.Click += new System.EventHandler(this.btnNuevoEmpleado_Click);
             // 
             // btnEditarEmpleado
             // 

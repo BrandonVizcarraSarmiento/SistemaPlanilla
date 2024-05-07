@@ -2,6 +2,7 @@
 using CapaEntidad;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +11,15 @@ namespace CapaNegocio
 {
     public class CN_Empleados
     {
-        public static List<Empleado> ObtenerTodosEmpleado()
+        public DataTable MostrarEmpleados()
         {
-            try
-            {
-                return CD_Empleados.ObtenerTodosEmpleado();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al obtener los empleados: " + ex.Message);
-            }
+            CD_Empleados cdEmpleados = new CD_Empleados();
+            return cdEmpleados.ObtenerEmpleados();
+        }
+        public void InsertarEmpleado(int dni, string nombres, string apellidos, DateTime fechaInicioContrato, DateTime fechaFinContrato, string cuentaBancaria, int idBanco, int idFondoPension, int idCargo)
+        {
+            CD_Empleados cdEmpleados = new CD_Empleados();
+            cdEmpleados.InsertarEmpleado(dni, nombres, apellidos, fechaInicioContrato, fechaFinContrato, cuentaBancaria, idBanco, idFondoPension, idCargo);
         }
     }
 }

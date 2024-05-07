@@ -1,5 +1,6 @@
 ﻿using CapaEntidad;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,53 +12,58 @@ namespace CapaDatos
 {
     public class CD_Empleados
     {
-        public static List<Empleado> ObtenerTodosEmpleado()
+        public DataTable ObtenerEmpleados()
         {
-            List<Empleado> listaEmpleado = new List<Empleado>();
-            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            DataTable dt = new DataTable();
+
+            try
             {
-                try
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
                 {
-                    StringBuilder query = new StringBuilder();
-                    query.AppendLine("SELECT E.Id, E.DNI, E.Nombres, E.Apellidos, E.FechaInicioContrato, E.FechaFinContrato, E.CuentaBancaria,");
-                    query.AppendLine("B.Nombre AS NombreBanco, FP.Nombre AS NombreFondoPension, C.Nombre AS NombreCargo");
-                    query.AppendLine("FROM Empleado E");
-                    query.AppendLine("INNER JOIN Banco B ON E.IdBanco = B.Id");
-                    query.AppendLine("INNER JOIN FondoPension FP ON E.IdFondoPension = FP.Id");
-                    query.AppendLine("INNER JOIN Cargo C ON E.IdCargo = C.Id");
+                    string query = @"SELECT e.Id, e.DNI, e.Nombres, e.Apellidos, e.FechaInicioContrato, e.FechaFinContrato, e.CuentaBancaria,
+                    b.Nombre AS NombreBanco, c.Nombre AS Cargo, fp.Nombre AS FondoPension
+                    FROM Empleado e
+                    INNER JOIN Banco b ON e.IdBanco = b.Id
+                    INNER JOIN Cargo c ON e.IdCargo = c.Id
+                    INNER JOIN FondoPension fp ON e.IdFondoPension = fp.Id";
 
-                    SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
-                    cmd.CommandType = CommandType.Text;
-
-                    conexion.Open();
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlCommand cmd = new SqlCommand(query, conexion))
                     {
-                        while (reader.Read())
-                        {
-                            Empleado empleado = new Empleado()
-                            {
-                                Id = Convert.ToInt32(reader["Id"]),
-                                DNI = Convert.ToInt32(reader["DNI"]),
-                                Nombres = reader["Nombres"].ToString(),
-                                Apellidos = reader["Apellidos"].ToString(),
-                                FechaInicioContrato = Convert.ToDateTime(reader["FechaInicioContrato"]),
-                                FechaFinContrato = Convert.ToDateTime(reader["FechaFinContrato"]),
-                                CuentaBancaria = reader["CuentaBancaria"].ToString(),
-                                oBanco = new Banco() { Nombre = reader["NombreBanco"].ToString() },
-                                oFondoPension = new FondoPension() { Nombre = reader["NombreFondoPension"].ToString() },
-                                oCargo = new Cargo() { Nombre = reader["NombreCargo"].ToString() }
-                            };
-                            listaEmpleado.Add(empleado);
-                        }
+                        conexion.Open();
+                        dt.Load(cmd.ExecuteReader());
                     }
                 }
-                catch (Exception ex)
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción mostrando un mensaje
+                throw new Exception("Error al obtener los empleados: " + ex.Message);
+            }
+
+            return dt;
+        }
+        public void InsertarEmpleado(int dni, string nombres, string apellidos, DateTime fechaInicioContrato, DateTime fechaFinContrato, string cuentaBancaria, int idBanco, int idFondoPension, int idCargo)
+        {
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                using (SqlCommand cmd = new SqlCommand("InsertarEmpleado", conexion))
                 {
-                    throw new Exception("Error al obtener empleados: " + ex.Message);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@DNI", dni);
+                    cmd.Parameters.AddWithValue("@Nombres", nombres);
+                    cmd.Parameters.AddWithValue("@Apellidos", apellidos);
+                    cmd.Parameters.AddWithValue("@FechaInicioContrato", fechaInicioContrato);
+                    cmd.Parameters.AddWithValue("@FechaFinContrato", fechaFinContrato);
+                    cmd.Parameters.AddWithValue("@CuentaBancaria", cuentaBancaria);
+                    cmd.Parameters.AddWithValue("@IdBanco", idBanco);
+                    cmd.Parameters.AddWithValue("@IdFondoPension", idFondoPension);
+                    cmd.Parameters.AddWithValue("@IdCargo", idCargo);
+
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
                 }
             }
-            return listaEmpleado;
         }
+
     }
 }
