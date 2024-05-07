@@ -37,8 +37,8 @@ namespace CapaPresentacion.Vistas_Cargo
 
         private void btnNuevoCargo_Click(object sender, EventArgs e)
         {
-            FrmAgregarCargo agregarForm = new FrmAgregarCargo();
-            agregarForm.ShowDialog();
+            ///FrmAgregarCargo agregarForm = new FrmAgregarCargo();
+            //agregarForm.ShowDialog();
             CargarDatos();
         }
 
@@ -50,8 +50,8 @@ namespace CapaPresentacion.Vistas_Cargo
                 string nombre = dtgvCargo.SelectedRows[0].Cells["Nombre"].Value.ToString();
                 decimal sueldoMensual = Convert.ToDecimal(dtgvCargo.SelectedRows[0].Cells["SueldoMensual"].Value);
 
-                FrmEditarCargo editarForm = new FrmEditarCargo(id, nombre, sueldoMensual);
-                editarForm.ShowDialog();
+                //FrmEditarCargo editarForm = new FrmEditarCargo(id, nombre, sueldoMensual);
+                //editarForm.ShowDialog();
                 CargarDatos();
             }
             else
