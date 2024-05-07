@@ -66,12 +66,6 @@
     <Compile Include="Vistas Banco\FrmBanco.Designer.cs">
       <DependentUpon>FrmBanco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas Cargo\FrmAgregarCargo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas Cargo\FrmAgregarCargo.Designer.cs">
-      <DependentUpon>FrmAgregarCargo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vistas Cargo\FrmCargo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,17 +92,17 @@
     <Compile Include="Registrase.Designer.cs">
       <DependentUpon>Registrase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas Cargo\FrmEditarCargo.cs">
+    <Compile Include="Vistas Cargo\FrmCargoEditar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas Cargo\FrmEditarCargo.Designer.cs">
-      <DependentUpon>FrmEditarCargo.cs</DependentUpon>
+    <Compile Include="Vistas Cargo\FrmCargoEditar.Designer.cs">
+      <DependentUpon>FrmCargoEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas Conceptos\FrmAgregarConceptos.cs">
+    <Compile Include="Vistas Cargo\FrmCargoNuevo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas Conceptos\FrmAgregarConceptos.Designer.cs">
-      <DependentUpon>FrmAgregarConceptos.cs</DependentUpon>
+    <Compile Include="Vistas Cargo\FrmCargoNuevo.Designer.cs">
+      <DependentUpon>FrmCargoNuevo.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas Conceptos\FrmConceptos.cs">
       <SubType>Form</SubType>
@@ -116,11 +110,17 @@
     <Compile Include="Vistas Conceptos\FrmConceptos.Designer.cs">
       <DependentUpon>FrmConceptos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas Conceptos\FrmEditarConceptos.cs">
+    <Compile Include="Vistas Empleados\FrmAgregarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas Conceptos\FrmEditarConceptos.Designer.cs">
-      <DependentUpon>FrmEditarConceptos.cs</DependentUpon>
+    <Compile Include="Vistas Empleados\FrmAgregarEmpleado.Designer.cs">
+      <DependentUpon>FrmAgregarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas Empleados\FrmEditarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Empleados\FrmEditarEmpleado.Designer.cs">
+      <DependentUpon>FrmEditarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas Empleados\FrmEmpleados.cs">
       <SubType>Form</SubType>
@@ -164,9 +164,6 @@
     <EmbeddedResource Include="Vistas Banco\FrmBanco.resx">
       <DependentUpon>FrmBanco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas Cargo\FrmAgregarCargo.resx">
-      <DependentUpon>FrmAgregarCargo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas Cargo\FrmCargo.resx">
       <DependentUpon>FrmCargo.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,17 +186,20 @@
     <EmbeddedResource Include="Registrase.resx">
       <DependentUpon>Registrase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas Cargo\FrmEditarCargo.resx">
-      <DependentUpon>FrmEditarCargo.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas Cargo\FrmCargoEditar.resx">
+      <DependentUpon>FrmCargoEditar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas Conceptos\FrmAgregarConceptos.resx">
-      <DependentUpon>FrmAgregarConceptos.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas Cargo\FrmCargoNuevo.resx">
+      <DependentUpon>FrmCargoNuevo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas Conceptos\FrmConceptos.resx">
       <DependentUpon>FrmConceptos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas Conceptos\FrmEditarConceptos.resx">
-      <DependentUpon>FrmEditarConceptos.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas Empleados\FrmAgregarEmpleado.resx">
+      <DependentUpon>FrmAgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Empleados\FrmEditarEmpleado.resx">
+      <DependentUpon>FrmEditarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas Empleados\FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>

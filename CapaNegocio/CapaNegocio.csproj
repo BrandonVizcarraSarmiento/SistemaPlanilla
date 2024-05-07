@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CN_Bancos.cs" />
     <Compile Include="CN_Cargo.cs" />
+    <Compile Include="CN_Empleados.cs" />
     <Compile Include="CN_FondoPension.cs" />
     <Compile Include="CN_Permiso.cs" />
     <Compile Include="CN_Rol.cs" />
