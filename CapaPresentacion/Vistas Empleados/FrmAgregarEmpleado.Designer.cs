@@ -111,6 +111,7 @@
             this.btnCancelarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelarEmpleado.UseVisualStyleBackColor = false;
+            this.btnCancelarEmpleado.Click += new System.EventHandler(this.btnCancelarEmpleado_Click);
             // 
             // btnLimpiarEmpleado
             // 
@@ -280,6 +281,7 @@
             this.Controls.Add(this.btnLimpiarEmpleado);
             this.Controls.Add(this.btnGuardarEmpleado);
             this.Name = "FrmAgregarEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgregarEmpleado";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -22,6 +22,10 @@ namespace CapaPresentacion.Vistas_Empleados
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
+            CargarDatos();
+        }
+        private void CargarDatos()
+        {
             CN_Empleados cnEmpleados = new CN_Empleados();
             dtgvEmpleado.DataSource = cnEmpleados.MostrarEmpleados();
         }
@@ -30,6 +34,7 @@ namespace CapaPresentacion.Vistas_Empleados
         {
             FrmAgregarEmpleado agregarForm = new FrmAgregarEmpleado();
             agregarForm.ShowDialog();
+            CargarDatos();
         }
     }
 }

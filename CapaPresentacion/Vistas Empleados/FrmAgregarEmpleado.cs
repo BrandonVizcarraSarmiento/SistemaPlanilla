@@ -23,13 +23,21 @@ namespace CapaPresentacion.Vistas_Empleados
         {
             try
             {
-
+                // Cargar los datos para cboBanco
+                List<Banco> listaBancos = CN_Bancos.ObtenerTodosBancos();
+                cboBanco.DataSource = listaBancos;
+                cboBanco.DisplayMember = "Nombre";
+                cboBanco.ValueMember = "Id";
                 // Cargar los datos para cboFondoPension
                 List<FondoPension> listaFondosPension = CN_FondoPension.ObtenerTodosFondosPension();
                 cboFondoPension.DataSource = listaFondosPension;
                 cboFondoPension.DisplayMember = "Nombre";
                 cboFondoPension.ValueMember = "Id";
-
+                // Cargar los datos para cboCargo
+                List<Cargo> listaCargos = CN_Cargo.ObtenerTodosCargos();
+                cboCargo.DataSource = listaCargos;
+                cboCargo.DisplayMember = "Nombre";
+                cboCargo.ValueMember = "Id";
             }
             catch (Exception ex)
             {
@@ -41,29 +49,29 @@ namespace CapaPresentacion.Vistas_Empleados
             try
             {
                 // Obtener los datos del formulario
-                int dni = int.Parse(txtDNI.Text);
+                string dnitext = txtDNI.Text.Trim();
                 string nombres = txtNombres.Text;
                 string apellidos = txtApellidos.Text;
                 DateTime fechaInicioContrato = dtpFechaIniciContrato.Value;
                 DateTime fechaFinContrato = dtpFechaFinContraton.Value;
                 string cuentaBancaria = txtCuenta.Text;
-                int idBanco = (int)cboBanco.SelectedValue; // Suponiendo que el ValueMember de cboBanco es el Id del banco
-                int idFondoPension = (int)cboFondoPension.SelectedValue; // Suponiendo que el ValueMember de cboFondoPension es el Id del fondo de pension
-                int idCargo = (int)cboCargo.SelectedValue; // Suponiendo que el ValueMember de cboCargo es el Id del cargo
+                int idBanco = (int)cboBanco.SelectedValue;
+                int idFondoPension = (int)cboFondoPension.SelectedValue;
+                int idCargo = (int)cboCargo.SelectedValue;
 
-                // Insertar el nuevo empleado
                 CN_Empleados cnEmpleados = new CN_Empleados();
-                cnEmpleados.InsertarEmpleado(dni, nombres, apellidos, fechaInicioContrato, fechaFinContrato, cuentaBancaria, idBanco, idFondoPension, idCargo);
+                cnEmpleados.InsertarEmpleado(dnitext, nombres, apellidos, fechaInicioContrato, fechaFinContrato, cuentaBancaria, idBanco, idFondoPension, idCargo);
 
-                // Mostrar mensaje de éxito
                 MessageBox.Show("Empleado agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Limpiar los controles del formulario
                 LimpiarControles();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                // Mostrar mensaje de error
                 MessageBox.Show("Error al agregar empleado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -78,6 +86,11 @@ namespace CapaPresentacion.Vistas_Empleados
             cboBanco.SelectedIndex = -1;
             cboFondoPension.SelectedIndex = -1;
             cboCargo.SelectedIndex = -1;
+        }
+
+        private void btnCancelarEmpleado_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
