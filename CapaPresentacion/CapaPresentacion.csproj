@@ -98,11 +98,35 @@
     <Compile Include="Vistas Conceptos\FrmConceptos.Designer.cs">
       <DependentUpon>FrmConceptos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas Empleados\FrmAgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Empleados\FrmAgregarEmpleado.Designer.cs">
+      <DependentUpon>FrmAgregarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas Empleados\FrmEditarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas Empleados\FrmEditarEmpleado.Designer.cs">
+      <DependentUpon>FrmEditarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas Empleados\FrmEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas Empleados\FrmEmpleados.Designer.cs">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas FondoPension\FrmAgregarFondoPension.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas FondoPension\FrmAgregarFondoPension.Designer.cs">
+      <DependentUpon>FrmAgregarFondoPension.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas FondoPension\FrmEditarFondoPension.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas FondoPension\FrmEditarFondoPension.Designer.cs">
+      <DependentUpon>FrmEditarFondoPension.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas FondoPension\FrmFondoPension.cs">
       <SubType>Form</SubType>
@@ -153,8 +177,20 @@
     <EmbeddedResource Include="Vistas Conceptos\FrmConceptos.resx">
       <DependentUpon>FrmConceptos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Empleados\FrmAgregarEmpleado.resx">
+      <DependentUpon>FrmAgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas Empleados\FrmEditarEmpleado.resx">
+      <DependentUpon>FrmEditarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas Empleados\FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas FondoPension\FrmAgregarFondoPension.resx">
+      <DependentUpon>FrmAgregarFondoPension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas FondoPension\FrmEditarFondoPension.resx">
+      <DependentUpon>FrmEditarFondoPension.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas FondoPension\FrmFondoPension.resx">
       <DependentUpon>FrmFondoPension.cs</DependentUpon>

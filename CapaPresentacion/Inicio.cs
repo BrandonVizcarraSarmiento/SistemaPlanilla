@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 using CapaEntidad;
 using CapaNegocio;
-using CapaPresentacion.Cargo;
+using CapaPresentacion.Vistas_Cargo;
 using CapaPresentacion.Vistas_Banco;
 using CapaPresentacion.Vistas_FondoPension;
 using CapaPresentacion.Vistas_Conceptos;
