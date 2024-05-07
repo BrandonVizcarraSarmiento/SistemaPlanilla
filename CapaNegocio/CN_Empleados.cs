@@ -92,5 +92,18 @@ namespace CapaNegocio
                 throw new Exception("Error al editar empleado en la capa de datos: " + ex.Message);
             }
         }
+        public void EliminarEmpleado(int id)
+        {
+            try
+            {
+                CD_Empleados cdEmpleados = new CD_Empleados();
+                cdEmpleados.EliminarEmpleado(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar empleado en la capa de negocio: " + ex.Message);
+            }
+        }
+
     }
 }

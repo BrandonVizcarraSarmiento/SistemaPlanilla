@@ -245,6 +245,7 @@
             this.btnEliminarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarEmpleado.UseVisualStyleBackColor = false;
+            this.btnEliminarEmpleado.Click += new System.EventHandler(this.btnEliminarEmpleado_Click);
             // 
             // FrmEmpleados
             // 

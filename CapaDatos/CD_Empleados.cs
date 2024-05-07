@@ -95,6 +95,28 @@ namespace CapaDatos
                 throw new Exception("Error al editar el empleado: " + ex.Message);
             }
         }
+        public void EliminarEmpleado(int id)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    using (SqlCommand cmd = new SqlCommand("EliminarEmpleado", conexion))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Id", id);
+
+                        conexion.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción mostrando un mensaje
+                throw new Exception("Error al eliminar el empleado: " + ex.Message);
+            }
+        }
 
     }
 }

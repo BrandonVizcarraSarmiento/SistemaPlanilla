@@ -64,5 +64,31 @@ namespace CapaPresentacion.Vistas_Empleados
                 MessageBox.Show("Seleccione un registro para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnEliminarEmpleado_Click(object sender, EventArgs e)
+        {
+            // Verifica si se ha seleccionado una fila
+            if (dtgvEmpleado.SelectedRows.Count > 0)
+            {
+                // Pregunta al usuario si realmente desea eliminar el registro
+                DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar este empleado?", "Confirmar Eliminación", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    // Obtiene el id del empleado seleccionado
+                    int id = Convert.ToInt32(dtgvEmpleado.SelectedRows[0].Cells["Id"].Value);
+
+                    // Llama al método para eliminar el empleado
+                    CN_Empleados cnEmpleados = new CN_Empleados();
+                    cnEmpleados.EliminarEmpleado(id);
+
+                    // Vuelve a cargar los datos en el DataGridView
+                    CargarDatos();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un empleado para eliminar.");
+            }
+        }
     }
 }
