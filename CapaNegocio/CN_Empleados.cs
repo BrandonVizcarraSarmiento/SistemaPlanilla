@@ -104,6 +104,18 @@ namespace CapaNegocio
                 throw new Exception("Error al eliminar empleado en la capa de negocio: " + ex.Message);
             }
         }
+        private CapaDatos.CD_Empleados capaDatos = new CapaDatos.CD_Empleados();
 
+        public DataTable BuscarEmpleado(string criterio, string busqueda)
+        {
+            try
+            {
+                return capaDatos.BuscarEmpleado(criterio, busqueda);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar empleados: " + ex.Message);
+            }
+        }
     }
 }

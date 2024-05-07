@@ -18,6 +18,14 @@ namespace CapaPresentacion.Vistas_Empleados
         public FrmEmpleados()
         {
             InitializeComponent();
+            // Agregar opciones al ComboBox de criterio de búsqueda
+            cboOpcionBuscar.Items.Add("DNI");
+            cboOpcionBuscar.Items.Add("Nombres");
+            cboOpcionBuscar.Items.Add("Apellidos");
+            cboOpcionBuscar.Items.Add("Cargo");
+
+            // Establecer la opción predeterminada
+            cboOpcionBuscar.SelectedIndex = 0;
         }
 
         private void FrmEmpleados_Load(object sender, EventArgs e)
@@ -88,6 +96,33 @@ namespace CapaPresentacion.Vistas_Empleados
             else
             {
                 MessageBox.Show("Seleccione un empleado para eliminar.");
+            }
+        }
+
+        private void btnBuscarEmpleado_Click(object sender, EventArgs e)
+        {
+            // Obtener el criterio de búsqueda seleccionado del ComboBox
+            string criterio = cboOpcionBuscar.SelectedItem.ToString();
+
+            // Obtener el término de búsqueda ingresado en el TextBox
+            string busqueda = txtBuscarEmpleado.Text;
+
+            // Realizar la búsqueda de empleados
+            try
+            {
+                CN_Empleados cnEmpleados = new CN_Empleados();
+                DataTable resultados = cnEmpleados.BuscarEmpleado(criterio, busqueda);
+
+                if (resultados.Rows.Count == 0)
+                {
+                    MessageBox.Show("No se encontraron empleados que coincidan con la búsqueda.", "No encontrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                dtgvEmpleado.DataSource = resultados;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar empleados: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

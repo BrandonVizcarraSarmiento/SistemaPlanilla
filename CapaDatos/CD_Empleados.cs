@@ -117,6 +117,35 @@ namespace CapaDatos
                 throw new Exception("Error al eliminar el empleado: " + ex.Message);
             }
         }
+        public DataTable BuscarEmpleado(string criterio, string busqueda)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    using (SqlCommand cmd = new SqlCommand("BuscarEmpleado", conexion))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@DNI", (criterio == "DNI") ? Convert.ToInt32(busqueda) : (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Nombres", (criterio == "Nombres") ? busqueda : (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Apellidos", (criterio == "Apellidos") ? busqueda : (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Cargo", (criterio == "Cargo") ? busqueda : (object)DBNull.Value);
+
+                        conexion.Open();
+                        dt.Load(cmd.ExecuteReader());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción mostrando un mensaje
+                throw new Exception("Error al buscar el empleado: " + ex.Message);
+            }
+
+            return dt;
+        }
 
     }
 }

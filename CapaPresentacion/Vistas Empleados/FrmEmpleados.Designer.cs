@@ -42,6 +42,7 @@
             this.btnNuevoEmpleado = new FontAwesome.Sharp.IconButton();
             this.btnEditarEmpleado = new FontAwesome.Sharp.IconButton();
             this.btnEliminarEmpleado = new FontAwesome.Sharp.IconButton();
+            this.cboOpcionBuscar = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEmpleado)).BeginInit();
@@ -135,16 +136,17 @@
             // panelBuscarEmpleado
             // 
             this.panelBuscarEmpleado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelBuscarEmpleado.Controls.Add(this.cboOpcionBuscar);
             this.panelBuscarEmpleado.Controls.Add(this.txtBuscarEmpleado);
             this.panelBuscarEmpleado.Controls.Add(this.btnBuscarEmpleado);
-            this.panelBuscarEmpleado.Location = new System.Drawing.Point(297, 6);
+            this.panelBuscarEmpleado.Location = new System.Drawing.Point(248, 8);
             this.panelBuscarEmpleado.Name = "panelBuscarEmpleado";
-            this.panelBuscarEmpleado.Size = new System.Drawing.Size(262, 52);
+            this.panelBuscarEmpleado.Size = new System.Drawing.Size(352, 52);
             this.panelBuscarEmpleado.TabIndex = 14;
             // 
             // txtBuscarEmpleado
             // 
-            this.txtBuscarEmpleado.Location = new System.Drawing.Point(19, 19);
+            this.txtBuscarEmpleado.Location = new System.Drawing.Point(121, 19);
             this.txtBuscarEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarEmpleado.Name = "txtBuscarEmpleado";
             this.txtBuscarEmpleado.Size = new System.Drawing.Size(175, 20);
@@ -162,13 +164,14 @@
             this.btnBuscarEmpleado.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBuscarEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscarEmpleado.IconSize = 21;
-            this.btnBuscarEmpleado.Location = new System.Drawing.Point(208, 17);
+            this.btnBuscarEmpleado.Location = new System.Drawing.Point(301, 17);
             this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
             this.btnBuscarEmpleado.Size = new System.Drawing.Size(35, 23);
             this.btnBuscarEmpleado.TabIndex = 11;
             this.btnBuscarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarEmpleado.UseVisualStyleBackColor = false;
+            this.btnBuscarEmpleado.Click += new System.EventHandler(this.btnBuscarEmpleado_Click);
             // 
             // panel3
             // 
@@ -247,6 +250,15 @@
             this.btnEliminarEmpleado.UseVisualStyleBackColor = false;
             this.btnEliminarEmpleado.Click += new System.EventHandler(this.btnEliminarEmpleado_Click);
             // 
+            // cboOpcionBuscar
+            // 
+            this.cboOpcionBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboOpcionBuscar.FormattingEnabled = true;
+            this.cboOpcionBuscar.Location = new System.Drawing.Point(12, 19);
+            this.cboOpcionBuscar.Name = "cboOpcionBuscar";
+            this.cboOpcionBuscar.Size = new System.Drawing.Size(102, 21);
+            this.cboOpcionBuscar.TabIndex = 74;
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,5 +293,6 @@
         private FontAwesome.Sharp.IconButton btnEditarEmpleado;
         private FontAwesome.Sharp.IconButton btnEliminarEmpleado;
         private System.Windows.Forms.DataGridView dtgvEmpleado;
+        private System.Windows.Forms.ComboBox cboOpcionBuscar;
     }
 }
