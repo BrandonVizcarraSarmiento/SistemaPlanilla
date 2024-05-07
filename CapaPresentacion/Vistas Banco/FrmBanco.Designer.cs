@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTituloSeccion = new System.Windows.Forms.Label();
-            this.dtgvBanco = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNuevoBanco = new FontAwesome.Sharp.IconButton();
             this.btnEditarBanco = new FontAwesome.Sharp.IconButton();
@@ -42,15 +41,12 @@
             this.txtBuscarBanco = new System.Windows.Forms.TextBox();
             this.btnBuscarBanco = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtIn = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.Label();
-            this.txtIndice = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.Label();
+            this.dtgvBanco = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvBanco)).BeginInit();
             this.panel3.SuspendLayout();
             this.panelBuscarBancos.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBanco)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -73,56 +69,6 @@
             this.lblTituloSeccion.Size = new System.Drawing.Size(111, 31);
             this.lblTituloSeccion.TabIndex = 0;
             this.lblTituloSeccion.Text = "Bancos";
-            // 
-            // dtgvBanco
-            // 
-            this.dtgvBanco.AllowUserToAddRows = false;
-            this.dtgvBanco.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvBanco.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgvBanco.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgvBanco.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.dtgvBanco.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvBanco.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvBanco.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgvBanco.ColumnHeadersHeight = 30;
-            this.dtgvBanco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvBanco.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgvBanco.EnableHeadersVisualStyles = false;
-            this.dtgvBanco.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvBanco.Location = new System.Drawing.Point(149, 63);
-            this.dtgvBanco.Margin = new System.Windows.Forms.Padding(2);
-            this.dtgvBanco.Name = "dtgvBanco";
-            this.dtgvBanco.ReadOnly = true;
-            this.dtgvBanco.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvBanco.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgvBanco.RowHeadersWidth = 51;
-            this.dtgvBanco.RowTemplate.Height = 24;
-            this.dtgvBanco.Size = new System.Drawing.Size(434, 223);
-            this.dtgvBanco.TabIndex = 0;
-            this.dtgvBanco.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvBanco_CellContentClick);
             // 
             // panel3
             // 
@@ -155,7 +101,6 @@
             this.btnNuevoBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevoBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevoBanco.UseVisualStyleBackColor = false;
-            this.btnNuevoBanco.Click += new System.EventHandler(this.btnNuevoBanco_Click);
             // 
             // btnEditarBanco
             // 
@@ -177,7 +122,6 @@
             this.btnEditarBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditarBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarBanco.UseVisualStyleBackColor = false;
-            this.btnEditarBanco.Click += new System.EventHandler(this.btnEditarBanco_Click);
             // 
             // btnEliminarBanco
             // 
@@ -199,7 +143,6 @@
             this.btnEliminarBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminarBanco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarBanco.UseVisualStyleBackColor = false;
-            this.btnEliminarBanco.Click += new System.EventHandler(this.btnEliminarBanco_Click);
             // 
             // panelBuscarBancos
             // 
@@ -242,59 +185,64 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.txtIn);
-            this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Controls.Add(this.txtIndice);
-            this.panel1.Controls.Add(this.txtId);
+            this.panel1.Controls.Add(this.dtgvBanco);
             this.panel1.Controls.Add(this.panelBuscarBancos);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.dtgvBanco);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 90);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(684, 393);
             this.panel1.TabIndex = 13;
             // 
-            // txtIn
+            // dtgvBanco
             // 
-            this.txtIn.AutoSize = true;
-            this.txtIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.txtIn.ForeColor = System.Drawing.Color.White;
-            this.txtIn.Location = new System.Drawing.Point(149, 63);
-            this.txtIn.Name = "txtIn";
-            this.txtIn.Size = new System.Drawing.Size(0, 13);
-            this.txtIn.TabIndex = 18;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.AutoSize = true;
-            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(216, 66);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(44, 13);
-            this.txtNombre.TabIndex = 17;
-            this.txtNombre.Text = "Nombre";
-            // 
-            // txtIndice
-            // 
-            this.txtIndice.AutoSize = true;
-            this.txtIndice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.txtIndice.Location = new System.Drawing.Point(149, 63);
-            this.txtIndice.Name = "txtIndice";
-            this.txtIndice.Size = new System.Drawing.Size(0, 13);
-            this.txtIndice.TabIndex = 16;
-            // 
-            // txtId
-            // 
-            this.txtId.AutoSize = true;
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(189, 66);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(18, 13);
-            this.txtId.TabIndex = 15;
-            this.txtId.Text = "ID";
+            this.dtgvBanco.AllowUserToAddRows = false;
+            this.dtgvBanco.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgvBanco.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvBanco.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgvBanco.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dtgvBanco.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvBanco.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvBanco.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvBanco.ColumnHeadersHeight = 30;
+            this.dtgvBanco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvBanco.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvBanco.EnableHeadersVisualStyles = false;
+            this.dtgvBanco.GridColor = System.Drawing.Color.SteelBlue;
+            this.dtgvBanco.Location = new System.Drawing.Point(195, 80);
+            this.dtgvBanco.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvBanco.Name = "dtgvBanco";
+            this.dtgvBanco.ReadOnly = true;
+            this.dtgvBanco.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvBanco.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvBanco.RowHeadersWidth = 51;
+            this.dtgvBanco.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.dtgvBanco.RowTemplate.Height = 24;
+            this.dtgvBanco.Size = new System.Drawing.Size(341, 204);
+            this.dtgvBanco.TabIndex = 17;
             // 
             // FrmBanco
             // 
@@ -306,14 +254,14 @@
             this.Controls.Add(this.panel2);
             this.Name = "FrmBanco";
             this.Text = "FrmBanco";
+            this.Load += new System.EventHandler(this.FrmBanco_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvBanco)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panelBuscarBancos.ResumeLayout(false);
             this.panelBuscarBancos.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvBanco)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -321,7 +269,6 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTituloSeccion;
-        private System.Windows.Forms.DataGridView dtgvBanco;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton btnNuevoBanco;
         private FontAwesome.Sharp.IconButton btnEditarBanco;
@@ -330,9 +277,6 @@
         private System.Windows.Forms.TextBox txtBuscarBanco;
         private FontAwesome.Sharp.IconButton btnBuscarBanco;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label txtId;
-        private System.Windows.Forms.Label txtNombre;
-        private System.Windows.Forms.Label txtIndice;
-        private System.Windows.Forms.Label txtIn;
+        private System.Windows.Forms.DataGridView dtgvBanco;
     }
 }

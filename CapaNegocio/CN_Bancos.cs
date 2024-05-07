@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,48 +12,16 @@ namespace CapaNegocio
 {
     public class CN_Bancos
     {
-        private CD_Bancos objcd_banco = new CD_Bancos();
-        public List<Banco> Listar()
+        public static List<Banco> ObtenerTodosBancos()
         {
-            return objcd_banco.Listar();
-        }
-        public int Registrar(Banco obj, out string Mensaje)
-        {
-            Mensaje = string.Empty;
-
-            if (obj.Nombre == "")
+            try
             {
-                Mensaje += "Es necesario el nombre completo del usuario\n";
+                return CD_Bancos.ObtenerTodosBancos();
             }
-
-            if (Mensaje != string.Empty)
+            catch (Exception ex)
             {
-                return 0;
-            }
-            else
-            {
-                return objcd_banco.Registrar(obj, out Mensaje);
+                throw new Exception("Error al obtener lista de bancos: " + ex.Message);
             }
         }
-        public bool Editar(Banco obj, out string Mensaje)
-        {
-
-            Mensaje = string.Empty;
-
-            if (obj.Nombre == "")
-            {
-                Mensaje += "Es necesario el nombre completo del usuario\n";
-            }
-
-            if (Mensaje != string.Empty)
-            {
-                return false;
-            }
-            else
-            {
-                return objcd_banco.Editar(obj, out Mensaje);
-            }
-        }
-       
     }
 }
