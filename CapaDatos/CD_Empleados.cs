@@ -42,7 +42,7 @@ namespace CapaDatos
 
             return dt;
         }
-        public void InsertarEmpleado(int dni, string nombres, string apellidos, DateTime fechaInicioContrato, DateTime fechaFinContrato, string cuentaBancaria, int idBanco, int idFondoPension, int idCargo)
+        public void InsertarEmpleado(int dni, string nombres, string apellidos, DateTime fechaInicioContrato, DateTime fechaFinContrato, int cuentaBancaria, int idBanco, int idFondoPension, int idCargo)
         {
             using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
             {

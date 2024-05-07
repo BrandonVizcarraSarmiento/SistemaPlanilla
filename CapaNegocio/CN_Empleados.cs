@@ -16,7 +16,7 @@ namespace CapaNegocio
             CD_Empleados cdEmpleados = new CD_Empleados();
             return cdEmpleados.ObtenerEmpleados();
         }
-        public void InsertarEmpleado(string dnitext, string nombres, string apellidos, DateTime fechaInicioContrato, DateTime fechaFinContrato, string cuentaBancaria, int idBanco, int idFondoPension, int idCargo)
+        public void InsertarEmpleado(string dnitext, string nombres, string apellidos, DateTime fechaInicioContrato, DateTime fechaFinContrato, string cuentaBancariaText, int idBanco, int idFondoPension, int idCargo)
         {
             if (string.IsNullOrWhiteSpace(dnitext))
                 throw new ArgumentException("El DNI no puede estar vacío.");
@@ -33,8 +33,10 @@ namespace CapaNegocio
                 throw new ArgumentException("La fecha de inicio de contrato no puede estar vacía.");
             if (fechaFinContrato == DateTime.MinValue)
                 throw new ArgumentException("La fecha de fin de contrato no puede estar vacía.");
-            if (string.IsNullOrWhiteSpace(cuentaBancaria))
+            if (string.IsNullOrWhiteSpace(cuentaBancariaText))
                 throw new ArgumentException("La cuenta bancaria no puede estar vacía.");
+            if (!int.TryParse(cuentaBancariaText, out int cuentaBancaria))
+                throw new ArgumentException("Cuenta bancaria debe ser numerico.");
             if (idBanco <= 0)
                 throw new ArgumentException("Debe seleccionar un banco.");
             if (idFondoPension <= 0)

@@ -280,6 +280,7 @@
             this.Controls.Add(this.btnCancelarEmpleado);
             this.Controls.Add(this.btnLimpiarEmpleado);
             this.Controls.Add(this.btnGuardarEmpleado);
+            this.MaximizeBox = false;
             this.Name = "FrmAgregarEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgregarEmpleado";

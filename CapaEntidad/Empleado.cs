@@ -14,7 +14,7 @@ namespace CapaEntidad
         public string Apellidos { get; set; }
         public DateTime FechaInicioContrato { get; set; }
         public DateTime FechaFinContrato { get; set; }
-        public string CuentaBancaria { get; set; }
+        public int CuentaBancaria { get; set; }
         public Banco oBanco { get; set; }
         public FondoPension oFondoPension { get; set; }
         public Cargo oCargo { get; set; }
