@@ -64,6 +64,37 @@ namespace CapaDatos
                 }
             }
         }
+        public void EditarEmpleado(int id, int dni, string nombres, string apellidos, DateTime fechaInicioContrato, DateTime fechaFinContrato, int cuentaBancaria, int idBanco, int idFondoPension, int idCargo)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    using (SqlCommand cmd = new SqlCommand("EditarEmpleado", conexion))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Id", id);
+                        cmd.Parameters.AddWithValue("@DNI", dni);
+                        cmd.Parameters.AddWithValue("@Nombres", nombres);
+                        cmd.Parameters.AddWithValue("@Apellidos", apellidos);
+                        cmd.Parameters.AddWithValue("@FechaInicioContrato", fechaInicioContrato);
+                        cmd.Parameters.AddWithValue("@FechaFinContrato", fechaFinContrato);
+                        cmd.Parameters.AddWithValue("@CuentaBancaria", cuentaBancaria);
+                        cmd.Parameters.AddWithValue("@IdBanco", idBanco);
+                        cmd.Parameters.AddWithValue("@IdFondoPension", idFondoPension);
+                        cmd.Parameters.AddWithValue("@IdCargo", idCargo);
+
+                        conexion.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción mostrando un mensaje
+                throw new Exception("Error al editar el empleado: " + ex.Message);
+            }
+        }
 
     }
 }

@@ -153,7 +153,6 @@
             // dtpFechaFinContraton
             // 
             this.dtpFechaFinContraton.Location = new System.Drawing.Point(205, 213);
-            this.dtpFechaFinContraton.MinDate = new System.DateTime(2024, 5, 6, 0, 0, 0, 0);
             this.dtpFechaFinContraton.Name = "dtpFechaFinContraton";
             this.dtpFechaFinContraton.Size = new System.Drawing.Size(126, 20);
             this.dtpFechaFinContraton.TabIndex = 69;
@@ -242,6 +241,7 @@
             this.btnCancelarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelarEmpleado.UseVisualStyleBackColor = false;
+            this.btnCancelarEmpleado.Click += new System.EventHandler(this.btnCancelarEmpleado_Click);
             // 
             // btnLimpiarEmpleado
             // 
@@ -262,6 +262,7 @@
             this.btnLimpiarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiarEmpleado.UseVisualStyleBackColor = false;
+            this.btnLimpiarEmpleado.Click += new System.EventHandler(this.btnLimpiarEmpleado_Click);
             // 
             // btnEditarEmpleado
             // 
@@ -282,11 +283,13 @@
             this.btnEditarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarEmpleado.UseVisualStyleBackColor = false;
+            this.btnEditarEmpleado.Click += new System.EventHandler(this.btnEditarEmpleado_Click);
             // 
             // FrmEditarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(403, 471);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -313,6 +316,7 @@
             this.Controls.Add(this.btnEditarEmpleado);
             this.MaximizeBox = false;
             this.Name = "FrmEditarEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditarEmpleado";
             this.ResumeLayout(false);
             this.PerformLayout();

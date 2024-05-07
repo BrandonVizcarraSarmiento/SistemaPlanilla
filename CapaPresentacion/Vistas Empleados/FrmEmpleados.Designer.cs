@@ -223,6 +223,7 @@
             this.btnEditarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarEmpleado.UseVisualStyleBackColor = false;
+            this.btnEditarEmpleado.Click += new System.EventHandler(this.btnEditarEmpleado_Click);
             // 
             // btnEliminarEmpleado
             // 

@@ -135,6 +135,7 @@
             this.btnLimpiarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiarEmpleado.UseVisualStyleBackColor = false;
+            this.btnLimpiarEmpleado.Click += new System.EventHandler(this.btnLimpiarEmpleado_Click);
             // 
             // btnGuardarEmpleado
             // 

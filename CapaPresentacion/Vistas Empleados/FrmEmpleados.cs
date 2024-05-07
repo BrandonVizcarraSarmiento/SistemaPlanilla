@@ -36,5 +36,33 @@ namespace CapaPresentacion.Vistas_Empleados
             agregarForm.ShowDialog();
             CargarDatos();
         }
+
+        private void btnEditarEmpleado_Click(object sender, EventArgs e)
+        {
+            if (dtgvEmpleado.SelectedRows.Count > 0)
+            {
+                int id = Convert.ToInt32(dtgvEmpleado.SelectedRows[0].Cells["Id"].Value);
+                int dni = Convert.ToInt32(dtgvEmpleado.SelectedRows[0].Cells["DNI"].Value);
+                string nombres = dtgvEmpleado.SelectedRows[0].Cells["Nombres"].Value.ToString();
+                string apellidos = dtgvEmpleado.SelectedRows[0].Cells["Apellidos"].Value.ToString();
+                DateTime fechaInicioContrato = Convert.ToDateTime(dtgvEmpleado.SelectedRows[0].Cells["FechaInicioContrato"].Value);
+                DateTime fechaFinContrato = Convert.ToDateTime(dtgvEmpleado.SelectedRows[0].Cells["FechaFinContrato"].Value);
+                int cuentaBancaria = Convert.ToInt32(dtgvEmpleado.SelectedRows[0].Cells["CuentaBancaria"].Value);
+                string nombreBanco = dtgvEmpleado.SelectedRows[0].Cells["NombreBanco"].Value.ToString();
+                string nombreFondoPension = dtgvEmpleado.SelectedRows[0].Cells["FondoPension"].Value.ToString(); // Asegúrate de que el nombre de la columna sea correcto
+                string nombreCargo = dtgvEmpleado.SelectedRows[0].Cells["Cargo"].Value.ToString();
+
+                // Abre el formulario para editar empleado
+                FrmEditarEmpleado editarForm = new FrmEditarEmpleado(id, dni, nombres, apellidos, fechaInicioContrato, fechaFinContrato, cuentaBancaria, nombreBanco, nombreFondoPension, nombreCargo);
+                editarForm.ShowDialog();
+
+                // Recarga los datos después de editar el empleado
+                CargarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

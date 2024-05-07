@@ -23,17 +23,17 @@ namespace CapaPresentacion.Vistas_Empleados
         {
             try
             {
-                // Cargar los datos para cboBanco
+                // Cargar los datos para comboBox
                 List<Banco> listaBancos = CN_Bancos.ObtenerTodosBancos();
                 cboBanco.DataSource = listaBancos;
                 cboBanco.DisplayMember = "Nombre";
                 cboBanco.ValueMember = "Id";
-                // Cargar los datos para cboFondoPension
+
                 List<FondoPension> listaFondosPension = CN_FondoPension.ObtenerTodosFondosPension();
                 cboFondoPension.DataSource = listaFondosPension;
                 cboFondoPension.DisplayMember = "Nombre";
                 cboFondoPension.ValueMember = "Id";
-                // Cargar los datos para cboCargo
+
                 List<Cargo> listaCargos = CN_Cargo.ObtenerTodosCargos();
                 cboCargo.DataSource = listaCargos;
                 cboCargo.DisplayMember = "Nombre";
@@ -83,11 +83,14 @@ namespace CapaPresentacion.Vistas_Empleados
             txtCuenta.Clear();
             dtpFechaIniciContrato.Value = DateTime.Now;
             dtpFechaFinContraton.Value = DateTime.Now;
-            cboBanco.SelectedIndex = -1;
-            cboFondoPension.SelectedIndex = -1;
-            cboCargo.SelectedIndex = -1;
+            cboBanco.SelectedIndex = 0;
+            cboFondoPension.SelectedIndex = 0;
+            cboCargo.SelectedIndex = 0;
         }
-
+        private void btnLimpiarEmpleado_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
         private void btnCancelarEmpleado_Click(object sender, EventArgs e)
         {
             this.Close();
