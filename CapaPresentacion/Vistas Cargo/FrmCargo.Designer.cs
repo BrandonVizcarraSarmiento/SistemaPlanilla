@@ -1,4 +1,4 @@
-﻿namespace CapaPresentacion.Cargo
+﻿namespace CapaPresentacion.Vistas_Cargo
 {
     partial class FrmCargo
     {
@@ -34,19 +34,19 @@
             this.lblCargos = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.panelBuscarCargos = new System.Windows.Forms.Panel();
-            this.txtBuscarCargos = new System.Windows.Forms.TextBox();
-            this.dtgvCargo = new System.Windows.Forms.DataGridView();
+            this.txtBuscarCargo = new System.Windows.Forms.TextBox();
+            this.btnBuscarCargos = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panelSegundoCargo = new System.Windows.Forms.Panel();
             this.btnNuevoCargo = new FontAwesome.Sharp.IconButton();
             this.btnEditarCargo = new FontAwesome.Sharp.IconButton();
             this.btnEliminarCargo = new FontAwesome.Sharp.IconButton();
-            this.btnBuscarCargos = new FontAwesome.Sharp.IconButton();
+            this.panelSegundoCargo = new System.Windows.Forms.Panel();
+            this.dtgvCargo = new System.Windows.Forms.DataGridView();
             this.panelTitulo.SuspendLayout();
             this.panelBuscarCargos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCargo)).BeginInit();
             this.panel3.SuspendLayout();
             this.panelSegundoCargo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCargo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCargos
@@ -76,7 +76,7 @@
             // panelBuscarCargos
             // 
             this.panelBuscarCargos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panelBuscarCargos.Controls.Add(this.txtBuscarCargos);
+            this.panelBuscarCargos.Controls.Add(this.txtBuscarCargo);
             this.panelBuscarCargos.Controls.Add(this.btnBuscarCargos);
             this.panelBuscarCargos.Location = new System.Drawing.Point(273, 117);
             this.panelBuscarCargos.Margin = new System.Windows.Forms.Padding(4);
@@ -84,61 +84,35 @@
             this.panelBuscarCargos.Size = new System.Drawing.Size(329, 58);
             this.panelBuscarCargos.TabIndex = 15;
             // 
-            // txtBuscarCargos
+            // txtBuscarCargo
             // 
-            this.txtBuscarCargos.Location = new System.Drawing.Point(25, 16);
-            this.txtBuscarCargos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBuscarCargos.Name = "txtBuscarCargos";
-            this.txtBuscarCargos.Size = new System.Drawing.Size(232, 22);
-            this.txtBuscarCargos.TabIndex = 12;
+            this.txtBuscarCargo.Location = new System.Drawing.Point(25, 16);
+            this.txtBuscarCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscarCargo.Name = "txtBuscarCargo";
+            this.txtBuscarCargo.Size = new System.Drawing.Size(232, 22);
+            this.txtBuscarCargo.TabIndex = 12;
             // 
-            // dtgvCargo
+            // btnBuscarCargos
             // 
-            this.dtgvCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvCargo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgvCargo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgvCargo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.dtgvCargo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvCargo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvCargo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgvCargo.ColumnHeadersHeight = 30;
-            this.dtgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvCargo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgvCargo.EnableHeadersVisualStyles = false;
-            this.dtgvCargo.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvCargo.Location = new System.Drawing.Point(252, 181);
-            this.dtgvCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtgvCargo.Name = "dtgvCargo";
-            this.dtgvCargo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvCargo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgvCargo.RowHeadersWidth = 51;
-            this.dtgvCargo.RowTemplate.Height = 24;
-            this.dtgvCargo.Size = new System.Drawing.Size(393, 265);
-            this.dtgvCargo.TabIndex = 1;
-            this.dtgvCargo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCargo_CellContentClick);
+            this.btnBuscarCargos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscarCargos.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnBuscarCargos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarCargos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscarCargos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCargos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscarCargos.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscarCargos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscarCargos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarCargos.IconSize = 21;
+            this.btnBuscarCargos.Location = new System.Drawing.Point(267, 12);
+            this.btnBuscarCargos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarCargos.Name = "btnBuscarCargos";
+            this.btnBuscarCargos.Size = new System.Drawing.Size(47, 28);
+            this.btnBuscarCargos.TabIndex = 11;
+            this.btnBuscarCargos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarCargos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarCargos.UseVisualStyleBackColor = false;
+            this.btnBuscarCargos.Click += new System.EventHandler(this.btnBuscarCargos_Click);
             // 
             // panel3
             // 
@@ -151,16 +125,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(507, 74);
             this.panel3.TabIndex = 16;
-            // 
-            // panelSegundoCargo
-            // 
-            this.panelSegundoCargo.Controls.Add(this.panelBuscarCargos);
-            this.panelSegundoCargo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSegundoCargo.Location = new System.Drawing.Point(0, 0);
-            this.panelSegundoCargo.Margin = new System.Windows.Forms.Padding(4);
-            this.panelSegundoCargo.Name = "panelSegundoCargo";
-            this.panelSegundoCargo.Size = new System.Drawing.Size(907, 554);
-            this.panelSegundoCargo.TabIndex = 17;
             // 
             // btnNuevoCargo
             // 
@@ -229,27 +193,67 @@
             this.btnEliminarCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminarCargo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarCargo.UseVisualStyleBackColor = false;
+            this.btnEliminarCargo.Click += new System.EventHandler(this.btnEliminarCargo_Click);
             // 
-            // btnBuscarCargos
+            // panelSegundoCargo
             // 
-            this.btnBuscarCargos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBuscarCargos.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnBuscarCargos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarCargos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnBuscarCargos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarCargos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscarCargos.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscarCargos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscarCargos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarCargos.IconSize = 21;
-            this.btnBuscarCargos.Location = new System.Drawing.Point(267, 12);
-            this.btnBuscarCargos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscarCargos.Name = "btnBuscarCargos";
-            this.btnBuscarCargos.Size = new System.Drawing.Size(47, 28);
-            this.btnBuscarCargos.TabIndex = 11;
-            this.btnBuscarCargos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarCargos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarCargos.UseVisualStyleBackColor = false;
+            this.panelSegundoCargo.Controls.Add(this.dtgvCargo);
+            this.panelSegundoCargo.Controls.Add(this.panelBuscarCargos);
+            this.panelSegundoCargo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSegundoCargo.Location = new System.Drawing.Point(0, 0);
+            this.panelSegundoCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.panelSegundoCargo.Name = "panelSegundoCargo";
+            this.panelSegundoCargo.Size = new System.Drawing.Size(907, 554);
+            this.panelSegundoCargo.TabIndex = 17;
+            // 
+            // dtgvCargo
+            // 
+            this.dtgvCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgvCargo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvCargo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgvCargo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dtgvCargo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvCargo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvCargo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvCargo.ColumnHeadersHeight = 30;
+            this.dtgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvCargo.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dtgvCargo.EnableHeadersVisualStyles = false;
+            this.dtgvCargo.GridColor = System.Drawing.Color.SteelBlue;
+            this.dtgvCargo.Location = new System.Drawing.Point(175, 181);
+            this.dtgvCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgvCargo.Name = "dtgvCargo";
+            this.dtgvCargo.ReadOnly = true;
+            this.dtgvCargo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvCargo.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgvCargo.RowHeadersWidth = 51;
+            this.dtgvCargo.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.dtgvCargo.RowTemplate.Height = 24;
+            this.dtgvCargo.Size = new System.Drawing.Size(579, 251);
+            this.dtgvCargo.TabIndex = 16;
             // 
             // FrmCargo
             // 
@@ -258,7 +262,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(907, 554);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.dtgvCargo);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelSegundoCargo);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -269,9 +272,9 @@
             this.panelTitulo.PerformLayout();
             this.panelBuscarCargos.ResumeLayout(false);
             this.panelBuscarCargos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvCargo)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panelSegundoCargo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvCargo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,13 +284,13 @@
         private System.Windows.Forms.Label lblCargos;
         private System.Windows.Forms.Panel panelTitulo;
         private System.Windows.Forms.Panel panelBuscarCargos;
-        private System.Windows.Forms.TextBox txtBuscarCargos;
+        private System.Windows.Forms.TextBox txtBuscarCargo;
         private FontAwesome.Sharp.IconButton btnBuscarCargos;
-        private System.Windows.Forms.DataGridView dtgvCargo;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton btnNuevoCargo;
         private FontAwesome.Sharp.IconButton btnEditarCargo;
         private FontAwesome.Sharp.IconButton btnEliminarCargo;
         private System.Windows.Forms.Panel panelSegundoCargo;
+        private System.Windows.Forms.DataGridView dtgvCargo;
     }
 }

@@ -1,4 +1,7 @@
-﻿using CapaPresentacion.Vistas_Cargo;
+﻿
+using CapaEntidad;
+using CapaNegocio;
+using CapaPresentacion.Vistas_Cargo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,13 +13,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Cargo
+
+
+
+namespace CapaPresentacion.Vistas_Cargo
 {
     public partial class FrmCargo : Form
     {
-        // Cadena de conexión a la base de datos
-        private string connectionString = "Data Source=LAPTOP-HS44347Q\\SQLEXPRESS;Initial Catalog=DBplanilla;Integrated Security=True";
-
         public FrmCargo()
         {
             InitializeComponent();
@@ -24,52 +27,85 @@ namespace CapaPresentacion.Cargo
 
         private void FrmCargo_Load(object sender, EventArgs e)
         {
-            CargarDatosDesdeBD();
+            CargarDatos();
         }
 
-        private void CargarDatosDesdeBD()
+        private void CargarDatos()
         {
-            // Crear una conexión a la base de datos
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                // Query SQL para seleccionar los datos de la tabla Cargo
-                string query = "SELECT Id, Nombre, SueldoMensual FROM Cargo";
-
-                // Crear un SqlDataAdapter para ejecutar la consulta y llenar un DataTable
-                using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
-                {
-                    // Crear un DataTable para almacenar los resultados de la consulta
-                    DataTable dataTable = new DataTable();
-
-                    // Abrir la conexión y llenar el DataTable con los datos de la consulta
-                    connection.Open();
-                    adapter.Fill(dataTable);
-
-                    // Asignar el DataTable como origen de datos del DataGridView
-                    dtgvCargo.DataSource = dataTable;
-                }
-            }
-        }
-
-        private void dtgvCargo_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Manejar el evento CellContentClick aquí si es necesario
-            // Por ejemplo, puedes obtener el valor de la celda seleccionada:
-            // var valor = dtgvCargo.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+            dtgvCargo.DataSource = CN_Cargo.ObtenerTodosCargos();
         }
 
         private void btnNuevoCargo_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario FrmCargoNUEVOEDITAR
-            FrmCargoNuevo frmCargoNuevoEditar = new FrmCargoNuevo();
-
-            // Mostrar el formulario FrmCargoNUEVOEDITAR
-            frmCargoNuevoEditar.ShowDialog();
+            FrmAgregarCargo agregarForm = new FrmAgregarCargo();
+            agregarForm.ShowDialog();
+            CargarDatos();
         }
 
         private void btnEditarCargo_Click(object sender, EventArgs e)
         {
+            if (dtgvCargo.SelectedRows.Count > 0)
+            {
+                int id = Convert.ToInt32(dtgvCargo.SelectedRows[0].Cells["Id"].Value);
+                string nombre = dtgvCargo.SelectedRows[0].Cells["Nombre"].Value.ToString();
+                decimal sueldoMensual = Convert.ToDecimal(dtgvCargo.SelectedRows[0].Cells["SueldoMensual"].Value);
 
+                FrmEditarCargo editarForm = new FrmEditarCargo(id, nombre, sueldoMensual);
+                editarForm.ShowDialog();
+                CargarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro para editar.");
+            }
+        }
+
+        private void btnEliminarCargo_Click(object sender, EventArgs e)
+        {
+            if (dtgvCargo.SelectedRows.Count > 0)
+            {
+                DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    int id = Convert.ToInt32(dtgvCargo.SelectedRows[0].Cells["Id"].Value);
+                    CN_Cargo.EliminarCargo(id);
+                    CargarDatos();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro para eliminar.");
+            }
+        }
+
+        private void btnBuscarCargos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nombre = txtBuscarCargo.Text.Trim();
+                List<Cargo> cargos = CN_Cargo.BuscarCargo(nombre);
+                if (cargos.Count == 0)
+                {
+                    MessageBox.Show("No se encontraron resultados.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MostrarCargos(cargos);
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar cargos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void MostrarCargos(List<Cargo> cargos)
+        {
+            dtgvCargo.DataSource = cargos;
         }
     }
 }

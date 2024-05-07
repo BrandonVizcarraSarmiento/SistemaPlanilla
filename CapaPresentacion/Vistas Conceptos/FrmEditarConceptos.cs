@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Vistas_Cargo
+namespace CapaPresentacion.Vistas_Conceptos
 {
-    public partial class FrmCargoNuevo : Form
+    public partial class FrmEditarConceptos : Form
     {
-        public FrmCargoNuevo()
+        public FrmEditarConceptos()
         {
             InitializeComponent();
-        }
-
-        private void FrmCargoNUEVOEDITAR_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -42,42 +42,47 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 20);
+            this.label2.Location = new System.Drawing.Point(97, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 24);
+            this.label2.Size = new System.Drawing.Size(280, 29);
             this.label2.TabIndex = 42;
             this.label2.Text = "Editar Fondo de Pension";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 62);
+            this.label3.Location = new System.Drawing.Point(71, 76);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 41;
             this.label3.Text = "Nombre";
             // 
             // txtDescuentoFPension
             // 
-            this.txtDescuentoFPension.Location = new System.Drawing.Point(56, 117);
+            this.txtDescuentoFPension.Location = new System.Drawing.Point(75, 144);
+            this.txtDescuentoFPension.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescuentoFPension.Name = "txtDescuentoFPension";
-            this.txtDescuentoFPension.Size = new System.Drawing.Size(255, 20);
+            this.txtDescuentoFPension.Size = new System.Drawing.Size(339, 22);
             this.txtDescuentoFPension.TabIndex = 38;
             // 
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(53, 101);
+            this.lblCorreo.Location = new System.Drawing.Point(71, 124);
+            this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(37, 13);
+            this.lblCorreo.Size = new System.Drawing.Size(47, 16);
             this.lblCorreo.TabIndex = 39;
             this.lblCorreo.Text = "%Dsto";
             // 
             // txtNombreFPension
             // 
-            this.txtNombreFPension.Location = new System.Drawing.Point(56, 78);
+            this.txtNombreFPension.Location = new System.Drawing.Point(75, 96);
+            this.txtNombreFPension.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreFPension.Name = "txtNombreFPension";
-            this.txtNombreFPension.Size = new System.Drawing.Size(255, 20);
+            this.txtNombreFPension.Size = new System.Drawing.Size(339, 22);
             this.txtNombreFPension.TabIndex = 40;
             // 
             // btnCancelarFPension
@@ -91,9 +96,10 @@
             this.btnCancelarFPension.IconColor = System.Drawing.Color.White;
             this.btnCancelarFPension.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelarFPension.IconSize = 21;
-            this.btnCancelarFPension.Location = new System.Drawing.Point(230, 174);
+            this.btnCancelarFPension.Location = new System.Drawing.Point(307, 214);
+            this.btnCancelarFPension.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelarFPension.Name = "btnCancelarFPension";
-            this.btnCancelarFPension.Size = new System.Drawing.Size(81, 34);
+            this.btnCancelarFPension.Size = new System.Drawing.Size(108, 42);
             this.btnCancelarFPension.TabIndex = 37;
             this.btnCancelarFPension.Text = "Cancelar";
             this.btnCancelarFPension.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -113,9 +119,10 @@
             this.btnLimpiarFPension.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiarFPension.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarFPension.IconSize = 21;
-            this.btnLimpiarFPension.Location = new System.Drawing.Point(143, 174);
+            this.btnLimpiarFPension.Location = new System.Drawing.Point(191, 214);
+            this.btnLimpiarFPension.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpiarFPension.Name = "btnLimpiarFPension";
-            this.btnLimpiarFPension.Size = new System.Drawing.Size(81, 33);
+            this.btnLimpiarFPension.Size = new System.Drawing.Size(108, 41);
             this.btnLimpiarFPension.TabIndex = 36;
             this.btnLimpiarFPension.Text = "Limpiar";
             this.btnLimpiarFPension.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -135,9 +142,10 @@
             this.btnGuardarEditFPension.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarEditFPension.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarEditFPension.IconSize = 21;
-            this.btnGuardarEditFPension.Location = new System.Drawing.Point(56, 174);
+            this.btnGuardarEditFPension.Location = new System.Drawing.Point(75, 214);
+            this.btnGuardarEditFPension.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardarEditFPension.Name = "btnGuardarEditFPension";
-            this.btnGuardarEditFPension.Size = new System.Drawing.Size(81, 33);
+            this.btnGuardarEditFPension.Size = new System.Drawing.Size(108, 41);
             this.btnGuardarEditFPension.TabIndex = 35;
             this.btnGuardarEditFPension.Text = "Guardar";
             this.btnGuardarEditFPension.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -147,9 +155,9 @@
             // 
             // FrmEditarFondoPension
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 229);
+            this.ClientSize = new System.Drawing.Size(487, 282);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDescuentoFPension);
@@ -158,9 +166,11 @@
             this.Controls.Add(this.btnCancelarFPension);
             this.Controls.Add(this.btnLimpiarFPension);
             this.Controls.Add(this.btnGuardarEditFPension);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmEditarFondoPension";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditarFondoPension";
+            this.Load += new System.EventHandler(this.FrmEditarFondoPension_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Vistas_Cargo
+namespace CapaPresentacion.Vistas_Conceptos
 {
-    public partial class FrmCargoEditar : Form
+    public partial class FrmAgregarConceptos : Form
     {
-        public FrmCargoEditar()
+        public FrmAgregarConceptos()
         {
             InitializeComponent();
         }
