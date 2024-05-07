@@ -48,17 +48,20 @@
             this.lblBanco = new System.Windows.Forms.Label();
             this.cboCargo = new System.Windows.Forms.ComboBox();
             this.lblCargo = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 25);
+            this.label2.Location = new System.Drawing.Point(116, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 24);
+            this.label2.Size = new System.Drawing.Size(168, 24);
             this.label2.TabIndex = 42;
-            this.label2.Text = "Agregar Fondo de Pension";
+            this.label2.Text = "Agregar empleado";
             // 
             // label3
             // 
@@ -103,7 +106,7 @@
             this.btnCancelarEmpleado.IconColor = System.Drawing.Color.White;
             this.btnCancelarEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelarEmpleado.IconSize = 21;
-            this.btnCancelarEmpleado.Location = new System.Drawing.Point(247, 448);
+            this.btnCancelarEmpleado.Location = new System.Drawing.Point(246, 416);
             this.btnCancelarEmpleado.Name = "btnCancelarEmpleado";
             this.btnCancelarEmpleado.Size = new System.Drawing.Size(81, 33);
             this.btnCancelarEmpleado.TabIndex = 37;
@@ -124,7 +127,7 @@
             this.btnLimpiarEmpleado.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiarEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarEmpleado.IconSize = 21;
-            this.btnLimpiarEmpleado.Location = new System.Drawing.Point(160, 448);
+            this.btnLimpiarEmpleado.Location = new System.Drawing.Point(159, 416);
             this.btnLimpiarEmpleado.Name = "btnLimpiarEmpleado";
             this.btnLimpiarEmpleado.Size = new System.Drawing.Size(81, 33);
             this.btnLimpiarEmpleado.TabIndex = 36;
@@ -144,7 +147,7 @@
             this.btnGuardarEmpleado.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarEmpleado.IconSize = 21;
-            this.btnGuardarEmpleado.Location = new System.Drawing.Point(73, 448);
+            this.btnGuardarEmpleado.Location = new System.Drawing.Point(72, 416);
             this.btnGuardarEmpleado.Name = "btnGuardarEmpleado";
             this.btnGuardarEmpleado.Size = new System.Drawing.Size(81, 33);
             this.btnGuardarEmpleado.TabIndex = 35;
@@ -172,22 +175,22 @@
             // 
             // dtpFechaIniciContrato
             // 
-            this.dtpFechaIniciContrato.Location = new System.Drawing.Point(73, 190);
+            this.dtpFechaIniciContrato.Location = new System.Drawing.Point(72, 215);
             this.dtpFechaIniciContrato.Name = "dtpFechaIniciContrato";
-            this.dtpFechaIniciContrato.Size = new System.Drawing.Size(255, 20);
+            this.dtpFechaIniciContrato.Size = new System.Drawing.Size(126, 20);
             this.dtpFechaIniciContrato.TabIndex = 45;
             // 
             // dtpFechaFinContraton
             // 
-            this.dtpFechaFinContraton.Location = new System.Drawing.Point(73, 226);
+            this.dtpFechaFinContraton.Location = new System.Drawing.Point(204, 215);
             this.dtpFechaFinContraton.MinDate = new System.DateTime(2024, 5, 6, 0, 0, 0, 0);
             this.dtpFechaFinContraton.Name = "dtpFechaFinContraton";
-            this.dtpFechaFinContraton.Size = new System.Drawing.Size(255, 20);
+            this.dtpFechaFinContraton.Size = new System.Drawing.Size(126, 20);
             this.dtpFechaFinContraton.TabIndex = 46;
             // 
             // txtCuenta
             // 
-            this.txtCuenta.Location = new System.Drawing.Point(73, 276);
+            this.txtCuenta.Location = new System.Drawing.Point(73, 254);
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(255, 20);
             this.txtCuenta.TabIndex = 47;
@@ -195,7 +198,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 260);
+            this.label4.Location = new System.Drawing.Point(72, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 48;
@@ -205,7 +208,7 @@
             // 
             this.cboFondoPension.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFondoPension.FormattingEnabled = true;
-            this.cboFondoPension.Location = new System.Drawing.Point(76, 365);
+            this.cboFondoPension.Location = new System.Drawing.Point(72, 333);
             this.cboFondoPension.Name = "cboFondoPension";
             this.cboFondoPension.Size = new System.Drawing.Size(255, 21);
             this.cboFondoPension.TabIndex = 52;
@@ -213,7 +216,7 @@
             // lblFondoPension
             // 
             this.lblFondoPension.AutoSize = true;
-            this.lblFondoPension.Location = new System.Drawing.Point(73, 349);
+            this.lblFondoPension.Location = new System.Drawing.Point(72, 317);
             this.lblFondoPension.Name = "lblFondoPension";
             this.lblFondoPension.Size = new System.Drawing.Size(92, 13);
             this.lblFondoPension.TabIndex = 51;
@@ -223,15 +226,15 @@
             // 
             this.cboBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBanco.FormattingEnabled = true;
-            this.cboBanco.Location = new System.Drawing.Point(76, 325);
+            this.cboBanco.Location = new System.Drawing.Point(72, 293);
             this.cboBanco.Name = "cboBanco";
-            this.cboBanco.Size = new System.Drawing.Size(255, 21);
+            this.cboBanco.Size = new System.Drawing.Size(256, 21);
             this.cboBanco.TabIndex = 50;
             // 
             // lblBanco
             // 
             this.lblBanco.AutoSize = true;
-            this.lblBanco.Location = new System.Drawing.Point(73, 309);
+            this.lblBanco.Location = new System.Drawing.Point(72, 277);
             this.lblBanco.Name = "lblBanco";
             this.lblBanco.Size = new System.Drawing.Size(38, 13);
             this.lblBanco.TabIndex = 49;
@@ -241,25 +244,56 @@
             // 
             this.cboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(76, 405);
+            this.cboCargo.Location = new System.Drawing.Point(73, 373);
             this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(255, 21);
+            this.cboCargo.Size = new System.Drawing.Size(254, 21);
             this.cboCargo.TabIndex = 54;
             // 
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(73, 389);
+            this.lblCargo.Location = new System.Drawing.Point(72, 357);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(35, 13);
             this.lblCargo.TabIndex = 53;
             this.lblCargo.Text = "Cargo";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(72, 199);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Inicio";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(201, 199);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(21, 13);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "Fin";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(72, 177);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "Contrato";
+            // 
             // FrmAgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(399, 493);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.cboFondoPension);
@@ -311,5 +345,8 @@
         private System.Windows.Forms.Label lblBanco;
         private System.Windows.Forms.ComboBox cboCargo;
         private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -54,13 +54,13 @@ namespace CapaPresentacion.Vistas_Empleados
                 string apellidos = txtApellidos.Text;
                 DateTime fechaInicioContrato = dtpFechaIniciContrato.Value;
                 DateTime fechaFinContrato = dtpFechaFinContraton.Value;
-                string cuentaBancaria = txtCuenta.Text;
+                string cuentaBancariaText = txtCuenta.Text;
                 int idBanco = (int)cboBanco.SelectedValue;
                 int idFondoPension = (int)cboFondoPension.SelectedValue;
                 int idCargo = (int)cboCargo.SelectedValue;
 
                 CN_Empleados cnEmpleados = new CN_Empleados();
-                cnEmpleados.InsertarEmpleado(dnitext, nombres, apellidos, fechaInicioContrato, fechaFinContrato, cuentaBancaria, idBanco, idFondoPension, idCargo);
+                cnEmpleados.InsertarEmpleado(dnitext, nombres, apellidos, fechaInicioContrato, fechaFinContrato, cuentaBancariaText, idBanco, idFondoPension, idCargo);
 
                 MessageBox.Show("Empleado agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
