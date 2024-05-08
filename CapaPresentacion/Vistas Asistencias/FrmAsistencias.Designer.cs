@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTituloAsistencias = new System.Windows.Forms.Label();
             this.lblMes = new System.Windows.Forms.Label();
             this.cmbBoxMes = new System.Windows.Forms.ComboBox();
@@ -38,17 +38,17 @@
             this.cmbBoxAño = new System.Windows.Forms.ComboBox();
             this.paneltitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgvAsistencia = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLimpiarAsistencias = new FontAwesome.Sharp.IconButton();
             this.btnGuardarAsistencias = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCargarAsistencias = new FontAwesome.Sharp.IconButton();
-            this.dtgvAsistencia = new System.Windows.Forms.DataGridView();
             this.paneltitulo.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloAsistencias
@@ -118,6 +118,55 @@
             this.panel1.Size = new System.Drawing.Size(567, 370);
             this.panel1.TabIndex = 8;
             // 
+            // dtgvAsistencia
+            // 
+            this.dtgvAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgvAsistencia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvAsistencia.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgvAsistencia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dtgvAsistencia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvAsistencia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvAsistencia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dtgvAsistencia.ColumnHeadersHeight = 30;
+            this.dtgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvAsistencia.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dtgvAsistencia.EnableHeadersVisualStyles = false;
+            this.dtgvAsistencia.GridColor = System.Drawing.Color.SteelBlue;
+            this.dtgvAsistencia.Location = new System.Drawing.Point(65, 61);
+            this.dtgvAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvAsistencia.Name = "dtgvAsistencia";
+            this.dtgvAsistencia.ReadOnly = true;
+            this.dtgvAsistencia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvAsistencia.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dtgvAsistencia.RowHeadersWidth = 51;
+            this.dtgvAsistencia.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.dtgvAsistencia.RowTemplate.Height = 24;
+            this.dtgvAsistencia.Size = new System.Drawing.Size(434, 204);
+            this.dtgvAsistencia.TabIndex = 16;
+            // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -147,6 +196,7 @@
             this.btnLimpiarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiarAsistencias.UseVisualStyleBackColor = false;
+            this.btnLimpiarAsistencias.Click += new System.EventHandler(this.btnLimpiarAsistencias_Click);
             // 
             // btnGuardarAsistencias
             // 
@@ -167,6 +217,7 @@
             this.btnGuardarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardarAsistencias.UseVisualStyleBackColor = false;
+            this.btnGuardarAsistencias.Click += new System.EventHandler(this.btnGuardarAsistencias_Click);
             // 
             // panel2
             // 
@@ -201,55 +252,6 @@
             this.btnCargarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCargarAsistencias.UseVisualStyleBackColor = false;
             // 
-            // dtgvAsistencia
-            // 
-            this.dtgvAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvAsistencia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvAsistencia.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgvAsistencia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.dtgvAsistencia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgvAsistencia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvAsistencia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvAsistencia.ColumnHeadersHeight = 30;
-            this.dtgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvAsistencia.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvAsistencia.EnableHeadersVisualStyles = false;
-            this.dtgvAsistencia.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvAsistencia.Location = new System.Drawing.Point(65, 61);
-            this.dtgvAsistencia.Margin = new System.Windows.Forms.Padding(2);
-            this.dtgvAsistencia.Name = "dtgvAsistencia";
-            this.dtgvAsistencia.ReadOnly = true;
-            this.dtgvAsistencia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvAsistencia.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgvAsistencia.RowHeadersWidth = 51;
-            this.dtgvAsistencia.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.dtgvAsistencia.RowTemplate.Height = 24;
-            this.dtgvAsistencia.Size = new System.Drawing.Size(434, 204);
-            this.dtgvAsistencia.TabIndex = 16;
-            // 
             // FrmAsistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,13 +261,14 @@
             this.Controls.Add(this.paneltitulo);
             this.Name = "FrmAsistencias";
             this.Text = "FrmAsistencias";
+            this.Load += new System.EventHandler(this.FrmAsistencias_Load_1);
             this.paneltitulo.ResumeLayout(false);
             this.paneltitulo.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).EndInit();
             this.ResumeLayout(false);
 
         }

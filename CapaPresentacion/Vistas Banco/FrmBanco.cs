@@ -1,7 +1,5 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
-using CapaPresentacion.Utilidades;
-using CapaPresentacion.Vistas_FondoPension;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
