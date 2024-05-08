@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTituloAsistencias = new System.Windows.Forms.Label();
             this.lblMes = new System.Windows.Forms.Label();
-            this.cmbBoxMes = new System.Windows.Forms.ComboBox();
+            this.cmbBoxMesAsistencia = new System.Windows.Forms.ComboBox();
             this.lblAño = new System.Windows.Forms.Label();
-            this.cmbBoxAño = new System.Windows.Forms.ComboBox();
+            this.cmbBoxAñoAsistencia = new System.Windows.Forms.ComboBox();
             this.paneltitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvAsistencia = new System.Windows.Forms.DataGridView();
@@ -71,13 +71,13 @@
             this.lblMes.TabIndex = 2;
             this.lblMes.Text = "Mes";
             // 
-            // cmbBoxMes
+            // cmbBoxMesAsistencia
             // 
-            this.cmbBoxMes.FormattingEnabled = true;
-            this.cmbBoxMes.Location = new System.Drawing.Point(50, 10);
-            this.cmbBoxMes.Name = "cmbBoxMes";
-            this.cmbBoxMes.Size = new System.Drawing.Size(63, 21);
-            this.cmbBoxMes.TabIndex = 3;
+            this.cmbBoxMesAsistencia.FormattingEnabled = true;
+            this.cmbBoxMesAsistencia.Location = new System.Drawing.Point(50, 10);
+            this.cmbBoxMesAsistencia.Name = "cmbBoxMesAsistencia";
+            this.cmbBoxMesAsistencia.Size = new System.Drawing.Size(63, 21);
+            this.cmbBoxMesAsistencia.TabIndex = 3;
             // 
             // lblAño
             // 
@@ -88,13 +88,13 @@
             this.lblAño.TabIndex = 4;
             this.lblAño.Text = "Año";
             // 
-            // cmbBoxAño
+            // cmbBoxAñoAsistencia
             // 
-            this.cmbBoxAño.FormattingEnabled = true;
-            this.cmbBoxAño.Location = new System.Drawing.Point(174, 9);
-            this.cmbBoxAño.Name = "cmbBoxAño";
-            this.cmbBoxAño.Size = new System.Drawing.Size(63, 21);
-            this.cmbBoxAño.TabIndex = 5;
+            this.cmbBoxAñoAsistencia.FormattingEnabled = true;
+            this.cmbBoxAñoAsistencia.Location = new System.Drawing.Point(174, 9);
+            this.cmbBoxAñoAsistencia.Name = "cmbBoxAñoAsistencia";
+            this.cmbBoxAñoAsistencia.Size = new System.Drawing.Size(63, 21);
+            this.cmbBoxAñoAsistencia.TabIndex = 5;
             // 
             // paneltitulo
             // 
@@ -120,6 +120,7 @@
             // 
             // dtgvAsistencia
             // 
+            this.dtgvAsistencia.AllowUserToAddRows = false;
             this.dtgvAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -128,24 +129,24 @@
             this.dtgvAsistencia.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dtgvAsistencia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvAsistencia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvAsistencia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvAsistencia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvAsistencia.ColumnHeadersHeight = 30;
             this.dtgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvAsistencia.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvAsistencia.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvAsistencia.EnableHeadersVisualStyles = false;
             this.dtgvAsistencia.GridColor = System.Drawing.Color.SteelBlue;
             this.dtgvAsistencia.Location = new System.Drawing.Point(65, 61);
@@ -153,14 +154,14 @@
             this.dtgvAsistencia.Name = "dtgvAsistencia";
             this.dtgvAsistencia.ReadOnly = true;
             this.dtgvAsistencia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvAsistencia.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvAsistencia.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvAsistencia.RowHeadersWidth = 51;
             this.dtgvAsistencia.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
             this.dtgvAsistencia.RowTemplate.Height = 24;
@@ -224,8 +225,8 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.Controls.Add(this.lblMes);
             this.panel2.Controls.Add(this.btnCargarAsistencias);
-            this.panel2.Controls.Add(this.cmbBoxMes);
-            this.panel2.Controls.Add(this.cmbBoxAño);
+            this.panel2.Controls.Add(this.cmbBoxMesAsistencia);
+            this.panel2.Controls.Add(this.cmbBoxAñoAsistencia);
             this.panel2.Controls.Add(this.lblAño);
             this.panel2.Location = new System.Drawing.Point(92, 17);
             this.panel2.Name = "panel2";
@@ -261,7 +262,7 @@
             this.Controls.Add(this.paneltitulo);
             this.Name = "FrmAsistencias";
             this.Text = "FrmAsistencias";
-            this.Load += new System.EventHandler(this.FrmAsistencias_Load_1);
+            this.Load += new System.EventHandler(this.FrmAsistencias_Load);
             this.paneltitulo.ResumeLayout(false);
             this.paneltitulo.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -277,9 +278,9 @@
 
         private System.Windows.Forms.Label lblTituloAsistencias;
         private System.Windows.Forms.Label lblMes;
-        private System.Windows.Forms.ComboBox cmbBoxMes;
+        private System.Windows.Forms.ComboBox cmbBoxMesAsistencia;
         private System.Windows.Forms.Label lblAño;
-        private System.Windows.Forms.ComboBox cmbBoxAño;
+        private System.Windows.Forms.ComboBox cmbBoxAñoAsistencia;
         private System.Windows.Forms.Panel paneltitulo;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCargarAsistencias;

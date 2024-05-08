@@ -11,36 +11,44 @@ namespace CapaDatos
 {
     public class CD_Asistencia
     {
-        public static List<Asistencia> ObtenerTodosAsistencia()
+        public DataTable ObtenerDatosAsistencia()
         {
-            List<Asistencia> listaAsistencia = new List<Asistencia>();
+            DataTable resultados = new DataTable();
             try
             {
                 using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM Asistencia", conexion);
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
+                    string consulta = @"
+                        SELECT 
+                            CONCAT(e.Nombres, ' ', e.Apellidos) AS NombreCompleto,
+                            e.DNI,
+                            c.Nombre AS Cargo,
+                            a.DiasLaborados,
+                            a.DiasNoLaborados,
+                            a.DiasEfectivos
+                        FROM 
+                            Empleado e
+                        JOIN 
+                            Asistencia a ON e.Id = a.IdEmpleado
+                        JOIN 
+                            Cargo c ON e.IdCargo = c.Id";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
                     {
-                        Asistencia asistencia = new Asistencia();
-                        asistencia.Id = Convert.ToInt32(reader["Id"]);
-                        asistencia.Mes = Convert.ToInt32(reader["Mes"]);
-                        asistencia.Ano = Convert.ToInt32(reader["Ano"]);
-                        asistencia.DiasLaborados = Convert.ToInt32(reader["DiasLaborados"]);
-                        asistencia.DiasNoLaborados = Convert.ToInt32(reader["DiasNoLaborados"]);
-                        asistencia.DiasEfectivos = Convert.ToInt32(reader["DiasEfectivos"]);
-                        asistencia.oEmpleado = new Empleado();
-                        listaAsistencia.Add(asistencia);
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(comando))
+                        {
+                            adapter.Fill(resultados);
+                        }
                     }
-                    reader.Close();
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al obtener lista de bancos: " + ex.Message);
+                // Manejar excepciones (por ejemplo, registrar o lanzar)
+                throw ex;
             }
-            return listaAsistencia;
+            return resultados;
         }
     }
 }

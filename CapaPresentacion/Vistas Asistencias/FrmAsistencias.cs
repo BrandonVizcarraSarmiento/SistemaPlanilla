@@ -18,17 +18,42 @@ namespace CapaPresentacion.Vistas_Asistencias
         public FrmAsistencias()
         {
             InitializeComponent();
+            CargarComboBoxMeses();
+            CargarComboBoxAños();
         }
-        private void CargarDatos()
+        private void CargarComboBoxMeses()
         {
-            dtgvAsistencia.DataSource = CN_Asistencia.ObtenerTodosAsistencia();
+            for (int mes = 1; mes <= 12; mes++)
+            {
+                cmbBoxMesAsistencia.Items.Add(mes);
+            }
         }
+        private void CargarComboBoxAños()
+        {
+            int añoActual = DateTime.Now.Year;
 
-        private void FrmAsistencias_Load_1(object sender, EventArgs e)
+            for (int año = añoActual; año >= añoActual - 10; año--)
+            {
+                cmbBoxAñoAsistencia.Items.Add(año);
+            }
+        }
+        private void FrmAsistencias_Load(object sender, EventArgs e)
         {
             CargarDatos();
         }
-
+        private void CargarDatos()
+        {
+            try
+            {
+                CN_Asistencia cnAsistencia = new CN_Asistencia();
+                DataTable dtAsistencia = cnAsistencia.ObtenerDatosAsistencia();
+                dtgvAsistencia.DataSource = dtAsistencia;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos de asistencia: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btnLimpiarAsistencias_Click(object sender, EventArgs e)
         {
             dtgvAsistencia.Rows.Clear();
