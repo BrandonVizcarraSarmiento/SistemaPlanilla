@@ -33,22 +33,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTituloAsistencias = new System.Windows.Forms.Label();
             this.lblMes = new System.Windows.Forms.Label();
-            this.cmbBoxMes = new System.Windows.Forms.ComboBox();
+            this.cmbBoxMesAsistencia = new System.Windows.Forms.ComboBox();
             this.lblAño = new System.Windows.Forms.Label();
-            this.cmbBoxAño = new System.Windows.Forms.ComboBox();
+            this.cmbBoxAñoAsistencia = new System.Windows.Forms.ComboBox();
             this.paneltitulo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgvAsistencia = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLimpiarAsistencias = new FontAwesome.Sharp.IconButton();
             this.btnGuardarAsistencias = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCargarAsistencias = new FontAwesome.Sharp.IconButton();
-            this.dtgvAsistencia = new System.Windows.Forms.DataGridView();
             this.paneltitulo.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloAsistencias
@@ -71,13 +71,13 @@
             this.lblMes.TabIndex = 2;
             this.lblMes.Text = "Mes";
             // 
-            // cmbBoxMes
+            // cmbBoxMesAsistencia
             // 
-            this.cmbBoxMes.FormattingEnabled = true;
-            this.cmbBoxMes.Location = new System.Drawing.Point(50, 10);
-            this.cmbBoxMes.Name = "cmbBoxMes";
-            this.cmbBoxMes.Size = new System.Drawing.Size(63, 21);
-            this.cmbBoxMes.TabIndex = 3;
+            this.cmbBoxMesAsistencia.FormattingEnabled = true;
+            this.cmbBoxMesAsistencia.Location = new System.Drawing.Point(50, 10);
+            this.cmbBoxMesAsistencia.Name = "cmbBoxMesAsistencia";
+            this.cmbBoxMesAsistencia.Size = new System.Drawing.Size(63, 21);
+            this.cmbBoxMesAsistencia.TabIndex = 3;
             // 
             // lblAño
             // 
@@ -88,13 +88,13 @@
             this.lblAño.TabIndex = 4;
             this.lblAño.Text = "Año";
             // 
-            // cmbBoxAño
+            // cmbBoxAñoAsistencia
             // 
-            this.cmbBoxAño.FormattingEnabled = true;
-            this.cmbBoxAño.Location = new System.Drawing.Point(174, 9);
-            this.cmbBoxAño.Name = "cmbBoxAño";
-            this.cmbBoxAño.Size = new System.Drawing.Size(63, 21);
-            this.cmbBoxAño.TabIndex = 5;
+            this.cmbBoxAñoAsistencia.FormattingEnabled = true;
+            this.cmbBoxAñoAsistencia.Location = new System.Drawing.Point(174, 9);
+            this.cmbBoxAñoAsistencia.Name = "cmbBoxAñoAsistencia";
+            this.cmbBoxAñoAsistencia.Size = new System.Drawing.Size(63, 21);
+            this.cmbBoxAñoAsistencia.TabIndex = 5;
             // 
             // paneltitulo
             // 
@@ -118,91 +118,9 @@
             this.panel1.Size = new System.Drawing.Size(567, 370);
             this.panel1.TabIndex = 8;
             // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel3.Controls.Add(this.btnLimpiarAsistencias);
-            this.panel3.Controls.Add(this.btnGuardarAsistencias);
-            this.panel3.Location = new System.Drawing.Point(92, 275);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(387, 51);
-            this.panel3.TabIndex = 11;
-            // 
-            // btnLimpiarAsistencias
-            // 
-            this.btnLimpiarAsistencias.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnLimpiarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarAsistencias.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarAsistencias.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarAsistencias.IconChar = FontAwesome.Sharp.IconChar.BroomBall;
-            this.btnLimpiarAsistencias.IconColor = System.Drawing.Color.White;
-            this.btnLimpiarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLimpiarAsistencias.IconSize = 21;
-            this.btnLimpiarAsistencias.Location = new System.Drawing.Point(219, 8);
-            this.btnLimpiarAsistencias.Name = "btnLimpiarAsistencias";
-            this.btnLimpiarAsistencias.Size = new System.Drawing.Size(99, 36);
-            this.btnLimpiarAsistencias.TabIndex = 9;
-            this.btnLimpiarAsistencias.Text = "Limpiar";
-            this.btnLimpiarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpiarAsistencias.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardarAsistencias
-            // 
-            this.btnGuardarAsistencias.BackColor = System.Drawing.Color.Tan;
-            this.btnGuardarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardarAsistencias.FlatAppearance.BorderSize = 0;
-            this.btnGuardarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarAsistencias.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarAsistencias.IconChar = FontAwesome.Sharp.IconChar.SdCard;
-            this.btnGuardarAsistencias.IconColor = System.Drawing.Color.White;
-            this.btnGuardarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardarAsistencias.IconSize = 21;
-            this.btnGuardarAsistencias.Location = new System.Drawing.Point(57, 8);
-            this.btnGuardarAsistencias.Name = "btnGuardarAsistencias";
-            this.btnGuardarAsistencias.Size = new System.Drawing.Size(99, 36);
-            this.btnGuardarAsistencias.TabIndex = 10;
-            this.btnGuardarAsistencias.Text = "Guardar";
-            this.btnGuardarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuardarAsistencias.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Controls.Add(this.lblMes);
-            this.panel2.Controls.Add(this.btnCargarAsistencias);
-            this.panel2.Controls.Add(this.cmbBoxMes);
-            this.panel2.Controls.Add(this.cmbBoxAño);
-            this.panel2.Controls.Add(this.lblAño);
-            this.panel2.Location = new System.Drawing.Point(92, 17);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(387, 39);
-            this.panel2.TabIndex = 10;
-            // 
-            // btnCargarAsistencias
-            // 
-            this.btnCargarAsistencias.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnCargarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCargarAsistencias.FlatAppearance.BorderSize = 0;
-            this.btnCargarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargarAsistencias.ForeColor = System.Drawing.Color.White;
-            this.btnCargarAsistencias.IconChar = FontAwesome.Sharp.IconChar.ArrowUpFromBracket;
-            this.btnCargarAsistencias.IconColor = System.Drawing.Color.White;
-            this.btnCargarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCargarAsistencias.IconSize = 21;
-            this.btnCargarAsistencias.Location = new System.Drawing.Point(264, 6);
-            this.btnCargarAsistencias.Name = "btnCargarAsistencias";
-            this.btnCargarAsistencias.Size = new System.Drawing.Size(99, 27);
-            this.btnCargarAsistencias.TabIndex = 9;
-            this.btnCargarAsistencias.Text = "Cargar";
-            this.btnCargarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCargarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCargarAsistencias.UseVisualStyleBackColor = false;
-            // 
             // dtgvAsistencia
             // 
+            this.dtgvAsistencia.AllowUserToAddRows = false;
             this.dtgvAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -250,6 +168,91 @@
             this.dtgvAsistencia.Size = new System.Drawing.Size(434, 204);
             this.dtgvAsistencia.TabIndex = 16;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel3.Controls.Add(this.btnLimpiarAsistencias);
+            this.panel3.Controls.Add(this.btnGuardarAsistencias);
+            this.panel3.Location = new System.Drawing.Point(92, 275);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(387, 51);
+            this.panel3.TabIndex = 11;
+            // 
+            // btnLimpiarAsistencias
+            // 
+            this.btnLimpiarAsistencias.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLimpiarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiarAsistencias.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarAsistencias.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiarAsistencias.IconChar = FontAwesome.Sharp.IconChar.BroomBall;
+            this.btnLimpiarAsistencias.IconColor = System.Drawing.Color.White;
+            this.btnLimpiarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLimpiarAsistencias.IconSize = 21;
+            this.btnLimpiarAsistencias.Location = new System.Drawing.Point(219, 8);
+            this.btnLimpiarAsistencias.Name = "btnLimpiarAsistencias";
+            this.btnLimpiarAsistencias.Size = new System.Drawing.Size(99, 36);
+            this.btnLimpiarAsistencias.TabIndex = 9;
+            this.btnLimpiarAsistencias.Text = "Limpiar";
+            this.btnLimpiarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpiarAsistencias.UseVisualStyleBackColor = false;
+            this.btnLimpiarAsistencias.Click += new System.EventHandler(this.btnLimpiarAsistencias_Click);
+            // 
+            // btnGuardarAsistencias
+            // 
+            this.btnGuardarAsistencias.BackColor = System.Drawing.Color.Tan;
+            this.btnGuardarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardarAsistencias.FlatAppearance.BorderSize = 0;
+            this.btnGuardarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarAsistencias.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarAsistencias.IconChar = FontAwesome.Sharp.IconChar.SdCard;
+            this.btnGuardarAsistencias.IconColor = System.Drawing.Color.White;
+            this.btnGuardarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardarAsistencias.IconSize = 21;
+            this.btnGuardarAsistencias.Location = new System.Drawing.Point(57, 8);
+            this.btnGuardarAsistencias.Name = "btnGuardarAsistencias";
+            this.btnGuardarAsistencias.Size = new System.Drawing.Size(99, 36);
+            this.btnGuardarAsistencias.TabIndex = 10;
+            this.btnGuardarAsistencias.Text = "Guardar";
+            this.btnGuardarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardarAsistencias.UseVisualStyleBackColor = false;
+            this.btnGuardarAsistencias.Click += new System.EventHandler(this.btnGuardarAsistencias_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Controls.Add(this.lblMes);
+            this.panel2.Controls.Add(this.btnCargarAsistencias);
+            this.panel2.Controls.Add(this.cmbBoxMesAsistencia);
+            this.panel2.Controls.Add(this.cmbBoxAñoAsistencia);
+            this.panel2.Controls.Add(this.lblAño);
+            this.panel2.Location = new System.Drawing.Point(92, 17);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(387, 39);
+            this.panel2.TabIndex = 10;
+            // 
+            // btnCargarAsistencias
+            // 
+            this.btnCargarAsistencias.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnCargarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCargarAsistencias.FlatAppearance.BorderSize = 0;
+            this.btnCargarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargarAsistencias.ForeColor = System.Drawing.Color.White;
+            this.btnCargarAsistencias.IconChar = FontAwesome.Sharp.IconChar.ArrowUpFromBracket;
+            this.btnCargarAsistencias.IconColor = System.Drawing.Color.White;
+            this.btnCargarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCargarAsistencias.IconSize = 21;
+            this.btnCargarAsistencias.Location = new System.Drawing.Point(264, 6);
+            this.btnCargarAsistencias.Name = "btnCargarAsistencias";
+            this.btnCargarAsistencias.Size = new System.Drawing.Size(99, 27);
+            this.btnCargarAsistencias.TabIndex = 9;
+            this.btnCargarAsistencias.Text = "Cargar";
+            this.btnCargarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCargarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCargarAsistencias.UseVisualStyleBackColor = false;
+            // 
             // FrmAsistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,13 +262,14 @@
             this.Controls.Add(this.paneltitulo);
             this.Name = "FrmAsistencias";
             this.Text = "FrmAsistencias";
+            this.Load += new System.EventHandler(this.FrmAsistencias_Load);
             this.paneltitulo.ResumeLayout(false);
             this.paneltitulo.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -274,9 +278,9 @@
 
         private System.Windows.Forms.Label lblTituloAsistencias;
         private System.Windows.Forms.Label lblMes;
-        private System.Windows.Forms.ComboBox cmbBoxMes;
+        private System.Windows.Forms.ComboBox cmbBoxMesAsistencia;
         private System.Windows.Forms.Label lblAño;
-        private System.Windows.Forms.ComboBox cmbBoxAño;
+        private System.Windows.Forms.ComboBox cmbBoxAñoAsistencia;
         private System.Windows.Forms.Panel paneltitulo;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCargarAsistencias;

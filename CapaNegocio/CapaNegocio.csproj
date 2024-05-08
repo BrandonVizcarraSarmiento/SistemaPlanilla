@@ -41,12 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CN_Asistencia.cs" />
     <Compile Include="CN_Bancos.cs" />
     <Compile Include="CN_Cargo.cs" />
     <Compile Include="CN_Conceptos.cs" />
     <Compile Include="CN_Empleados.cs" />
     <Compile Include="CN_FondoPension.cs" />
     <Compile Include="CN_Permiso.cs" />
+    <Compile Include="CN_Planilla.cs" />
     <Compile Include="CN_Rol.cs" />
     <Compile Include="CN_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
