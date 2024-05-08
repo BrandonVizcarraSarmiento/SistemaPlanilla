@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using CapaNegocio;
 
 namespace CapaPresentacion.Vistas_Cargo
@@ -18,8 +17,18 @@ namespace CapaPresentacion.Vistas_Cargo
         {
             InitializeComponent();
         }
+        private void LimpiarCampos()
+        {
+            txtNombreCargo.Text = "";
+            txtSueldoMensual.Text = "";
+        }
 
-        private void btnGuardarCargo_Click(object sender, EventArgs e)
+        private void FrmAgregarCargo_Load(object sender, EventArgs e)
+        {
+            // Puedes agregar código de inicialización aquí si es necesario
+        }
+
+        private void btnGuardarCargo_Click_1(object sender, EventArgs e)
         {
             string nombre = txtNombreCargo.Text;
             string sueldoMensualText = txtSueldoMensual.Text;
@@ -42,25 +51,14 @@ namespace CapaPresentacion.Vistas_Cargo
             }
         }
 
-        private void btnLimpiarCargo_Click(object sender, EventArgs e)
+        private void btnLimpiarCargo_Click_1(object sender, EventArgs e)
         {
             LimpiarCampos();
         }
 
-        private void btnCancelarCargo_Click(object sender, EventArgs e)
+        private void btnCancelarCargo_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void LimpiarCampos()
-        {
-            txtNombreCargo.Text = "";
-            txtSueldoMensual.Text = "";
-        }
-
-        private void FrmAgregarCargo_Load(object sender, EventArgs e)
-        {
-            // Puedes agregar código de inicialización aquí si es necesario
         }
     }
 }
