@@ -137,6 +137,26 @@ namespace CapaDatos
                 throw new Exception("Error al editar el usuario: " + ex.Message);
             }
         }
+        public void EliminarUsuario(int id)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(Conexion.cadena))
+                {
+                    connection.Open();
 
+                    using (SqlCommand command = new SqlCommand("EliminarUsuario", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@Id", id);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar el usuario: " + ex.Message);
+            }
+        }
     }
 }

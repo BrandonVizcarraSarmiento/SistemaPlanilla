@@ -79,5 +79,9 @@ namespace CapaNegocio
                 throw new Exception("Error al editar el usuario: " + ex.Message);
             }
         }
+        public void EliminarUsuario(int id)
+        {
+            objcd_usuario.EliminarUsuario(id);
+        }
     }
 }

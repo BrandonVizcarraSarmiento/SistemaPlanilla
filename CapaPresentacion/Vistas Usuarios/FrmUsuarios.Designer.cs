@@ -173,6 +173,7 @@
             this.btnEliminarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminarUsuario.UseVisualStyleBackColor = false;
+            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
             // 
             // panel3
             // 

@@ -55,16 +55,34 @@ namespace CapaPresentacion.Vistas_Usuarios
                 int idRol = Convert.ToInt32(dtgvUsuario.SelectedRows[0].Cells["IdRol"].Value);
                 bool estado = Convert.ToBoolean(dtgvUsuario.SelectedRows[0].Cells["Estado"].Value);
 
-                // Abre el formulario para editar usuario
                 FrmEditarUsuario editarForm = new FrmEditarUsuario(id, nombre, correo, clave, idRol, estado);
                 editarForm.ShowDialog();
 
-                // Recarga los datos después de editar el usuario
                 CargarDatos();
             }
             else
             {
                 MessageBox.Show("Seleccione un registro para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            if (dtgvUsuario.SelectedRows.Count > 0)
+            {
+                int id = Convert.ToInt32(dtgvUsuario.SelectedRows[0].Cells["Id"].Value);
+
+                if (MessageBox.Show("¿Está seguro de que desea eliminar este usuario?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    CN_Usuario cnUsuarios = new CN_Usuario();
+                    cnUsuarios.EliminarUsuario(id);
+                    MessageBox.Show("Usuario eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarDatos();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un usuario para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
