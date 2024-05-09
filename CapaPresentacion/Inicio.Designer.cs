@@ -50,7 +50,7 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pcbLogoImagen = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,7 +58,7 @@
             this.panelTitulo.SuspendLayout();
             this.panelContenUsuario.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -381,7 +381,7 @@
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panelContenedor.Controls.Add(this.lblFecha);
             this.panelContenedor.Controls.Add(this.lblhora);
-            this.panelContenedor.Controls.Add(this.pictureBox1);
+            this.panelContenedor.Controls.Add(this.pcbLogoImagen);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelContenedor.Location = new System.Drawing.Point(218, 69);
@@ -391,31 +391,36 @@
             // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(325, 85);
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(401, 334);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(35, 13);
+            this.lblFecha.Size = new System.Drawing.Size(90, 31);
             this.lblFecha.TabIndex = 4;
-            this.lblFecha.Text = "label1";
+            this.lblFecha.Text = "Fecha";
             // 
             // lblhora
             // 
+            this.lblhora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblhora.AutoSize = true;
-            this.lblhora.Location = new System.Drawing.Point(223, 85);
+            this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.Location = new System.Drawing.Point(444, 284);
             this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(35, 13);
+            this.lblhora.Size = new System.Drawing.Size(73, 31);
             this.lblhora.TabIndex = 3;
-            this.lblhora.Text = "label1";
+            this.lblhora.Text = "Hora";
             // 
-            // pictureBox1
+            // pcbLogoImagen
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Logo_ET;
-            this.pictureBox1.Location = new System.Drawing.Point(223, 210);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(397, 213);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pcbLogoImagen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pcbLogoImagen.Image = global::CapaPresentacion.Properties.Resources.Logo_ET;
+            this.pcbLogoImagen.Location = new System.Drawing.Point(279, 49);
+            this.pcbLogoImagen.Name = "pcbLogoImagen";
+            this.pcbLogoImagen.Size = new System.Drawing.Size(397, 213);
+            this.pcbLogoImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLogoImagen.TabIndex = 2;
+            this.pcbLogoImagen.TabStop = false;
             // 
             // horafecha
             // 
@@ -444,7 +449,7 @@
             this.panelContenUsuario.PerformLayout();
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,7 +476,7 @@
         private System.Windows.Forms.Panel panelContenUsuario;
         private FontAwesome.Sharp.IconButton btnUsuarios;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcbLogoImagen;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.Timer horafecha;

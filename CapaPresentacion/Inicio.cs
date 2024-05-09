@@ -90,6 +90,10 @@ namespace CapaPresentacion
 
         private void AbrirFormulario(IconButton menu, Form formulario)
         {
+            lblhora.Visible = false;
+            lblFecha.Visible = false;
+            pcbLogoImagen.Visible = false;
+
             if (MenuActivo != null)
             {
                 MenuActivo.BackColor = Color.FromArgb(98, 102, 244); // Restaurar el color del botón anterior
@@ -160,6 +164,10 @@ namespace CapaPresentacion
             FormularioActivo.Close();
             MenuActivo.BackColor = Color.FromArgb(98, 102, 244); // Restaurar el color del botón anterior
             MenuActivo.ForeColor = SystemColors.ButtonHighlight; // Restaurar el color de texto del botón anterior
+
+            lblhora.Visible = true;
+            lblFecha.Visible = true;
+            pcbLogoImagen.Visible = true;
         }
 
         private void horafecha_Tick(object sender, EventArgs e)

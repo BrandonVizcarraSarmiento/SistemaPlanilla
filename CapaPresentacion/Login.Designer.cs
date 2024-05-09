@@ -87,7 +87,7 @@
             this.lblClave.AutoSize = true;
             this.lblClave.ForeColor = System.Drawing.Color.White;
             this.lblClave.Image = ((System.Drawing.Image)(resources.GetObject("lblClave.Image")));
-            this.lblClave.Location = new System.Drawing.Point(131, 266);
+            this.lblClave.Location = new System.Drawing.Point(128, 273);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(34, 13);
             this.lblClave.TabIndex = 6;
