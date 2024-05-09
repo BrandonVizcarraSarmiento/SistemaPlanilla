@@ -86,7 +86,7 @@
             this.btnNuevoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNuevoBanco.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnNuevoBanco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevoBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnNuevoBanco.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuevoBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuevoBanco.IconChar = FontAwesome.Sharp.IconChar.Pen;
@@ -108,7 +108,7 @@
             this.btnEditarBanco.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEditarBanco.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnEditarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEditarBanco.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditarBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditarBanco.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
@@ -130,7 +130,7 @@
             this.btnEliminarBanco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarBanco.BackColor = System.Drawing.Color.IndianRed;
             this.btnEliminarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminarBanco.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarBanco.IconChar = FontAwesome.Sharp.IconChar.Trash;
@@ -170,7 +170,7 @@
             this.btnBuscarBanco.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscarBanco.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnBuscarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscarBanco.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBuscarBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBuscarBanco.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;

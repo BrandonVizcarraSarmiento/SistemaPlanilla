@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.paneltitulo = new System.Windows.Forms.Panel();
             this.lblTituloAsistencias = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -96,24 +96,24 @@
             this.dtgvPlanilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dtgvPlanilla.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvPlanilla.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvPlanilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvPlanilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvPlanilla.ColumnHeadersHeight = 30;
             this.dtgvPlanilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvPlanilla.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvPlanilla.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvPlanilla.EnableHeadersVisualStyles = false;
             this.dtgvPlanilla.GridColor = System.Drawing.Color.SteelBlue;
             this.dtgvPlanilla.Location = new System.Drawing.Point(117, 61);
@@ -121,14 +121,14 @@
             this.dtgvPlanilla.Name = "dtgvPlanilla";
             this.dtgvPlanilla.ReadOnly = true;
             this.dtgvPlanilla.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvPlanilla.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvPlanilla.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvPlanilla.RowHeadersWidth = 51;
             this.dtgvPlanilla.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
             this.dtgvPlanilla.RowTemplate.Height = 24;
@@ -149,7 +149,7 @@
             // 
             this.btnLimpiarPlanilla.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnLimpiarPlanilla.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarPlanilla.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarPlanilla.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiarPlanilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarPlanilla.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarPlanilla.IconChar = FontAwesome.Sharp.IconChar.Cancel;
@@ -169,7 +169,7 @@
             // 
             this.btnGuardarPlanilla.BackColor = System.Drawing.Color.Tan;
             this.btnGuardarPlanilla.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardarPlanilla.FlatAppearance.BorderSize = 0;
+            this.btnGuardarPlanilla.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarPlanilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarPlanilla.ForeColor = System.Drawing.Color.White;
             this.btnGuardarPlanilla.IconChar = FontAwesome.Sharp.IconChar.SdCard;
@@ -211,7 +211,7 @@
             // 
             this.btnCargarPlanilla.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnCargarPlanilla.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCargarPlanilla.FlatAppearance.BorderSize = 0;
+            this.btnCargarPlanilla.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCargarPlanilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargarPlanilla.ForeColor = System.Drawing.Color.White;
             this.btnCargarPlanilla.IconChar = FontAwesome.Sharp.IconChar.ArrowUpFromBracket;

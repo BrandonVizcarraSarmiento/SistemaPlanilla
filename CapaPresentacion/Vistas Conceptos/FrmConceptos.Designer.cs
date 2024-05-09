@@ -114,7 +114,7 @@
             this.dtgvConceptos.EnableHeadersVisualStyles = false;
             this.dtgvConceptos.GridColor = System.Drawing.Color.SteelBlue;
             this.dtgvConceptos.Location = new System.Drawing.Point(140, 73);
-            this.dtgvConceptos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvConceptos.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvConceptos.Name = "dtgvConceptos";
             this.dtgvConceptos.ReadOnly = true;
             this.dtgvConceptos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -148,7 +148,7 @@
             this.btnNuevosConceptos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNuevosConceptos.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnNuevosConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevosConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnNuevosConceptos.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuevosConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevosConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuevosConceptos.IconChar = FontAwesome.Sharp.IconChar.Pen;
@@ -170,7 +170,7 @@
             this.btnEditarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEditarConceptos.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnEditarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEditarConceptos.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditarConceptos.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
@@ -192,7 +192,7 @@
             this.btnEliminarConceptos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarConceptos.BackColor = System.Drawing.Color.IndianRed;
             this.btnEliminarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminarConceptos.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarConceptos.IconChar = FontAwesome.Sharp.IconChar.Trash;
@@ -222,7 +222,7 @@
             // txtBuscarConceptos
             // 
             this.txtBuscarConceptos.Location = new System.Drawing.Point(19, 13);
-            this.txtBuscarConceptos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBuscarConceptos.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscarConceptos.Name = "txtBuscarConceptos";
             this.txtBuscarConceptos.Size = new System.Drawing.Size(175, 20);
             this.txtBuscarConceptos.TabIndex = 12;
@@ -232,7 +232,7 @@
             this.btnBuscarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscarConceptos.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnBuscarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscarConceptos.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBuscarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBuscarConceptos.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;

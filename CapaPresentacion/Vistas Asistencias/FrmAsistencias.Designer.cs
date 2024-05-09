@@ -184,7 +184,7 @@
             // 
             this.btnLimpiarAsistencias.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnLimpiarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarAsistencias.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarAsistencias.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarAsistencias.ForeColor = System.Drawing.Color.White;
             this.btnLimpiarAsistencias.IconChar = FontAwesome.Sharp.IconChar.BroomBall;
@@ -205,7 +205,7 @@
             // 
             this.btnGuardarAsistencias.BackColor = System.Drawing.Color.Tan;
             this.btnGuardarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardarAsistencias.FlatAppearance.BorderSize = 0;
+            this.btnGuardarAsistencias.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarAsistencias.ForeColor = System.Drawing.Color.White;
             this.btnGuardarAsistencias.IconChar = FontAwesome.Sharp.IconChar.SdCard;
@@ -239,7 +239,7 @@
             // 
             this.btnCargarAsistencias.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnCargarAsistencias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCargarAsistencias.FlatAppearance.BorderSize = 0;
+            this.btnCargarAsistencias.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCargarAsistencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargarAsistencias.ForeColor = System.Drawing.Color.White;
             this.btnCargarAsistencias.IconChar = FontAwesome.Sharp.IconChar.ArrowUpFromBracket;
