@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
 using System.Windows.Forms;
-
 namespace CapaPresentacion.Vistas_Banco
 {
     public partial class FrmBanco : Form
@@ -27,7 +26,6 @@ namespace CapaPresentacion.Vistas_Banco
         {
             dtgvBanco.DataSource = CN_Bancos.ObtenerTodosBancos();
         }
-
         private void btnNuevoBanco_Click(object sender, EventArgs e)
         {
             // Abre el formulario para agregar fondo de pensión
@@ -37,7 +35,6 @@ namespace CapaPresentacion.Vistas_Banco
             // Recarga los datos después de agregar un nuevo fondo de pensión
             CargarDatos();
         }
-
         private void btnEditarBanco_Click(object sender, EventArgs e)
         {
             // Verifica si se ha seleccionado una fila
@@ -59,7 +56,6 @@ namespace CapaPresentacion.Vistas_Banco
                 MessageBox.Show("Seleccione un registro para editar.");
             }
         }
-
         private void btnEliminarBanco_Click(object sender, EventArgs e)
         {
             // Verifica si se ha seleccionado una fila
@@ -84,7 +80,6 @@ namespace CapaPresentacion.Vistas_Banco
                 MessageBox.Show("Seleccione un registro para eliminar.");
             }
         }
-
         private void btnBuscarBanco_Click(object sender, EventArgs e)
         {
             try
