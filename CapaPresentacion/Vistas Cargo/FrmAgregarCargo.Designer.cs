@@ -42,47 +42,42 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(176, 60);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(132, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 29);
+            this.label2.Size = new System.Drawing.Size(134, 24);
             this.label2.TabIndex = 42;
             this.label2.Text = "Agregar Cargo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 111);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(73, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 41;
             this.label3.Text = "Nombre";
             // 
             // txtSueldoMensual
             // 
-            this.txtSueldoMensual.Location = new System.Drawing.Point(101, 179);
-            this.txtSueldoMensual.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSueldoMensual.Location = new System.Drawing.Point(76, 145);
             this.txtSueldoMensual.Name = "txtSueldoMensual";
-            this.txtSueldoMensual.Size = new System.Drawing.Size(339, 22);
+            this.txtSueldoMensual.Size = new System.Drawing.Size(255, 20);
             this.txtSueldoMensual.TabIndex = 38;
             // 
             // lblSueldo
             // 
             this.lblSueldo.AutoSize = true;
-            this.lblSueldo.Location = new System.Drawing.Point(97, 159);
-            this.lblSueldo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSueldo.Location = new System.Drawing.Point(73, 129);
             this.lblSueldo.Name = "lblSueldo";
-            this.lblSueldo.Size = new System.Drawing.Size(101, 16);
+            this.lblSueldo.Size = new System.Drawing.Size(80, 13);
             this.lblSueldo.TabIndex = 39;
             this.lblSueldo.Text = "SueldoMensual";
             // 
             // txtNombreCargo
             // 
-            this.txtNombreCargo.Location = new System.Drawing.Point(101, 131);
-            this.txtNombreCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreCargo.Location = new System.Drawing.Point(76, 106);
             this.txtNombreCargo.Name = "txtNombreCargo";
-            this.txtNombreCargo.Size = new System.Drawing.Size(339, 22);
+            this.txtNombreCargo.Size = new System.Drawing.Size(255, 20);
             this.txtNombreCargo.TabIndex = 40;
             // 
             // btnCancelarCargo
@@ -96,10 +91,9 @@
             this.btnCancelarCargo.IconColor = System.Drawing.Color.White;
             this.btnCancelarCargo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelarCargo.IconSize = 21;
-            this.btnCancelarCargo.Location = new System.Drawing.Point(333, 249);
-            this.btnCancelarCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelarCargo.Location = new System.Drawing.Point(250, 202);
             this.btnCancelarCargo.Name = "btnCancelarCargo";
-            this.btnCancelarCargo.Size = new System.Drawing.Size(108, 42);
+            this.btnCancelarCargo.Size = new System.Drawing.Size(81, 34);
             this.btnCancelarCargo.TabIndex = 37;
             this.btnCancelarCargo.Text = "Cancelar";
             this.btnCancelarCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -119,10 +113,9 @@
             this.btnLimpiarCargo.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiarCargo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarCargo.IconSize = 21;
-            this.btnLimpiarCargo.Location = new System.Drawing.Point(217, 249);
-            this.btnLimpiarCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiarCargo.Location = new System.Drawing.Point(163, 202);
             this.btnLimpiarCargo.Name = "btnLimpiarCargo";
-            this.btnLimpiarCargo.Size = new System.Drawing.Size(108, 41);
+            this.btnLimpiarCargo.Size = new System.Drawing.Size(81, 33);
             this.btnLimpiarCargo.TabIndex = 36;
             this.btnLimpiarCargo.Text = "Limpiar";
             this.btnLimpiarCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -142,10 +135,9 @@
             this.btnGuardarCargo.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarCargo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarCargo.IconSize = 21;
-            this.btnGuardarCargo.Location = new System.Drawing.Point(101, 249);
-            this.btnGuardarCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardarCargo.Location = new System.Drawing.Point(76, 202);
             this.btnGuardarCargo.Name = "btnGuardarCargo";
-            this.btnGuardarCargo.Size = new System.Drawing.Size(108, 41);
+            this.btnGuardarCargo.Size = new System.Drawing.Size(81, 33);
             this.btnGuardarCargo.TabIndex = 35;
             this.btnGuardarCargo.Text = "Guardar";
             this.btnGuardarCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -155,9 +147,9 @@
             // 
             // FrmAgregarCargo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 350);
+            this.ClientSize = new System.Drawing.Size(404, 284);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSueldoMensual);
@@ -166,6 +158,8 @@
             this.Controls.Add(this.btnCancelarCargo);
             this.Controls.Add(this.btnLimpiarCargo);
             this.Controls.Add(this.btnGuardarCargo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "FrmAgregarCargo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgregarCargo";

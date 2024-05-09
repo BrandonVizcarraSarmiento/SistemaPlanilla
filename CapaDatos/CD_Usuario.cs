@@ -45,8 +45,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                // Manejar excepciones (por ejemplo, registrar o lanzar)
-                throw ex;
+                throw new Exception("Error al obtener los usuarios: " + ex.Message);
             }
             return resultados;
         }
@@ -83,10 +82,60 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception("Error al obtener los usuarios: " + ex.Message);
+            }
+            return resultados;
+        }
+        public DataTable ObtenerRoles()
+        {
+            DataTable resultados = new DataTable();
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    conexion.Open();
+                    string consulta = "SELECT Id, Descripcion FROM Rol";
+
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(comando))
+                        {
+                            adapter.Fill(resultados);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener los roles: " + ex.Message);
             }
             return resultados;
         }
 
+        public void AgregarUsuario(string nombre, string correo, string clave, int idRol, bool estado)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    conexion.Open();
+                    using (SqlCommand comando = new SqlCommand("AgregarUsuario", conexion))
+                    {
+                        comando.CommandType = CommandType.StoredProcedure;
+                        comando.Parameters.AddWithValue("@Nombre", nombre);
+                        comando.Parameters.AddWithValue("@Correo", correo);
+                        comando.Parameters.AddWithValue("@Clave", clave);
+                        comando.Parameters.AddWithValue("@IdRol", idRol);
+                        comando.Parameters.AddWithValue("@Estado", estado);
+
+                        comando.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al agregar el usuario: " + ex.Message);
+            }
+        }
     }
 }

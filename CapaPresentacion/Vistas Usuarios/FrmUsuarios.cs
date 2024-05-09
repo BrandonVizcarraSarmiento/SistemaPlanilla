@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CapaPresentacion.Utilidades;
 using CapaEntidad;
 using CapaNegocio;
 
@@ -20,25 +19,14 @@ namespace CapaPresentacion.Vistas_Usuarios
         {
             InitializeComponent();
         }
-
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
-            //MOSTRAR TODOS LOS USUARIOS
+            CargarDatos();
+        }
+        private void CargarDatos()
+        {
             CN_Usuario cnUsuarios = new CN_Usuario();
             dtgvUsuario.DataSource = cnUsuarios.ObtenerUsuariosConRoles();
-        }
-
-        private void btnNuevoUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btnEliminarUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btnBuscarUsuario_Click(object sender, EventArgs e)
-        {
-
         }
         private void btnLimpiarBuscador_Click(object sender, EventArgs e)
         {
@@ -47,6 +35,13 @@ namespace CapaPresentacion.Vistas_Usuarios
             {
                 row.Visible = true;
             }
+        }
+
+        private void btnNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            FrmAgregarUsuario agregarForm = new FrmAgregarUsuario();
+            agregarForm.ShowDialog();
+            CargarDatos();
         }
     }
 }

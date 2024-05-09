@@ -44,39 +44,35 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(226, 33);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(170, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 29);
+            this.label2.Size = new System.Drawing.Size(174, 24);
             this.label2.TabIndex = 50;
             this.label2.Text = "Agregar Conceptos";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(143, 181);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(107, 147);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 49;
             this.label3.Text = "Nombre";
             // 
             // lblSueldo
             // 
             this.lblSueldo.AutoSize = true;
-            this.lblSueldo.Location = new System.Drawing.Point(143, 251);
-            this.lblSueldo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSueldo.Location = new System.Drawing.Point(107, 204);
             this.lblSueldo.Name = "lblSueldo";
-            this.lblSueldo.Size = new System.Drawing.Size(35, 16);
+            this.lblSueldo.Size = new System.Drawing.Size(28, 13);
             this.lblSueldo.TabIndex = 47;
             this.lblSueldo.Text = "Tipo";
             // 
             // txtNombreConceptos
             // 
-            this.txtNombreConceptos.Location = new System.Drawing.Point(146, 201);
-            this.txtNombreConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreConceptos.Location = new System.Drawing.Point(110, 163);
             this.txtNombreConceptos.Name = "txtNombreConceptos";
-            this.txtNombreConceptos.Size = new System.Drawing.Size(339, 22);
+            this.txtNombreConceptos.Size = new System.Drawing.Size(255, 20);
             this.txtNombreConceptos.TabIndex = 48;
             // 
             // btnCancelarConceptos
@@ -90,10 +86,9 @@
             this.btnCancelarConceptos.IconColor = System.Drawing.Color.White;
             this.btnCancelarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelarConceptos.IconSize = 21;
-            this.btnCancelarConceptos.Location = new System.Drawing.Point(378, 322);
-            this.btnCancelarConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelarConceptos.Location = new System.Drawing.Point(284, 262);
             this.btnCancelarConceptos.Name = "btnCancelarConceptos";
-            this.btnCancelarConceptos.Size = new System.Drawing.Size(108, 42);
+            this.btnCancelarConceptos.Size = new System.Drawing.Size(81, 34);
             this.btnCancelarConceptos.TabIndex = 45;
             this.btnCancelarConceptos.Text = "Cancelar";
             this.btnCancelarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -113,10 +108,9 @@
             this.btnLimpiarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarConceptos.IconSize = 21;
-            this.btnLimpiarConceptos.Location = new System.Drawing.Point(262, 322);
-            this.btnLimpiarConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiarConceptos.Location = new System.Drawing.Point(196, 262);
             this.btnLimpiarConceptos.Name = "btnLimpiarConceptos";
-            this.btnLimpiarConceptos.Size = new System.Drawing.Size(108, 41);
+            this.btnLimpiarConceptos.Size = new System.Drawing.Size(81, 33);
             this.btnLimpiarConceptos.TabIndex = 44;
             this.btnLimpiarConceptos.Text = "Limpiar";
             this.btnLimpiarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -136,10 +130,9 @@
             this.btnGuardarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarConceptos.IconSize = 21;
-            this.btnGuardarConceptos.Location = new System.Drawing.Point(146, 322);
-            this.btnGuardarConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardarConceptos.Location = new System.Drawing.Point(110, 262);
             this.btnGuardarConceptos.Name = "btnGuardarConceptos";
-            this.btnGuardarConceptos.Size = new System.Drawing.Size(108, 41);
+            this.btnGuardarConceptos.Size = new System.Drawing.Size(81, 33);
             this.btnGuardarConceptos.TabIndex = 43;
             this.btnGuardarConceptos.Text = "Guardar";
             this.btnGuardarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -150,34 +143,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 103);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(107, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 51;
             this.label1.Text = "Codigo";
             // 
             // txtCodigoConceptos
             // 
-            this.txtCodigoConceptos.Location = new System.Drawing.Point(146, 138);
-            this.txtCodigoConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoConceptos.Location = new System.Drawing.Point(110, 112);
             this.txtCodigoConceptos.Name = "txtCodigoConceptos";
-            this.txtCodigoConceptos.Size = new System.Drawing.Size(339, 22);
+            this.txtCodigoConceptos.Size = new System.Drawing.Size(255, 20);
             this.txtCodigoConceptos.TabIndex = 52;
             // 
             // cmbTipoConceptos
             // 
             this.cmbTipoConceptos.FormattingEnabled = true;
-            this.cmbTipoConceptos.Location = new System.Drawing.Point(146, 271);
+            this.cmbTipoConceptos.Location = new System.Drawing.Point(110, 220);
+            this.cmbTipoConceptos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipoConceptos.Name = "cmbTipoConceptos";
-            this.cmbTipoConceptos.Size = new System.Drawing.Size(121, 24);
+            this.cmbTipoConceptos.Size = new System.Drawing.Size(92, 21);
             this.cmbTipoConceptos.TabIndex = 53;
             // 
             // FrmAgregarConceptos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 404);
+            this.ClientSize = new System.Drawing.Size(473, 328);
             this.Controls.Add(this.cmbTipoConceptos);
             this.Controls.Add(this.txtCodigoConceptos);
             this.Controls.Add(this.label1);
@@ -188,6 +180,8 @@
             this.Controls.Add(this.btnCancelarConceptos);
             this.Controls.Add(this.btnLimpiarConceptos);
             this.Controls.Add(this.btnGuardarConceptos);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
             this.Name = "FrmAgregarConceptos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgregarConceptos";

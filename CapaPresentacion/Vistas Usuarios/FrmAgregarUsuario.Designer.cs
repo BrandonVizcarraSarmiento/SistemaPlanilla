@@ -66,6 +66,7 @@
             this.btnLimpiarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiarUsuario.UseVisualStyleBackColor = false;
+            this.btnLimpiarUsuario.Click += new System.EventHandler(this.btnLimpiarUsuario_Click);
             // 
             // btnGuardarUsuario
             // 
@@ -87,6 +88,7 @@
             this.btnGuardarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardarUsuario.UseVisualStyleBackColor = false;
+            this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
             // btnCancelar
             // 
@@ -107,6 +109,7 @@
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label1
             // 
@@ -241,8 +244,11 @@
             this.Controls.Add(this.btnGuardarUsuario);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLimpiarUsuario);
+            this.MaximizeBox = false;
             this.Name = "FrmAgregarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgregarUsuario";
+            this.Load += new System.EventHandler(this.FrmAgregarUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

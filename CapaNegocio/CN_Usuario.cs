@@ -39,6 +39,24 @@ namespace CapaNegocio
                 CD_Usuario cdUsuario = new CD_Usuario();
                 return cdUsuario.ObtenerUsuariosConRoles();
         }
+        public DataTable ObtenerRoles()
+        {
+            return objcd_usuario.ObtenerRoles();
+        }
 
+        public void AgregarUsuario(string nombre, string correo, string clave, int idRol, bool estado)
+        {
+            // Validar que los campos no estén vacíos
+            if (string.IsNullOrWhiteSpace(nombre))
+                throw new ArgumentException("El nombre no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(correo))
+                throw new ArgumentException("El correo no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(clave))
+                throw new ArgumentException("La clave no puede estar vacía.");
+
+            objcd_usuario.AgregarUsuario(nombre, correo, clave, idRol, estado);
+        }
     }
 }

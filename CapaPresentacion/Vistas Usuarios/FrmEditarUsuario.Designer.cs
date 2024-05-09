@@ -239,7 +239,9 @@
             this.Controls.Add(this.lblRol);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.txtNombre);
+            this.MaximizeBox = false;
             this.Name = "FrmEditarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditarUsuario";
             this.ResumeLayout(false);
             this.PerformLayout();
