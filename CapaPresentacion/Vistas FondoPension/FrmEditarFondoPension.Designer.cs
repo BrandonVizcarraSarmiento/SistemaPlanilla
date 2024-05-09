@@ -41,16 +41,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 20);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(52, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 24);
+            this.label2.Size = new System.Drawing.Size(243, 24);
             this.label2.TabIndex = 42;
             this.label2.Text = "Editar Fondo de Pension";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(53, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
@@ -67,6 +69,7 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
+            this.lblCorreo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCorreo.Location = new System.Drawing.Point(53, 101);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(37, 13);
@@ -84,7 +87,7 @@
             // 
             this.btnCancelarFPension.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnCancelarFPension.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarFPension.FlatAppearance.BorderSize = 0;
+            this.btnCancelarFPension.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelarFPension.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarFPension.ForeColor = System.Drawing.Color.White;
             this.btnCancelarFPension.IconChar = FontAwesome.Sharp.IconChar.Cancel;
@@ -93,7 +96,7 @@
             this.btnCancelarFPension.IconSize = 21;
             this.btnCancelarFPension.Location = new System.Drawing.Point(230, 174);
             this.btnCancelarFPension.Name = "btnCancelarFPension";
-            this.btnCancelarFPension.Size = new System.Drawing.Size(81, 34);
+            this.btnCancelarFPension.Size = new System.Drawing.Size(81, 33);
             this.btnCancelarFPension.TabIndex = 37;
             this.btnCancelarFPension.Text = "Cancelar";
             this.btnCancelarFPension.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -149,6 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(365, 229);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);

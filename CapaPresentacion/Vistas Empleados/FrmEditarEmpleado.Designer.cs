@@ -56,6 +56,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(73, 175);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 13);
@@ -65,6 +66,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(202, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(21, 13);
@@ -74,6 +76,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(73, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
@@ -92,6 +95,7 @@
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
+            this.lblCargo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCargo.Location = new System.Drawing.Point(73, 355);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(35, 13);
@@ -110,6 +114,7 @@
             // lblFondoPension
             // 
             this.lblFondoPension.AutoSize = true;
+            this.lblFondoPension.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblFondoPension.Location = new System.Drawing.Point(73, 315);
             this.lblFondoPension.Name = "lblFondoPension";
             this.lblFondoPension.Size = new System.Drawing.Size(92, 13);
@@ -128,6 +133,7 @@
             // lblBanco
             // 
             this.lblBanco.AutoSize = true;
+            this.lblBanco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblBanco.Location = new System.Drawing.Point(73, 275);
             this.lblBanco.Name = "lblBanco";
             this.lblBanco.Size = new System.Drawing.Size(38, 13);
@@ -144,6 +150,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(73, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
@@ -167,6 +174,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(71, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
@@ -183,16 +191,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(127, 22);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(123, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 24);
+            this.label2.Size = new System.Drawing.Size(163, 24);
             this.label2.TabIndex = 65;
             this.label2.Text = "Editar empleado";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(71, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
@@ -209,6 +219,7 @@
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
+            this.lblApellidos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblApellidos.Location = new System.Drawing.Point(71, 136);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(49, 13);
@@ -226,7 +237,7 @@
             // 
             this.btnCancelarEmpleado.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnCancelarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarEmpleado.FlatAppearance.BorderSize = 0;
+            this.btnCancelarEmpleado.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarEmpleado.ForeColor = System.Drawing.Color.White;
             this.btnCancelarEmpleado.IconChar = FontAwesome.Sharp.IconChar.Cancel;
@@ -289,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(403, 471);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);

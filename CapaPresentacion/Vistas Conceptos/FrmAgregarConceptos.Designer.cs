@@ -43,16 +43,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 27);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(79, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 24);
+            this.label2.Size = new System.Drawing.Size(191, 24);
             this.label2.TabIndex = 50;
             this.label2.Text = "Agregar Conceptos";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(42, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
@@ -62,6 +64,7 @@
             // lblSueldo
             // 
             this.lblSueldo.AutoSize = true;
+            this.lblSueldo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblSueldo.Location = new System.Drawing.Point(42, 204);
             this.lblSueldo.Name = "lblSueldo";
             this.lblSueldo.Size = new System.Drawing.Size(28, 13);
@@ -142,7 +145,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 84);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(42, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 51;
@@ -158,7 +162,7 @@
             // cmbTipoConceptos
             // 
             this.cmbTipoConceptos.FormattingEnabled = true;
-            this.cmbTipoConceptos.Location = new System.Drawing.Point(45, 220);
+            this.cmbTipoConceptos.Location = new System.Drawing.Point(45, 219);
             this.cmbTipoConceptos.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTipoConceptos.Name = "cmbTipoConceptos";
             this.cmbTipoConceptos.Size = new System.Drawing.Size(92, 21);
@@ -168,6 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(345, 328);
             this.Controls.Add(this.cmbTipoConceptos);
             this.Controls.Add(this.txtCodigoConceptos);
@@ -179,6 +184,7 @@
             this.Controls.Add(this.btnCancelarConceptos);
             this.Controls.Add(this.btnLimpiarConceptos);
             this.Controls.Add(this.btnGuardarConceptos);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;

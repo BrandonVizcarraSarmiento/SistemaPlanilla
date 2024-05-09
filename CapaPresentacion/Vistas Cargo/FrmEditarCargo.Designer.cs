@@ -41,16 +41,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(100, 54);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(151, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 24);
+            this.label2.Size = new System.Drawing.Size(126, 24);
             this.label2.TabIndex = 50;
             this.label2.Text = "Editar Cargo";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(80, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
@@ -67,6 +69,7 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
+            this.lblCorreo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCorreo.Location = new System.Drawing.Point(80, 134);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(83, 13);
@@ -149,6 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(419, 295);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);

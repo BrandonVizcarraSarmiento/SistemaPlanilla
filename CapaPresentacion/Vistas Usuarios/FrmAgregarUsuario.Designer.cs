@@ -114,6 +114,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(44, 196);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 13);
@@ -123,10 +124,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(102, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 24);
+            this.label2.Size = new System.Drawing.Size(160, 24);
             this.label2.TabIndex = 52;
             this.label2.Text = "Agregar usuario";
             // 
@@ -141,6 +143,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(44, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
@@ -166,6 +169,7 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
+            this.lblEstado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblEstado.Location = new System.Drawing.Point(44, 275);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(40, 13);
@@ -192,6 +196,7 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
+            this.lblCorreo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCorreo.Location = new System.Drawing.Point(44, 118);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(38, 13);
@@ -201,6 +206,7 @@
             // lblRol
             // 
             this.lblRol.AutoSize = true;
+            this.lblRol.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblRol.Location = new System.Drawing.Point(44, 235);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(23, 13);
@@ -210,6 +216,7 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
+            this.lblClave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblClave.Location = new System.Drawing.Point(44, 157);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(34, 13);
@@ -227,6 +234,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.ClientSize = new System.Drawing.Size(349, 404);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);

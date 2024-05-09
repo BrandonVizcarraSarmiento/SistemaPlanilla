@@ -144,7 +144,7 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 84</value>
+    <value>42, 97</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 13</value>
@@ -171,13 +171,13 @@
     <value>True</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 14.25pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 27</value>
+    <value>88, 48</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 24</value>
+    <value>170, 24</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>

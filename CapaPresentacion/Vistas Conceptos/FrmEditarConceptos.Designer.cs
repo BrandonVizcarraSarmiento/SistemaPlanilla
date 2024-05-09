@@ -49,21 +49,25 @@
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Name = "label1";
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Name = "label2";
             // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Name = "label3";
             // 
             // lblSueldo
             // 
             resources.ApplyResources(this.lblSueldo, "lblSueldo");
+            this.lblSueldo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblSueldo.Name = "lblSueldo";
             // 
             // txtNombreConceptos
@@ -126,6 +130,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.Controls.Add(this.cmbTipoConceptos);
             this.Controls.Add(this.txtCodigoConceptos);
             this.Controls.Add(this.label1);
