@@ -6,7 +6,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace CapaDatos
 {
     public class CD_Bancos
@@ -55,7 +54,6 @@ namespace CapaDatos
                 throw new Exception("Error al insertar banco: " + ex.Message);
             }
         }
-
         public static void EditarBanco(int id, string nombre)
         {
             try
@@ -93,7 +91,6 @@ namespace CapaDatos
                 throw new Exception("Error al eliminar el Banco: " + ex.Message);
             }
         }
-        // Método para buscar fondos de pensión por nombre
         public static List<Banco> BuscarBanco(string nombre)
         {
             List<Banco> listaBanco = new List<Banco>();

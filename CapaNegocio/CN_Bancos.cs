@@ -4,10 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using CapaDatos;
 using CapaEntidad;
-
 namespace CapaNegocio
 {
     public class CN_Bancos
@@ -37,7 +35,6 @@ namespace CapaNegocio
                 throw new Exception("Error al insertar el banco: " + ex.Message);
             }
         }
-
         public static void EditarBanco(int id, string nombre)
         {
             // Validar si el nombre está vacío
@@ -52,7 +49,6 @@ namespace CapaNegocio
                 throw new Exception("Error al editar el banco: " + ex.Message);
             }
         }
-
         public static void EliminarBanco(int id)
         {
             try
