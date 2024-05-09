@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,65 +13,32 @@ namespace CapaNegocio
     public class CN_Usuario
     {
         private CD_Usuario objcd_usuario = new CD_Usuario();
-        public List<Usuario> Listar()
+        public Usuario ValidarUsuario(string correo, string clave)
         {
-            return objcd_usuario.Listar();
-        }
-        public int Registrar(Usuario obj, out string Mensaje)
-        {
-            Mensaje = string.Empty;
+            DataTable dtUsuario = objcd_usuario.ObtenerUsuarioPorCorreoYClave(correo, clave);
 
-            if (obj.Nombre == "")
+            if (dtUsuario.Rows.Count > 0)
             {
-                Mensaje += "Es necesario el nombre completo del usuario\n";
-            }
-
-            if (obj.Clave == "")
-            {
-                Mensaje += "Es necesario la clave del usuario\n";
-            }
-
-            if (Mensaje != string.Empty)
-            {
-                return 0;
+                DataRow row = dtUsuario.Rows[0];
+                Usuario usuario = new Usuario
+                {
+                    Id = Convert.ToInt32(row["Id"]),
+                    Nombre = row["Nombre"].ToString(),
+                    Correo = row["Correo"].ToString(),
+                    Clave = row["Clave"].ToString()
+                };
+                return usuario;
             }
             else
             {
-                return objcd_usuario.Registrar(obj, out Mensaje);
+                return null;
             }
-
-
         }
-        public bool Editar(Usuario obj, out string Mensaje)
+        public DataTable ObtenerUsuariosConRoles()
         {
-
-            Mensaje = string.Empty;
-
-            if (obj.Nombre == "")
-            {
-                Mensaje += "Es necesario el nombre completo del usuario\n";
-            }
-
-            if (obj.Clave == "")
-            {
-                Mensaje += "Es necesario la clave del usuario\n";
-            }
-
-
-            if (Mensaje != string.Empty)
-            {
-                return false;
-            }
-            else
-            {
-                return objcd_usuario.Editar(obj, out Mensaje);
-            }
-
-
+                CD_Usuario cdUsuario = new CD_Usuario();
+                return cdUsuario.ObtenerUsuariosConRoles();
         }
-        public bool Eliminar(Usuario obj, out string Mensaje)
-        {
-            return objcd_usuario.Eliminar(obj, out Mensaje);
-        }
+
     }
 }

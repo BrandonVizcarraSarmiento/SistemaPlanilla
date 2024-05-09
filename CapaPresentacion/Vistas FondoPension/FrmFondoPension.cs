@@ -23,7 +23,6 @@ namespace CapaPresentacion.Vistas_FondoPension
         {
             CargarDatos();
         }
-        // Método para cargar los datos en el DataGridView
         private void CargarDatos()
         {
             dtgvFPension.DataSource = CN_FondoPension.ObtenerTodosFondosPension();
@@ -31,11 +30,9 @@ namespace CapaPresentacion.Vistas_FondoPension
 
         private void btnNuevoFPension_Click(object sender, EventArgs e)
         {
-            // Abre el formulario para agregar fondo de pensión
             FrmAgregarFondoPension agregarForm = new FrmAgregarFondoPension();
             agregarForm.ShowDialog();
 
-            // Recarga los datos después de agregar un nuevo fondo de pensión
             CargarDatos();
         }
 
@@ -49,11 +46,9 @@ namespace CapaPresentacion.Vistas_FondoPension
                string nombre = dtgvFPension.SelectedRows[0].Cells["Nombre"].Value.ToString();
                decimal porcentajeDescuento = Convert.ToDecimal(dtgvFPension.SelectedRows[0].Cells["PorcentajeDescuento"].Value);
 
-               // Abre el formulario para editar fondo de pensión
                FrmEditarFondoPension editarForm = new FrmEditarFondoPension(id, nombre, porcentajeDescuento);
                editarForm.ShowDialog();
 
-               // Recarga los datos después de editar el fondo de pensión
                CargarDatos();
             }
             else
@@ -64,20 +59,15 @@ namespace CapaPresentacion.Vistas_FondoPension
 
         private void btnEliminarFPension_Click(object sender, EventArgs e)
         {
-            // Verifica si se ha seleccionado una fila
             if (dtgvFPension.SelectedRows.Count > 0)
             {
-                // Pregunta al usuario si realmente desea eliminar el registro
                 DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
                 {
-                    // Obtiene el id del registro seleccionado
                     int id = Convert.ToInt32(dtgvFPension.SelectedRows[0].Cells["Id"].Value);
 
-                    // Llama al método para eliminar el registro
                     CN_FondoPension.EliminarFondoPension(id);
 
-                    // Vuelve a cargar los datos en el DataGridView
                     CargarDatos();
                 }
             }
@@ -93,7 +83,6 @@ namespace CapaPresentacion.Vistas_FondoPension
             {
                 string nombre = txtBuscarFPension.Text.Trim();
 
-                // Llamar al método en la capa de negocio para buscar fondos de pensión por nombre
                 List<FondoPension> fondosPension = CN_FondoPension.BuscarFondoPension(nombre);
 
                 if (fondosPension.Count == 0)
@@ -102,7 +91,6 @@ namespace CapaPresentacion.Vistas_FondoPension
                 }
                 else
                 {
-                    // Mostrar los resultados en el DataGridView
                     dtgvFPension.DataSource = fondosPension;
                 }
             }

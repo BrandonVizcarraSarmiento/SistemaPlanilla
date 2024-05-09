@@ -99,7 +99,7 @@
             // 
             this.btnCancelarEmpleado.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnCancelarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarEmpleado.FlatAppearance.BorderSize = 0;
+            this.btnCancelarEmpleado.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCancelarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarEmpleado.ForeColor = System.Drawing.Color.White;
             this.btnCancelarEmpleado.IconChar = FontAwesome.Sharp.IconChar.Cancel;

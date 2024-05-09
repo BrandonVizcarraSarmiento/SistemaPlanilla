@@ -171,7 +171,6 @@
             this.Name = "FrmAgregarFondoPension";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgregarFondoPension";
-            this.Load += new System.EventHandler(this.FrmAgregarFondoPension_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

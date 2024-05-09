@@ -162,7 +162,6 @@
             this.Name = "FrmEditarFondoPension";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditarFondoPension";
-            this.Load += new System.EventHandler(this.FrmEditarFondoPension_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
