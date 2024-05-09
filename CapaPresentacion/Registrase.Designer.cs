@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrase));
             this.label2 = new System.Windows.Forms.Label();
             this.lblClave = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
@@ -40,24 +40,17 @@
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.txtConfirmarClaveRegistrar = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(429, 116);
-            this.label1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label2.BackColor = System.Drawing.SystemColors.Desktop;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(164, 42);
+            this.label2.Location = new System.Drawing.Point(158, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 31);
             this.label2.TabIndex = 2;
@@ -66,7 +59,9 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(111, 228);
+            this.lblClave.ForeColor = System.Drawing.Color.White;
+            this.lblClave.Image = ((System.Drawing.Image)(resources.GetObject("lblClave.Image")));
+            this.lblClave.Location = new System.Drawing.Point(112, 236);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(34, 13);
             this.lblClave.TabIndex = 10;
@@ -75,7 +70,9 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(111, 182);
+            this.lblCorreo.ForeColor = System.Drawing.Color.White;
+            this.lblCorreo.Image = ((System.Drawing.Image)(resources.GetObject("lblCorreo.Image")));
+            this.lblCorreo.Location = new System.Drawing.Point(112, 186);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(38, 13);
             this.lblCorreo.TabIndex = 9;
@@ -99,7 +96,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 131);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.Location = new System.Drawing.Point(111, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 12;
@@ -107,6 +106,7 @@
             // 
             // txtNombreRegistrar
             // 
+            this.txtNombreRegistrar.BackColor = System.Drawing.SystemColors.Window;
             this.txtNombreRegistrar.Location = new System.Drawing.Point(111, 150);
             this.txtNombreRegistrar.Name = "txtNombreRegistrar";
             this.txtNombreRegistrar.Size = new System.Drawing.Size(234, 20);
@@ -115,6 +115,8 @@
             // btnRegistrarte
             // 
             this.btnRegistrarte.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnRegistrarte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegistrarte.BackgroundImage")));
+            this.btnRegistrarte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRegistrarte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrarte.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRegistrarte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -137,18 +139,17 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Red;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.X;
             this.btnCancelar.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 21;
-            this.btnCancelar.Location = new System.Drawing.Point(336, 405);
+            this.btnCancelar.Location = new System.Drawing.Point(396, 1);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(81, 33);
+            this.btnCancelar.Size = new System.Drawing.Size(32, 25);
             this.btnCancelar.TabIndex = 14;
-            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -157,7 +158,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(111, 284);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
+            this.label4.Location = new System.Drawing.Point(111, 291);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 16;
@@ -170,6 +173,15 @@
             this.txtConfirmarClaveRegistrar.PasswordChar = '*';
             this.txtConfirmarClaveRegistrar.Size = new System.Drawing.Size(234, 20);
             this.txtConfirmarClaveRegistrar.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(433, 453);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // Registrase
             // 
@@ -188,19 +200,18 @@
             this.Controls.Add(this.txtClaveRegistrar);
             this.Controls.Add(this.txtCorreoRegistrar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Registrase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrase";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.Label lblCorreo;
@@ -208,9 +219,10 @@
         private System.Windows.Forms.TextBox txtCorreoRegistrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombreRegistrar;
-        private FontAwesome.Sharp.IconButton btnRegistrarte;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtConfirmarClaveRegistrar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton btnRegistrarte;
     }
 }

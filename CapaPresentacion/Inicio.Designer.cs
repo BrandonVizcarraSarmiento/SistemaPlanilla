@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnPlanillas = new FontAwesome.Sharp.IconButton();
             this.btnAsistencias = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
@@ -46,12 +48,17 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblhora = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.panelTitulo.SuspendLayout();
             this.panelContenUsuario.SuspendLayout();
+            this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -72,6 +79,29 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(218, 558);
             this.panelMenu.TabIndex = 1;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            this.btnUsuarios.IconColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuarios.IconSize = 30;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 353);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnUsuarios.Size = new System.Drawing.Size(218, 37);
+            this.btnUsuarios.TabIndex = 9;
+            this.btnUsuarios.Tag = "Usuarios";
+            this.btnUsuarios.Text = "   Usuarios";
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnPlanillas
             // 
@@ -295,7 +325,7 @@
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.panelTitulo.Controls.Add(this.panelContenUsuario);
             this.panelTitulo.Controls.Add(this.lblTitulo);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -348,36 +378,49 @@
             // panelContenedor
             // 
             this.panelContenedor.AutoSize = true;
-            this.panelContenedor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
+            this.panelContenedor.Controls.Add(this.lblFecha);
+            this.panelContenedor.Controls.Add(this.lblhora);
+            this.panelContenedor.Controls.Add(this.pictureBox1);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelContenedor.Location = new System.Drawing.Point(218, 69);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(942, 489);
             this.panelContenedor.TabIndex = 3;
             // 
-            // btnUsuarios
+            // lblFecha
             // 
-            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserGear;
-            this.btnUsuarios.IconColor = System.Drawing.Color.White;
-            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUsuarios.IconSize = 30;
-            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 353);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnUsuarios.Size = new System.Drawing.Size(218, 37);
-            this.btnUsuarios.TabIndex = 9;
-            this.btnUsuarios.Tag = "Usuarios";
-            this.btnUsuarios.Text = "   Usuarios";
-            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(325, 85);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(35, 13);
+            this.lblFecha.TabIndex = 4;
+            this.lblFecha.Text = "label1";
+            // 
+            // lblhora
+            // 
+            this.lblhora.AutoSize = true;
+            this.lblhora.Location = new System.Drawing.Point(223, 85);
+            this.lblhora.Name = "lblhora";
+            this.lblhora.Size = new System.Drawing.Size(35, 13);
+            this.lblhora.TabIndex = 3;
+            this.lblhora.Text = "label1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Logo_ET;
+            this.pictureBox1.Location = new System.Drawing.Point(223, 210);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(397, 213);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // horafecha
+            // 
+            this.horafecha.Enabled = true;
+            this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
             // Inicio
             // 
@@ -399,6 +442,9 @@
             this.panelTitulo.PerformLayout();
             this.panelContenUsuario.ResumeLayout(false);
             this.panelContenUsuario.PerformLayout();
+            this.panelContenedor.ResumeLayout(false);
+            this.panelContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,8 +468,12 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblUsu;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panelContenUsuario;
         private FontAwesome.Sharp.IconButton btnUsuarios;
+        private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblhora;
+        private System.Windows.Forms.Timer horafecha;
     }
 }

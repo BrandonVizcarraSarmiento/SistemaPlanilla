@@ -161,5 +161,11 @@ namespace CapaPresentacion
             MenuActivo.BackColor = Color.FromArgb(98, 102, 244); // Restaurar el color del botón anterior
             MenuActivo.ForeColor = SystemColors.ButtonHighlight; // Restaurar el color de texto del botón anterior
         }
+
+        private void horafecha_Tick(object sender, EventArgs e)
+        {
+            lblhora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblFecha.Text = DateTime.Now.ToString("dddd MMMM yyy");
+        }
     }
 }
