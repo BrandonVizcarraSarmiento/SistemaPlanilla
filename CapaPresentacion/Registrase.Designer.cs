@@ -38,6 +38,8 @@
             this.txtNombreRegistrar = new System.Windows.Forms.TextBox();
             this.btnRegistrarte = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtConfirmarClaveRegistrar = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +66,7 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.Location = new System.Drawing.Point(111, 245);
+            this.lblClave.Location = new System.Drawing.Point(111, 228);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(34, 13);
             this.lblClave.TabIndex = 10;
@@ -73,7 +75,7 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(111, 199);
+            this.lblCorreo.Location = new System.Drawing.Point(111, 182);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(38, 13);
             this.lblCorreo.TabIndex = 9;
@@ -81,7 +83,7 @@
             // 
             // txtClaveRegistrar
             // 
-            this.txtClaveRegistrar.Location = new System.Drawing.Point(111, 268);
+            this.txtClaveRegistrar.Location = new System.Drawing.Point(111, 251);
             this.txtClaveRegistrar.Name = "txtClaveRegistrar";
             this.txtClaveRegistrar.PasswordChar = '*';
             this.txtClaveRegistrar.Size = new System.Drawing.Size(234, 20);
@@ -89,7 +91,7 @@
             // 
             // txtCorreoRegistrar
             // 
-            this.txtCorreoRegistrar.Location = new System.Drawing.Point(111, 218);
+            this.txtCorreoRegistrar.Location = new System.Drawing.Point(111, 201);
             this.txtCorreoRegistrar.Name = "txtCorreoRegistrar";
             this.txtCorreoRegistrar.Size = new System.Drawing.Size(234, 20);
             this.txtCorreoRegistrar.TabIndex = 7;
@@ -97,7 +99,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 148);
+            this.label3.Location = new System.Drawing.Point(111, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 12;
@@ -105,7 +107,7 @@
             // 
             // txtNombreRegistrar
             // 
-            this.txtNombreRegistrar.Location = new System.Drawing.Point(111, 167);
+            this.txtNombreRegistrar.Location = new System.Drawing.Point(111, 150);
             this.txtNombreRegistrar.Name = "txtNombreRegistrar";
             this.txtNombreRegistrar.Size = new System.Drawing.Size(234, 20);
             this.txtNombreRegistrar.TabIndex = 11;
@@ -121,7 +123,7 @@
             this.btnRegistrarte.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRegistrarte.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegistrarte.IconSize = 21;
-            this.btnRegistrarte.Location = new System.Drawing.Point(170, 325);
+            this.btnRegistrarte.Location = new System.Drawing.Point(170, 358);
             this.btnRegistrarte.Name = "btnRegistrarte";
             this.btnRegistrarte.Size = new System.Drawing.Size(103, 33);
             this.btnRegistrarte.TabIndex = 13;
@@ -152,12 +154,31 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(111, 284);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Confirmar clave";
+            // 
+            // txtConfirmarClaveRegistrar
+            // 
+            this.txtConfirmarClaveRegistrar.Location = new System.Drawing.Point(111, 307);
+            this.txtConfirmarClaveRegistrar.Name = "txtConfirmarClaveRegistrar";
+            this.txtConfirmarClaveRegistrar.PasswordChar = '*';
+            this.txtConfirmarClaveRegistrar.Size = new System.Drawing.Size(234, 20);
+            this.txtConfirmarClaveRegistrar.TabIndex = 15;
+            // 
             // Registrase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(429, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtConfirmarClaveRegistrar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRegistrarte);
             this.Controls.Add(this.label3);
@@ -189,5 +210,7 @@
         private System.Windows.Forms.TextBox txtNombreRegistrar;
         private FontAwesome.Sharp.IconButton btnRegistrarte;
         private FontAwesome.Sharp.IconButton btnCancelar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtConfirmarClaveRegistrar;
     }
 }
