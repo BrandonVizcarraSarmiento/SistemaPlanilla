@@ -53,7 +53,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.IndianRed;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.lblTituloSeccion);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -177,7 +177,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panel3.Controls.Add(this.btnNuevoUsuario);
             this.panel3.Controls.Add(this.btnEditarUsuario);
             this.panel3.Controls.Add(this.btnEliminarUsuario);
@@ -287,6 +287,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(27, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(150, 24);

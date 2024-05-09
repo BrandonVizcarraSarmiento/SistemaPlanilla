@@ -55,22 +55,20 @@
             this.lblCargos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblCargos.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblCargos.Location = new System.Drawing.Point(52, 37);
-            this.lblCargos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCargos.Location = new System.Drawing.Point(39, 30);
             this.lblCargos.Name = "lblCargos";
-            this.lblCargos.Size = new System.Drawing.Size(133, 39);
+            this.lblCargos.Size = new System.Drawing.Size(108, 31);
             this.lblCargos.TabIndex = 0;
             this.lblCargos.Text = "Cargos";
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.Color.IndianRed;
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panelTitulo.Controls.Add(this.lblCargos);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
-            this.panelTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(907, 106);
+            this.panelTitulo.Size = new System.Drawing.Size(680, 86);
             this.panelTitulo.TabIndex = 1;
             // 
             // panelBuscarCargos
@@ -78,18 +76,17 @@
             this.panelBuscarCargos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelBuscarCargos.Controls.Add(this.txtBuscarCargo);
             this.panelBuscarCargos.Controls.Add(this.btnBuscarCargos);
-            this.panelBuscarCargos.Location = new System.Drawing.Point(273, 117);
-            this.panelBuscarCargos.Margin = new System.Windows.Forms.Padding(4);
+            this.panelBuscarCargos.Location = new System.Drawing.Point(205, 95);
             this.panelBuscarCargos.Name = "panelBuscarCargos";
-            this.panelBuscarCargos.Size = new System.Drawing.Size(329, 58);
+            this.panelBuscarCargos.Size = new System.Drawing.Size(247, 47);
             this.panelBuscarCargos.TabIndex = 15;
             // 
             // txtBuscarCargo
             // 
-            this.txtBuscarCargo.Location = new System.Drawing.Point(25, 16);
-            this.txtBuscarCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscarCargo.Location = new System.Drawing.Point(19, 13);
+            this.txtBuscarCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscarCargo.Name = "txtBuscarCargo";
-            this.txtBuscarCargo.Size = new System.Drawing.Size(232, 22);
+            this.txtBuscarCargo.Size = new System.Drawing.Size(175, 20);
             this.txtBuscarCargo.TabIndex = 12;
             // 
             // btnBuscarCargos
@@ -104,10 +101,9 @@
             this.btnBuscarCargos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBuscarCargos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscarCargos.IconSize = 21;
-            this.btnBuscarCargos.Location = new System.Drawing.Point(267, 12);
-            this.btnBuscarCargos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarCargos.Location = new System.Drawing.Point(200, 10);
             this.btnBuscarCargos.Name = "btnBuscarCargos";
-            this.btnBuscarCargos.Size = new System.Drawing.Size(47, 28);
+            this.btnBuscarCargos.Size = new System.Drawing.Size(35, 23);
             this.btnBuscarCargos.TabIndex = 11;
             this.btnBuscarCargos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarCargos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -117,13 +113,13 @@
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panel3.Controls.Add(this.btnNuevoCargo);
             this.panel3.Controls.Add(this.btnEditarCargo);
             this.panel3.Controls.Add(this.btnEliminarCargo);
-            this.panel3.Location = new System.Drawing.Point(193, 454);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(145, 369);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(507, 74);
+            this.panel3.Size = new System.Drawing.Size(380, 60);
             this.panel3.TabIndex = 16;
             // 
             // btnNuevoCargo
@@ -138,10 +134,9 @@
             this.btnNuevoCargo.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuevoCargo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevoCargo.IconSize = 21;
-            this.btnNuevoCargo.Location = new System.Drawing.Point(59, 12);
-            this.btnNuevoCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevoCargo.Location = new System.Drawing.Point(44, 10);
             this.btnNuevoCargo.Name = "btnNuevoCargo";
-            this.btnNuevoCargo.Size = new System.Drawing.Size(108, 41);
+            this.btnNuevoCargo.Size = new System.Drawing.Size(81, 33);
             this.btnNuevoCargo.TabIndex = 8;
             this.btnNuevoCargo.Text = "Nuevo";
             this.btnNuevoCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -161,10 +156,9 @@
             this.btnEditarCargo.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditarCargo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditarCargo.IconSize = 21;
-            this.btnEditarCargo.Location = new System.Drawing.Point(201, 12);
-            this.btnEditarCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditarCargo.Location = new System.Drawing.Point(151, 10);
             this.btnEditarCargo.Name = "btnEditarCargo";
-            this.btnEditarCargo.Size = new System.Drawing.Size(108, 41);
+            this.btnEditarCargo.Size = new System.Drawing.Size(81, 33);
             this.btnEditarCargo.TabIndex = 10;
             this.btnEditarCargo.Text = "Editar";
             this.btnEditarCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -184,10 +178,9 @@
             this.btnEliminarCargo.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarCargo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarCargo.IconSize = 21;
-            this.btnEliminarCargo.Location = new System.Drawing.Point(344, 12);
-            this.btnEliminarCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarCargo.Location = new System.Drawing.Point(258, 10);
             this.btnEliminarCargo.Name = "btnEliminarCargo";
-            this.btnEliminarCargo.Size = new System.Drawing.Size(108, 41);
+            this.btnEliminarCargo.Size = new System.Drawing.Size(81, 33);
             this.btnEliminarCargo.TabIndex = 9;
             this.btnEliminarCargo.Text = "Eliminar";
             this.btnEliminarCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -197,13 +190,13 @@
             // 
             // panelSegundoCargo
             // 
+            this.panelSegundoCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panelSegundoCargo.Controls.Add(this.dtgvCargo);
             this.panelSegundoCargo.Controls.Add(this.panelBuscarCargos);
             this.panelSegundoCargo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSegundoCargo.Location = new System.Drawing.Point(0, 0);
-            this.panelSegundoCargo.Margin = new System.Windows.Forms.Padding(4);
             this.panelSegundoCargo.Name = "panelSegundoCargo";
-            this.panelSegundoCargo.Size = new System.Drawing.Size(907, 554);
+            this.panelSegundoCargo.Size = new System.Drawing.Size(680, 450);
             this.panelSegundoCargo.TabIndex = 17;
             // 
             // dtgvCargo
@@ -236,8 +229,8 @@
             this.dtgvCargo.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvCargo.EnableHeadersVisualStyles = false;
             this.dtgvCargo.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvCargo.Location = new System.Drawing.Point(175, 181);
-            this.dtgvCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgvCargo.Location = new System.Drawing.Point(131, 147);
+            this.dtgvCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgvCargo.Name = "dtgvCargo";
             this.dtgvCargo.ReadOnly = true;
             this.dtgvCargo.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -252,19 +245,18 @@
             this.dtgvCargo.RowHeadersWidth = 51;
             this.dtgvCargo.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
             this.dtgvCargo.RowTemplate.Height = 24;
-            this.dtgvCargo.Size = new System.Drawing.Size(579, 251);
+            this.dtgvCargo.Size = new System.Drawing.Size(434, 204);
             this.dtgvCargo.TabIndex = 16;
             // 
             // FrmCargo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(907, 554);
+            this.ClientSize = new System.Drawing.Size(680, 450);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelSegundoCargo);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCargo";
             this.Text = "FrmCargo";
             this.Load += new System.EventHandler(this.FrmCargo_Load);

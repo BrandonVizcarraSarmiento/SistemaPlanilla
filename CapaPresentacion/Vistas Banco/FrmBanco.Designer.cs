@@ -51,7 +51,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.IndianRed;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panel2.Controls.Add(this.lblTituloSeccion);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -188,7 +188,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panel1.Controls.Add(this.dtgvBanco);
             this.panel1.Controls.Add(this.panelBuscarBancos);
             this.panel1.Controls.Add(this.panel3);

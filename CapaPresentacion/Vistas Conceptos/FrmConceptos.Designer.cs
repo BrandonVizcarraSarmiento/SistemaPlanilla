@@ -51,13 +51,12 @@
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.Color.IndianRed;
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panelTitulo.Controls.Add(this.lblConcepto);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
-            this.panelTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(912, 107);
+            this.panelTitulo.Size = new System.Drawing.Size(684, 87);
             this.panelTitulo.TabIndex = 2;
             // 
             // lblConcepto
@@ -66,24 +65,22 @@
             this.lblConcepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConcepto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblConcepto.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblConcepto.Location = new System.Drawing.Point(52, 37);
-            this.lblConcepto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblConcepto.Location = new System.Drawing.Point(39, 30);
             this.lblConcepto.Name = "lblConcepto";
-            this.lblConcepto.Size = new System.Drawing.Size(189, 39);
+            this.lblConcepto.Size = new System.Drawing.Size(154, 31);
             this.lblConcepto.TabIndex = 0;
             this.lblConcepto.Text = "Conceptos";
             // 
             // panelSegundoCargo
             // 
-            this.panelSegundoCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelSegundoCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panelSegundoCargo.Controls.Add(this.dtgvConceptos);
             this.panelSegundoCargo.Controls.Add(this.panel3);
             this.panelSegundoCargo.Controls.Add(this.panelBuscar);
             this.panelSegundoCargo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSegundoCargo.Location = new System.Drawing.Point(0, 107);
-            this.panelSegundoCargo.Margin = new System.Windows.Forms.Padding(4);
+            this.panelSegundoCargo.Location = new System.Drawing.Point(0, 87);
             this.panelSegundoCargo.Name = "panelSegundoCargo";
-            this.panelSegundoCargo.Size = new System.Drawing.Size(912, 447);
+            this.panelSegundoCargo.Size = new System.Drawing.Size(684, 363);
             this.panelSegundoCargo.TabIndex = 18;
             // 
             // dtgvConceptos
@@ -116,8 +113,8 @@
             this.dtgvConceptos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvConceptos.EnableHeadersVisualStyles = false;
             this.dtgvConceptos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvConceptos.Location = new System.Drawing.Point(187, 90);
-            this.dtgvConceptos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtgvConceptos.Location = new System.Drawing.Point(140, 73);
+            this.dtgvConceptos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtgvConceptos.Name = "dtgvConceptos";
             this.dtgvConceptos.ReadOnly = true;
             this.dtgvConceptos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -132,7 +129,7 @@
             this.dtgvConceptos.RowHeadersWidth = 51;
             this.dtgvConceptos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
             this.dtgvConceptos.RowTemplate.Height = 24;
-            this.dtgvConceptos.Size = new System.Drawing.Size(507, 251);
+            this.dtgvConceptos.Size = new System.Drawing.Size(380, 204);
             this.dtgvConceptos.TabIndex = 21;
             // 
             // panel3
@@ -141,10 +138,9 @@
             this.panel3.Controls.Add(this.btnNuevosConceptos);
             this.panel3.Controls.Add(this.btnEditarConceptos);
             this.panel3.Controls.Add(this.btnEliminarConceptos);
-            this.panel3.Location = new System.Drawing.Point(187, 347);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(140, 282);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(507, 74);
+            this.panel3.Size = new System.Drawing.Size(380, 60);
             this.panel3.TabIndex = 20;
             // 
             // btnNuevosConceptos
@@ -159,10 +155,9 @@
             this.btnNuevosConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNuevosConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevosConceptos.IconSize = 21;
-            this.btnNuevosConceptos.Location = new System.Drawing.Point(59, 12);
-            this.btnNuevosConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevosConceptos.Location = new System.Drawing.Point(44, 10);
             this.btnNuevosConceptos.Name = "btnNuevosConceptos";
-            this.btnNuevosConceptos.Size = new System.Drawing.Size(108, 41);
+            this.btnNuevosConceptos.Size = new System.Drawing.Size(81, 33);
             this.btnNuevosConceptos.TabIndex = 8;
             this.btnNuevosConceptos.Text = "Nuevo";
             this.btnNuevosConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -182,10 +177,9 @@
             this.btnEditarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditarConceptos.IconSize = 21;
-            this.btnEditarConceptos.Location = new System.Drawing.Point(201, 12);
-            this.btnEditarConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditarConceptos.Location = new System.Drawing.Point(151, 10);
             this.btnEditarConceptos.Name = "btnEditarConceptos";
-            this.btnEditarConceptos.Size = new System.Drawing.Size(108, 41);
+            this.btnEditarConceptos.Size = new System.Drawing.Size(81, 33);
             this.btnEditarConceptos.TabIndex = 10;
             this.btnEditarConceptos.Text = "Editar";
             this.btnEditarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -205,10 +199,9 @@
             this.btnEliminarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEliminarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarConceptos.IconSize = 21;
-            this.btnEliminarConceptos.Location = new System.Drawing.Point(344, 12);
-            this.btnEliminarConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarConceptos.Location = new System.Drawing.Point(258, 10);
             this.btnEliminarConceptos.Name = "btnEliminarConceptos";
-            this.btnEliminarConceptos.Size = new System.Drawing.Size(108, 41);
+            this.btnEliminarConceptos.Size = new System.Drawing.Size(81, 33);
             this.btnEliminarConceptos.TabIndex = 9;
             this.btnEliminarConceptos.Text = "Eliminar";
             this.btnEliminarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -221,18 +214,17 @@
             this.panelBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelBuscar.Controls.Add(this.txtBuscarConceptos);
             this.panelBuscar.Controls.Add(this.btnBuscarConceptos);
-            this.panelBuscar.Location = new System.Drawing.Point(273, 10);
-            this.panelBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.panelBuscar.Location = new System.Drawing.Point(205, 8);
             this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(329, 58);
+            this.panelBuscar.Size = new System.Drawing.Size(247, 47);
             this.panelBuscar.TabIndex = 19;
             // 
             // txtBuscarConceptos
             // 
-            this.txtBuscarConceptos.Location = new System.Drawing.Point(25, 16);
-            this.txtBuscarConceptos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscarConceptos.Location = new System.Drawing.Point(19, 13);
+            this.txtBuscarConceptos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscarConceptos.Name = "txtBuscarConceptos";
-            this.txtBuscarConceptos.Size = new System.Drawing.Size(232, 22);
+            this.txtBuscarConceptos.Size = new System.Drawing.Size(175, 20);
             this.txtBuscarConceptos.TabIndex = 12;
             // 
             // btnBuscarConceptos
@@ -247,10 +239,9 @@
             this.btnBuscarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBuscarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscarConceptos.IconSize = 21;
-            this.btnBuscarConceptos.Location = new System.Drawing.Point(267, 12);
-            this.btnBuscarConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarConceptos.Location = new System.Drawing.Point(200, 10);
             this.btnBuscarConceptos.Name = "btnBuscarConceptos";
-            this.btnBuscarConceptos.Size = new System.Drawing.Size(47, 28);
+            this.btnBuscarConceptos.Size = new System.Drawing.Size(35, 23);
             this.btnBuscarConceptos.TabIndex = 11;
             this.btnBuscarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -259,12 +250,11 @@
             // 
             // FrmConceptos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 554);
+            this.ClientSize = new System.Drawing.Size(684, 450);
             this.Controls.Add(this.panelSegundoCargo);
             this.Controls.Add(this.panelTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmConceptos";
             this.Text = "FrmConceptos";
             this.Load += new System.EventHandler(this.FrmConceptos_Load_1);

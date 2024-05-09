@@ -65,6 +65,7 @@
             // lblMes
             // 
             this.lblMes.AutoSize = true;
+            this.lblMes.ForeColor = System.Drawing.SystemColors.Window;
             this.lblMes.Location = new System.Drawing.Point(17, 14);
             this.lblMes.Name = "lblMes";
             this.lblMes.Size = new System.Drawing.Size(27, 13);
@@ -82,6 +83,7 @@
             // lblAño
             // 
             this.lblAño.AutoSize = true;
+            this.lblAño.ForeColor = System.Drawing.SystemColors.Window;
             this.lblAño.Location = new System.Drawing.Point(142, 15);
             this.lblAño.Name = "lblAño";
             this.lblAño.Size = new System.Drawing.Size(26, 13);
@@ -98,7 +100,7 @@
             // 
             // paneltitulo
             // 
-            this.paneltitulo.BackColor = System.Drawing.Color.IndianRed;
+            this.paneltitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.paneltitulo.Controls.Add(this.lblTituloAsistencias);
             this.paneltitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitulo.Location = new System.Drawing.Point(0, 0);
@@ -108,7 +110,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(244)))));
             this.panel1.Controls.Add(this.dtgvAsistencia);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
