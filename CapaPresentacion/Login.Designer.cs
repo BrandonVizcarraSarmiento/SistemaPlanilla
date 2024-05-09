@@ -104,7 +104,7 @@
             // 
             this.btnIngresar.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnIngresar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnIngresar.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
@@ -125,7 +125,7 @@
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Red;
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
@@ -146,7 +146,7 @@
             // 
             this.btnRegistrarse.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrarse.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRegistrarse.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRegistrarse.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;

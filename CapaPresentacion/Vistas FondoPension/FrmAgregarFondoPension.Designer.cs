@@ -158,6 +158,7 @@
             this.Controls.Add(this.btnCancelarFPension);
             this.Controls.Add(this.btnLimpiarFPension);
             this.Controls.Add(this.btnGuardarFPension);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmAgregarFondoPension";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

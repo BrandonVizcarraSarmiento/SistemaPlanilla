@@ -12,16 +12,19 @@ namespace CapaNegocio
 {
     public class CN_Asistencia
     {
-        public static List<Asistencia> ObtenerTodosAsistencia()
+        public DataTable ObtenerDatosAsistencia()
         {
+            DataTable resultados = new DataTable();
             try
             {
-                return CD_Asistencia.ObtenerTodosAsistencia();
+                CD_Asistencia cdAsistencia = new CD_Asistencia();
+                resultados = cdAsistencia.ObtenerDatosAsistencia();
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al obtener lista de bancos: " + ex.Message);
+                throw ex;
             }
+            return resultados;
         }
         public static void GuardarOActualizarAsistencia(Asistencia asistencia)
         {

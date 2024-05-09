@@ -34,6 +34,7 @@
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblConcepto = new System.Windows.Forms.Label();
             this.panelSegundoCargo = new System.Windows.Forms.Panel();
+            this.dtgvConceptos = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnNuevosConceptos = new FontAwesome.Sharp.IconButton();
             this.btnEditarConceptos = new FontAwesome.Sharp.IconButton();
@@ -41,12 +42,11 @@
             this.panelBuscar = new System.Windows.Forms.Panel();
             this.txtBuscarConceptos = new System.Windows.Forms.TextBox();
             this.btnBuscarConceptos = new FontAwesome.Sharp.IconButton();
-            this.dtgvConceptos = new System.Windows.Forms.DataGridView();
             this.panelTitulo.SuspendLayout();
             this.panelSegundoCargo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvConceptos)).BeginInit();
             this.panel3.SuspendLayout();
             this.panelBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvConceptos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitulo
@@ -55,8 +55,9 @@
             this.panelTitulo.Controls.Add(this.lblConcepto);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(684, 87);
+            this.panelTitulo.Size = new System.Drawing.Size(912, 107);
             this.panelTitulo.TabIndex = 2;
             // 
             // lblConcepto
@@ -65,9 +66,10 @@
             this.lblConcepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConcepto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblConcepto.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblConcepto.Location = new System.Drawing.Point(39, 30);
+            this.lblConcepto.Location = new System.Drawing.Point(52, 37);
+            this.lblConcepto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConcepto.Name = "lblConcepto";
-            this.lblConcepto.Size = new System.Drawing.Size(154, 31);
+            this.lblConcepto.Size = new System.Drawing.Size(189, 39);
             this.lblConcepto.TabIndex = 0;
             this.lblConcepto.Text = "Conceptos";
             // 
@@ -78,122 +80,11 @@
             this.panelSegundoCargo.Controls.Add(this.panel3);
             this.panelSegundoCargo.Controls.Add(this.panelBuscar);
             this.panelSegundoCargo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSegundoCargo.Location = new System.Drawing.Point(0, 87);
+            this.panelSegundoCargo.Location = new System.Drawing.Point(0, 107);
+            this.panelSegundoCargo.Margin = new System.Windows.Forms.Padding(4);
             this.panelSegundoCargo.Name = "panelSegundoCargo";
-            this.panelSegundoCargo.Size = new System.Drawing.Size(684, 363);
+            this.panelSegundoCargo.Size = new System.Drawing.Size(912, 447);
             this.panelSegundoCargo.TabIndex = 18;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel3.Controls.Add(this.btnNuevosConceptos);
-            this.panel3.Controls.Add(this.btnEditarConceptos);
-            this.panel3.Controls.Add(this.btnEliminarConceptos);
-            this.panel3.Location = new System.Drawing.Point(140, 282);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(380, 60);
-            this.panel3.TabIndex = 20;
-            // 
-            // btnNuevosConceptos
-            // 
-            this.btnNuevosConceptos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNuevosConceptos.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnNuevosConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevosConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnNuevosConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevosConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevosConceptos.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            this.btnNuevosConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevosConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevosConceptos.IconSize = 21;
-            this.btnNuevosConceptos.Location = new System.Drawing.Point(44, 10);
-            this.btnNuevosConceptos.Name = "btnNuevosConceptos";
-            this.btnNuevosConceptos.Size = new System.Drawing.Size(81, 33);
-            this.btnNuevosConceptos.TabIndex = 8;
-            this.btnNuevosConceptos.Text = "Nuevo";
-            this.btnNuevosConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevosConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevosConceptos.UseVisualStyleBackColor = false;
-            // 
-            // btnEditarConceptos
-            // 
-            this.btnEditarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEditarConceptos.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEditarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEditarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditarConceptos.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.btnEditarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditarConceptos.IconSize = 21;
-            this.btnEditarConceptos.Location = new System.Drawing.Point(151, 10);
-            this.btnEditarConceptos.Name = "btnEditarConceptos";
-            this.btnEditarConceptos.Size = new System.Drawing.Size(81, 33);
-            this.btnEditarConceptos.TabIndex = 10;
-            this.btnEditarConceptos.Text = "Editar";
-            this.btnEditarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditarConceptos.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminarConceptos
-            // 
-            this.btnEliminarConceptos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminarConceptos.BackColor = System.Drawing.Color.IndianRed;
-            this.btnEliminarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnEliminarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminarConceptos.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnEliminarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminarConceptos.IconSize = 21;
-            this.btnEliminarConceptos.Location = new System.Drawing.Point(258, 10);
-            this.btnEliminarConceptos.Name = "btnEliminarConceptos";
-            this.btnEliminarConceptos.Size = new System.Drawing.Size(81, 33);
-            this.btnEliminarConceptos.TabIndex = 9;
-            this.btnEliminarConceptos.Text = "Eliminar";
-            this.btnEliminarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminarConceptos.UseVisualStyleBackColor = false;
-            // 
-            // panelBuscar
-            // 
-            this.panelBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panelBuscar.Controls.Add(this.txtBuscarConceptos);
-            this.panelBuscar.Controls.Add(this.btnBuscarConceptos);
-            this.panelBuscar.Location = new System.Drawing.Point(205, 8);
-            this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(247, 47);
-            this.panelBuscar.TabIndex = 19;
-            // 
-            // txtBuscarConceptos
-            // 
-            this.txtBuscarConceptos.Location = new System.Drawing.Point(19, 13);
-            this.txtBuscarConceptos.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBuscarConceptos.Name = "txtBuscarConceptos";
-            this.txtBuscarConceptos.Size = new System.Drawing.Size(175, 20);
-            this.txtBuscarConceptos.TabIndex = 12;
-            // 
-            // btnBuscarConceptos
-            // 
-            this.btnBuscarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBuscarConceptos.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnBuscarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnBuscarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscarConceptos.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBuscarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarConceptos.IconSize = 21;
-            this.btnBuscarConceptos.Location = new System.Drawing.Point(200, 10);
-            this.btnBuscarConceptos.Name = "btnBuscarConceptos";
-            this.btnBuscarConceptos.Size = new System.Drawing.Size(35, 23);
-            this.btnBuscarConceptos.TabIndex = 11;
-            this.btnBuscarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBuscarConceptos.UseVisualStyleBackColor = false;
             // 
             // dtgvConceptos
             // 
@@ -225,8 +116,8 @@
             this.dtgvConceptos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvConceptos.EnableHeadersVisualStyles = false;
             this.dtgvConceptos.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvConceptos.Location = new System.Drawing.Point(140, 73);
-            this.dtgvConceptos.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvConceptos.Location = new System.Drawing.Point(187, 90);
+            this.dtgvConceptos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvConceptos.Name = "dtgvConceptos";
             this.dtgvConceptos.ReadOnly = true;
             this.dtgvConceptos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -241,25 +132,149 @@
             this.dtgvConceptos.RowHeadersWidth = 51;
             this.dtgvConceptos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
             this.dtgvConceptos.RowTemplate.Height = 24;
-            this.dtgvConceptos.Size = new System.Drawing.Size(380, 204);
+            this.dtgvConceptos.Size = new System.Drawing.Size(507, 251);
             this.dtgvConceptos.TabIndex = 21;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel3.Controls.Add(this.btnNuevosConceptos);
+            this.panel3.Controls.Add(this.btnEditarConceptos);
+            this.panel3.Controls.Add(this.btnEliminarConceptos);
+            this.panel3.Location = new System.Drawing.Point(187, 347);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(507, 74);
+            this.panel3.TabIndex = 20;
+            // 
+            // btnNuevosConceptos
+            // 
+            this.btnNuevosConceptos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevosConceptos.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnNuevosConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevosConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnNuevosConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevosConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevosConceptos.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.btnNuevosConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevosConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevosConceptos.IconSize = 21;
+            this.btnNuevosConceptos.Location = new System.Drawing.Point(59, 12);
+            this.btnNuevosConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevosConceptos.Name = "btnNuevosConceptos";
+            this.btnNuevosConceptos.Size = new System.Drawing.Size(108, 41);
+            this.btnNuevosConceptos.TabIndex = 8;
+            this.btnNuevosConceptos.Text = "Nuevo";
+            this.btnNuevosConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevosConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNuevosConceptos.UseVisualStyleBackColor = false;
+            this.btnNuevosConceptos.Click += new System.EventHandler(this.btnNuevosConceptos_Click);
+            // 
+            // btnEditarConceptos
+            // 
+            this.btnEditarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEditarConceptos.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEditarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEditarConceptos.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
+            this.btnEditarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEditarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditarConceptos.IconSize = 21;
+            this.btnEditarConceptos.Location = new System.Drawing.Point(201, 12);
+            this.btnEditarConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditarConceptos.Name = "btnEditarConceptos";
+            this.btnEditarConceptos.Size = new System.Drawing.Size(108, 41);
+            this.btnEditarConceptos.TabIndex = 10;
+            this.btnEditarConceptos.Text = "Editar";
+            this.btnEditarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditarConceptos.UseVisualStyleBackColor = false;
+            this.btnEditarConceptos.Click += new System.EventHandler(this.btnEditarConceptos_Click);
+            // 
+            // btnEliminarConceptos
+            // 
+            this.btnEliminarConceptos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarConceptos.BackColor = System.Drawing.Color.IndianRed;
+            this.btnEliminarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEliminarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEliminarConceptos.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEliminarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminarConceptos.IconSize = 21;
+            this.btnEliminarConceptos.Location = new System.Drawing.Point(344, 12);
+            this.btnEliminarConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarConceptos.Name = "btnEliminarConceptos";
+            this.btnEliminarConceptos.Size = new System.Drawing.Size(108, 41);
+            this.btnEliminarConceptos.TabIndex = 9;
+            this.btnEliminarConceptos.Text = "Eliminar";
+            this.btnEliminarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminarConceptos.UseVisualStyleBackColor = false;
+            this.btnEliminarConceptos.Click += new System.EventHandler(this.btnEliminarConceptos_Click);
+            // 
+            // panelBuscar
+            // 
+            this.panelBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelBuscar.Controls.Add(this.txtBuscarConceptos);
+            this.panelBuscar.Controls.Add(this.btnBuscarConceptos);
+            this.panelBuscar.Location = new System.Drawing.Point(273, 10);
+            this.panelBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.panelBuscar.Name = "panelBuscar";
+            this.panelBuscar.Size = new System.Drawing.Size(329, 58);
+            this.panelBuscar.TabIndex = 19;
+            // 
+            // txtBuscarConceptos
+            // 
+            this.txtBuscarConceptos.Location = new System.Drawing.Point(25, 16);
+            this.txtBuscarConceptos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscarConceptos.Name = "txtBuscarConceptos";
+            this.txtBuscarConceptos.Size = new System.Drawing.Size(232, 22);
+            this.txtBuscarConceptos.TabIndex = 12;
+            // 
+            // btnBuscarConceptos
+            // 
+            this.btnBuscarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscarConceptos.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnBuscarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscarConceptos.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBuscarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarConceptos.IconSize = 21;
+            this.btnBuscarConceptos.Location = new System.Drawing.Point(267, 12);
+            this.btnBuscarConceptos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarConceptos.Name = "btnBuscarConceptos";
+            this.btnBuscarConceptos.Size = new System.Drawing.Size(47, 28);
+            this.btnBuscarConceptos.TabIndex = 11;
+            this.btnBuscarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuscarConceptos.UseVisualStyleBackColor = false;
+            this.btnBuscarConceptos.Click += new System.EventHandler(this.btnBuscarConceptos_Click);
             // 
             // FrmConceptos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 450);
+            this.ClientSize = new System.Drawing.Size(912, 554);
             this.Controls.Add(this.panelSegundoCargo);
             this.Controls.Add(this.panelTitulo);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmConceptos";
             this.Text = "FrmConceptos";
+            this.Load += new System.EventHandler(this.FrmConceptos_Load_1);
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             this.panelSegundoCargo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvConceptos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvConceptos)).EndInit();
             this.ResumeLayout(false);
 
         }

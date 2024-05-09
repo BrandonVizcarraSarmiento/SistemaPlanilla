@@ -1,5 +1,4 @@
-﻿using CapaEntidad;
-using CapaNegocio;
+﻿using CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
+
 
 namespace CapaPresentacion.Vistas_Cargo
 {
@@ -24,41 +26,42 @@ namespace CapaPresentacion.Vistas_Cargo
             txtSueldoMensual.Text = sueldoMensual.ToString();
         }
 
-        private void btnGuardarEditCargo_Click(object sender, EventArgs e)
+        private void btnGuardarEditCargo_Click_1(object sender, EventArgs e)
         {
-            string nuevoNombre = txtNombreCargo.Text;
-            string nuevoSueldoMensual = txtSueldoMensual.Text;
+            string nombre = txtNombreCargo.Text;
+            string sueldoMensualText = txtSueldoMensual.Text;
 
             try
             {
-                CN_Cargo.EditarCargo(IdCargo, nuevoNombre, nuevoSueldoMensual);
+                CN_Cargo.EditarCargo(IdCargo, nombre, sueldoMensualText);
                 MessageBox.Show("Cargo editado correctamente.");
                 this.Close();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al intentar editar el cargo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al intentar editar el cargo: " + ex.Message);
             }
         }
 
-        private void btnLimpiarCargo_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-        }
-
-        private void btnCancelarCargo_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void LimpiarCampos()
+        private void btnLimpiarCargo_Click_1(object sender, EventArgs e)
         {
             txtNombreCargo.Text = "";
             txtSueldoMensual.Text = "";
         }
+
+        private void btnCancelarCargo_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmEditarCargo_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

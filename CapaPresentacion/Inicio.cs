@@ -161,6 +161,5 @@ namespace CapaPresentacion
             MenuActivo.BackColor = Color.FromArgb(98, 102, 244); // Restaurar el color del botón anterior
             MenuActivo.ForeColor = SystemColors.ButtonHighlight; // Restaurar el color de texto del botón anterior
         }
-
     }
 }

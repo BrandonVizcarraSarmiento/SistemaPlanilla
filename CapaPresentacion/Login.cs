@@ -22,27 +22,35 @@ namespace CapaPresentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            List<Usuario> TEST = new CN_Usuario().Listar();
-            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Correo == txtCorreo.Text && u.Clave == txtClave.Text).FirstOrDefault();
+            string correo = txtCorreo.Text;
+            string clave = txtClave.Text;
 
-            if(ousuario != null)
+            if (!string.IsNullOrEmpty(correo) && !string.IsNullOrEmpty(clave))
             {
-                Inicio form = new Inicio(ousuario);
-                form.Show();
-                this.Hide();
+                CN_Usuario cnUsuario = new CN_Usuario();
+                Usuario usuario = cnUsuario.ValidarUsuario(correo, clave);
 
-                form.FormClosing += frm_Cerrar;
+                if (usuario != null)
+                {
+                    Inicio formInicio = new Inicio(usuario);
+                    formInicio.Show();
+                    this.Hide();
+                    formInicio.FormClosing += frm_Cerrar;
+                }
+                else
+                {
+                    MessageBox.Show("Correo o contraseña incorrectos");
+                }
             }
             else
             {
-                MessageBox.Show("NO SE ENCONTRO EL USURIO", "Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Por favor ingrese el correo y la contraseña");
             }
-
         }
         private void frm_Cerrar(object sender, FormClosingEventArgs e)
         {

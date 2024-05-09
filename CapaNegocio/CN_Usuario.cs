@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,65 +13,75 @@ namespace CapaNegocio
     public class CN_Usuario
     {
         private CD_Usuario objcd_usuario = new CD_Usuario();
-        public List<Usuario> Listar()
+        public Usuario ValidarUsuario(string correo, string clave)
         {
-            return objcd_usuario.Listar();
-        }
-        public int Registrar(Usuario obj, out string Mensaje)
-        {
-            Mensaje = string.Empty;
+            DataTable dtUsuario = objcd_usuario.ObtenerUsuarioPorCorreoYClave(correo, clave);
 
-            if (obj.Nombre == "")
+            if (dtUsuario.Rows.Count > 0)
             {
-                Mensaje += "Es necesario el nombre completo del usuario\n";
-            }
-
-            if (obj.Clave == "")
-            {
-                Mensaje += "Es necesario la clave del usuario\n";
-            }
-
-            if (Mensaje != string.Empty)
-            {
-                return 0;
+                DataRow row = dtUsuario.Rows[0];
+                Usuario usuario = new Usuario
+                {
+                    Id = Convert.ToInt32(row["Id"]),
+                    Nombre = row["Nombre"].ToString(),
+                    Correo = row["Correo"].ToString(),
+                    Clave = row["Clave"].ToString()
+                };
+                return usuario;
             }
             else
             {
-                return objcd_usuario.Registrar(obj, out Mensaje);
+                return null;
             }
-
-
         }
-        public bool Editar(Usuario obj, out string Mensaje)
+        public DataTable ObtenerUsuariosConRoles()
         {
-
-            Mensaje = string.Empty;
-
-            if (obj.Nombre == "")
-            {
-                Mensaje += "Es necesario el nombre completo del usuario\n";
-            }
-
-            if (obj.Clave == "")
-            {
-                Mensaje += "Es necesario la clave del usuario\n";
-            }
-
-
-            if (Mensaje != string.Empty)
-            {
-                return false;
-            }
-            else
-            {
-                return objcd_usuario.Editar(obj, out Mensaje);
-            }
-
-
+                CD_Usuario cdUsuario = new CD_Usuario();
+                return cdUsuario.ObtenerUsuariosConRoles();
         }
-        public bool Eliminar(Usuario obj, out string Mensaje)
+        public void AgregarUsuario(string nombre, string correo, string clave, int idRol, bool estado)
         {
-            return objcd_usuario.Eliminar(obj, out Mensaje);
+            // Validar que los campos no estén vacíos
+            if (string.IsNullOrWhiteSpace(nombre))
+                throw new ArgumentException("El nombre no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(correo))
+                throw new ArgumentException("El correo no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(clave))
+                throw new ArgumentException("La clave no puede estar vacía.");
+
+            objcd_usuario.AgregarUsuario(nombre, correo, clave, idRol, estado);
+        }
+        public void EditarUsuario(int id, string nombre, string correo, string clave, int idRol, bool estado)
+        {
+            // Validar que el ID del usuario sea válido
+            if (id <= 0)
+                throw new ArgumentException("El ID del usuario no es válido.", nameof(id));
+
+            // Validar que los campos no estén vacíos
+            if (string.IsNullOrWhiteSpace(nombre))
+                throw new ArgumentException("El nombre no puede estar vacío.", nameof(nombre));
+
+            if (string.IsNullOrWhiteSpace(correo))
+                throw new ArgumentException("El correo no puede estar vacío.", nameof(correo));
+
+            if (string.IsNullOrWhiteSpace(clave))
+                throw new ArgumentException("La clave no puede estar vacía.", nameof(clave));
+
+            try
+            {
+                // Llamar al método de la capa de datos para editar el usuario
+                objcd_usuario.EditarUsuario(id, nombre, correo, clave, idRol, estado);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al editar el usuario: " + ex.Message);
+            }
+        }
+        public void EliminarUsuario(int id)
+        {
+            objcd_usuario.EliminarUsuario(id);
         }
     }
 }

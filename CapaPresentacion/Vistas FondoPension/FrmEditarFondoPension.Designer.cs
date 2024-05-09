@@ -158,11 +158,11 @@
             this.Controls.Add(this.btnCancelarFPension);
             this.Controls.Add(this.btnLimpiarFPension);
             this.Controls.Add(this.btnGuardarEditFPension);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmEditarFondoPension";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditarFondoPension";
-            this.Load += new System.EventHandler(this.FrmEditarFondoPension_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

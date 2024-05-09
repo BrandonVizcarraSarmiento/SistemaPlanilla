@@ -54,10 +54,5 @@ namespace CapaPresentacion.Vistas_FondoPension
         {
             this.Close();
         }
-
-        private void FrmEditarFondoPension_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

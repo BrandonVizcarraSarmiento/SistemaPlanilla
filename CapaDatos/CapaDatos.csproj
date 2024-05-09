@@ -45,6 +45,7 @@
     <Compile Include="CD_Asistencia.cs" />
     <Compile Include="CD_Bancos.cs" />
     <Compile Include="CD_Cargo.cs" />
+    <Compile Include="CD_Conceptos.cs" />
     <Compile Include="CD_Empleados.cs" />
     <Compile Include="CD_FondoPension.cs" />
     <Compile Include="CD_Permiso.cs" />
