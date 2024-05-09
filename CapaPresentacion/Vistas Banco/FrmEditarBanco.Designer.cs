@@ -110,16 +110,16 @@
             // 
             this.btnCancelarBanco.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnCancelarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarBanco.FlatAppearance.BorderSize = 0;
+            this.btnCancelarBanco.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelarBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarBanco.ForeColor = System.Drawing.Color.White;
             this.btnCancelarBanco.IconChar = FontAwesome.Sharp.IconChar.Cancel;
             this.btnCancelarBanco.IconColor = System.Drawing.Color.White;
             this.btnCancelarBanco.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelarBanco.IconSize = 21;
-            this.btnCancelarBanco.Location = new System.Drawing.Point(244, 143);
+            this.btnCancelarBanco.Location = new System.Drawing.Point(244, 144);
             this.btnCancelarBanco.Name = "btnCancelarBanco";
-            this.btnCancelarBanco.Size = new System.Drawing.Size(81, 34);
+            this.btnCancelarBanco.Size = new System.Drawing.Size(81, 32);
             this.btnCancelarBanco.TabIndex = 48;
             this.btnCancelarBanco.Text = "Cancelar";
             this.btnCancelarBanco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -138,6 +138,7 @@
             this.Controls.Add(this.txtNombreBanco);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmEditarBanco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

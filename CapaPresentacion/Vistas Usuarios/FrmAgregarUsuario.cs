@@ -27,10 +27,11 @@ namespace CapaPresentacion.Vistas_Usuarios
         }
         private void CargarRoles()
         {
-            DataTable dtRoles = cnUsuario.ObtenerRoles();
+            // Cargar roles en cboRol
+            CN_Rol cnRol = new CN_Rol();
+            cboRol.DataSource = cnRol.Listar();
             cboRol.DisplayMember = "Descripcion";
             cboRol.ValueMember = "Id";
-            cboRol.DataSource = dtRoles;
         }
 
         private void CargarEstados()

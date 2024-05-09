@@ -110,7 +110,7 @@
             // 
             this.btnCancelarBanco.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnCancelarBanco.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarBanco.FlatAppearance.BorderSize = 0;
+            this.btnCancelarBanco.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelarBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarBanco.ForeColor = System.Drawing.Color.White;
             this.btnCancelarBanco.IconChar = FontAwesome.Sharp.IconChar.Cancel;
@@ -138,6 +138,7 @@
             this.Controls.Add(this.txtNombreBanco);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmAgregarBanco";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -84,7 +84,7 @@
             // 
             this.btnCancelarCargo.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnCancelarCargo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarCargo.FlatAppearance.BorderSize = 0;
+            this.btnCancelarCargo.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelarCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarCargo.ForeColor = System.Drawing.Color.White;
             this.btnCancelarCargo.IconChar = FontAwesome.Sharp.IconChar.Cancel;
@@ -93,7 +93,7 @@
             this.btnCancelarCargo.IconSize = 21;
             this.btnCancelarCargo.Location = new System.Drawing.Point(257, 207);
             this.btnCancelarCargo.Name = "btnCancelarCargo";
-            this.btnCancelarCargo.Size = new System.Drawing.Size(81, 34);
+            this.btnCancelarCargo.Size = new System.Drawing.Size(81, 33);
             this.btnCancelarCargo.TabIndex = 45;
             this.btnCancelarCargo.Text = "Cancelar";
             this.btnCancelarCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -158,7 +158,8 @@
             this.Controls.Add(this.btnCancelarCargo);
             this.Controls.Add(this.btnLimpiarCargo);
             this.Controls.Add(this.btnGuardarEditCargo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmEditarCargo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

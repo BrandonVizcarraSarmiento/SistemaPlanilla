@@ -86,32 +86,6 @@ namespace CapaDatos
             }
             return resultados;
         }
-        public DataTable ObtenerRoles()
-        {
-            DataTable resultados = new DataTable();
-            try
-            {
-                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
-                {
-                    conexion.Open();
-                    string consulta = "SELECT Id, Descripcion FROM Rol";
-
-                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
-                    {
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(comando))
-                        {
-                            adapter.Fill(resultados);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al obtener los roles: " + ex.Message);
-            }
-            return resultados;
-        }
-
         public void AgregarUsuario(string nombre, string correo, string clave, int idRol, bool estado)
         {
             try
@@ -137,5 +111,32 @@ namespace CapaDatos
                 throw new Exception("Error al agregar el usuario: " + ex.Message);
             }
         }
+        public void EditarUsuario(int id, string nombre, string correo, string clave, int idRol, bool estado)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    conexion.Open();
+                    using (SqlCommand comando = new SqlCommand("EditarUsuario", conexion))
+                    {
+                        comando.CommandType = CommandType.StoredProcedure;
+                        comando.Parameters.AddWithValue("@Id", id);
+                        comando.Parameters.AddWithValue("@Nombre", nombre);
+                        comando.Parameters.AddWithValue("@Correo", correo);
+                        comando.Parameters.AddWithValue("@Clave", clave);
+                        comando.Parameters.AddWithValue("@IdRol", idRol);
+                        comando.Parameters.AddWithValue("@Estado", estado);
+
+                        comando.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al editar el usuario: " + ex.Message);
+            }
+        }
+
     }
 }

@@ -315,6 +315,7 @@
             this.Controls.Add(this.btnCancelarEmpleado);
             this.Controls.Add(this.btnLimpiarEmpleado);
             this.Controls.Add(this.btnGuardarEmpleado);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmAgregarEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

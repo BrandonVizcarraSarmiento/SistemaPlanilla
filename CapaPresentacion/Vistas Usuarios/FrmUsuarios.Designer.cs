@@ -230,6 +230,7 @@
             this.btnEditarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarUsuario.UseVisualStyleBackColor = false;
+            this.btnEditarUsuario.Click += new System.EventHandler(this.btnEditarUsuario_Click);
             // 
             // dtgvUsuario
             // 

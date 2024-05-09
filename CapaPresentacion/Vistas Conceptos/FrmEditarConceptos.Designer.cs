@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditarConceptos));
             this.txtCodigoConceptos = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,134 +43,89 @@
             // 
             // txtCodigoConceptos
             // 
-            this.txtCodigoConceptos.Location = new System.Drawing.Point(108, 128);
+            resources.ApplyResources(this.txtCodigoConceptos, "txtCodigoConceptos");
             this.txtCodigoConceptos.Name = "txtCodigoConceptos";
-            this.txtCodigoConceptos.Size = new System.Drawing.Size(255, 20);
-            this.txtCodigoConceptos.TabIndex = 62;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 99);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 61;
-            this.label1.Text = "Codigo";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(168, 42);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 24);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "Editar Conceptos";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 162);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "Nombre";
             // 
             // lblSueldo
             // 
-            this.lblSueldo.AutoSize = true;
-            this.lblSueldo.Location = new System.Drawing.Point(106, 219);
+            resources.ApplyResources(this.lblSueldo, "lblSueldo");
             this.lblSueldo.Name = "lblSueldo";
-            this.lblSueldo.Size = new System.Drawing.Size(28, 13);
-            this.lblSueldo.TabIndex = 57;
-            this.lblSueldo.Text = "Tipo";
             // 
             // txtNombreConceptos
             // 
-            this.txtNombreConceptos.Location = new System.Drawing.Point(108, 179);
+            resources.ApplyResources(this.txtNombreConceptos, "txtNombreConceptos");
             this.txtNombreConceptos.Name = "txtNombreConceptos";
-            this.txtNombreConceptos.Size = new System.Drawing.Size(255, 20);
-            this.txtNombreConceptos.TabIndex = 58;
             // 
             // btnCancelarConceptos
             // 
             this.btnCancelarConceptos.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnCancelarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelarConceptos.FlatAppearance.BorderSize = 0;
-            this.btnCancelarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarConceptos.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            resources.ApplyResources(this.btnCancelarConceptos, "btnCancelarConceptos");
             this.btnCancelarConceptos.ForeColor = System.Drawing.Color.White;
             this.btnCancelarConceptos.IconChar = FontAwesome.Sharp.IconChar.Cancel;
             this.btnCancelarConceptos.IconColor = System.Drawing.Color.White;
             this.btnCancelarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelarConceptos.IconSize = 21;
-            this.btnCancelarConceptos.Location = new System.Drawing.Point(282, 277);
             this.btnCancelarConceptos.Name = "btnCancelarConceptos";
-            this.btnCancelarConceptos.Size = new System.Drawing.Size(81, 34);
-            this.btnCancelarConceptos.TabIndex = 55;
-            this.btnCancelarConceptos.Text = "Cancelar";
-            this.btnCancelarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelarConceptos.UseVisualStyleBackColor = false;
             this.btnCancelarConceptos.Click += new System.EventHandler(this.btnCancelarConceptos_Click);
             // 
             // btnLimpiarConceptos
             // 
-            this.btnLimpiarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLimpiarConceptos.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnLimpiarConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpiarConceptos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLimpiarConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.btnLimpiarConceptos, "btnLimpiarConceptos");
             this.btnLimpiarConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiarConceptos.IconChar = FontAwesome.Sharp.IconChar.Broom;
             this.btnLimpiarConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLimpiarConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarConceptos.IconSize = 21;
-            this.btnLimpiarConceptos.Location = new System.Drawing.Point(195, 277);
             this.btnLimpiarConceptos.Name = "btnLimpiarConceptos";
-            this.btnLimpiarConceptos.Size = new System.Drawing.Size(81, 33);
-            this.btnLimpiarConceptos.TabIndex = 54;
-            this.btnLimpiarConceptos.Text = "Limpiar";
-            this.btnLimpiarConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiarConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiarConceptos.UseVisualStyleBackColor = false;
             this.btnLimpiarConceptos.Click += new System.EventHandler(this.btnLimpiarConceptos_Click);
             // 
             // btnGuardarEditConceptos
             // 
-            this.btnGuardarEditConceptos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            resources.ApplyResources(this.btnGuardarEditConceptos, "btnGuardarEditConceptos");
             this.btnGuardarEditConceptos.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnGuardarEditConceptos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarEditConceptos.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnGuardarEditConceptos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarEditConceptos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarEditConceptos.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btnGuardarEditConceptos.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardarEditConceptos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarEditConceptos.IconSize = 21;
-            this.btnGuardarEditConceptos.Location = new System.Drawing.Point(108, 277);
             this.btnGuardarEditConceptos.Name = "btnGuardarEditConceptos";
-            this.btnGuardarEditConceptos.Size = new System.Drawing.Size(81, 33);
-            this.btnGuardarEditConceptos.TabIndex = 53;
-            this.btnGuardarEditConceptos.Text = "Guardar";
-            this.btnGuardarEditConceptos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarEditConceptos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardarEditConceptos.UseVisualStyleBackColor = false;
             this.btnGuardarEditConceptos.Click += new System.EventHandler(this.btnGuardarEditConceptos_Click);
             // 
             // cmbTipoConceptos
             // 
             this.cmbTipoConceptos.FormattingEnabled = true;
-            this.cmbTipoConceptos.Location = new System.Drawing.Point(108, 252);
-            this.cmbTipoConceptos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            resources.ApplyResources(this.cmbTipoConceptos, "cmbTipoConceptos");
             this.cmbTipoConceptos.Name = "cmbTipoConceptos";
-            this.cmbTipoConceptos.Size = new System.Drawing.Size(92, 21);
-            this.cmbTipoConceptos.TabIndex = 63;
             // 
             // FrmEditarConceptos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 353);
             this.Controls.Add(this.cmbTipoConceptos);
             this.Controls.Add(this.txtCodigoConceptos);
             this.Controls.Add(this.label1);
@@ -180,11 +136,9 @@
             this.Controls.Add(this.btnCancelarConceptos);
             this.Controls.Add(this.btnLimpiarConceptos);
             this.Controls.Add(this.btnGuardarEditConceptos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmEditarConceptos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditarConceptos";
             this.ResumeLayout(false);
             this.PerformLayout();
 

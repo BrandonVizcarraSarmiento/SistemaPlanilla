@@ -33,17 +33,17 @@
             this.txtConfirmarClave = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cboEstado = new System.Windows.Forms.ComboBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.txtClave = new System.Windows.Forms.TextBox();
             this.cboRol = new System.Windows.Forms.ComboBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.lblClave = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnEditarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnLimpiarUsuario = new FontAwesome.Sharp.IconButton();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -91,13 +91,6 @@
             this.cboEstado.Size = new System.Drawing.Size(255, 21);
             this.cboEstado.TabIndex = 36;
             // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(33, 110);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(255, 20);
-            this.txtCorreo.TabIndex = 27;
-            // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
@@ -106,14 +99,6 @@
             this.lblEstado.Size = new System.Drawing.Size(40, 13);
             this.lblEstado.TabIndex = 35;
             this.lblEstado.Text = "Estado";
-            // 
-            // txtClave
-            // 
-            this.txtClave.Location = new System.Drawing.Point(33, 149);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(255, 20);
-            this.txtClave.TabIndex = 28;
             // 
             // cboRol
             // 
@@ -151,13 +136,6 @@
             this.lblClave.TabIndex = 30;
             this.lblClave.Text = "Clave";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(33, 71);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(255, 20);
-            this.txtNombre.TabIndex = 31;
-            // 
             // btnEditarUsuario
             // 
             this.btnEditarUsuario.BackColor = System.Drawing.Color.MediumTurquoise;
@@ -177,6 +155,7 @@
             this.btnEditarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditarUsuario.UseVisualStyleBackColor = false;
+            this.btnEditarUsuario.Click += new System.EventHandler(this.btnEditarUsuario_Click);
             // 
             // btnCancelar
             // 
@@ -197,6 +176,7 @@
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnLimpiarUsuario
             // 
@@ -217,12 +197,38 @@
             this.btnLimpiarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLimpiarUsuario.UseVisualStyleBackColor = false;
+            this.btnLimpiarUsuario.Click += new System.EventHandler(this.btnLimpiarUsuario_Click);
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(32, 110);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(255, 20);
+            this.txtCorreo.TabIndex = 43;
+            // 
+            // txtClave
+            // 
+            this.txtClave.Location = new System.Drawing.Point(32, 149);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(255, 20);
+            this.txtClave.TabIndex = 44;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(33, 72);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(254, 20);
+            this.txtNombre.TabIndex = 45;
             // 
             // FrmEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(319, 364);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtClave);
+            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.btnEditarUsuario);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLimpiarUsuario);
@@ -231,14 +237,12 @@
             this.Controls.Add(this.txtConfirmarClave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cboEstado);
-            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.cboRol);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblRol);
             this.Controls.Add(this.lblClave);
-            this.Controls.Add(this.txtNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmEditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -255,16 +259,16 @@
         private System.Windows.Forms.TextBox txtConfirmarClave;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboEstado;
-        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.ComboBox cboRol;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblClave;
-        private System.Windows.Forms.TextBox txtNombre;
         private FontAwesome.Sharp.IconButton btnEditarUsuario;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnLimpiarUsuario;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }

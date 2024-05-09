@@ -43,5 +43,29 @@ namespace CapaPresentacion.Vistas_Usuarios
             agregarForm.ShowDialog();
             CargarDatos();
         }
+
+        private void btnEditarUsuario_Click(object sender, EventArgs e)
+        {
+            if (dtgvUsuario.SelectedRows.Count > 0)
+            {
+                int id = Convert.ToInt32(dtgvUsuario.SelectedRows[0].Cells["Id"].Value);
+                string nombre = dtgvUsuario.SelectedRows[0].Cells["Nombre"].Value.ToString();
+                string correo = dtgvUsuario.SelectedRows[0].Cells["Correo"].Value.ToString();
+                string clave = dtgvUsuario.SelectedRows[0].Cells["Clave"].Value.ToString();
+                int idRol = Convert.ToInt32(dtgvUsuario.SelectedRows[0].Cells["IdRol"].Value);
+                bool estado = Convert.ToBoolean(dtgvUsuario.SelectedRows[0].Cells["Estado"].Value);
+
+                // Abre el formulario para editar usuario
+                FrmEditarUsuario editarForm = new FrmEditarUsuario(id, nombre, correo, clave, idRol, estado);
+                editarForm.ShowDialog();
+
+                // Recarga los datos después de editar el usuario
+                CargarDatos();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro para editar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

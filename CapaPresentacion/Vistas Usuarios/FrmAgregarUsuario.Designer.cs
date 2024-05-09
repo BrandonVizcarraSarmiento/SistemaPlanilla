@@ -244,6 +244,7 @@
             this.Controls.Add(this.btnGuardarUsuario);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLimpiarUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmAgregarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
