@@ -56,9 +56,19 @@ namespace CapaPresentacion.Vistas_Asistencias
         }
         private void btnLimpiarAsistencias_Click(object sender, EventArgs e)
         {
-            dtgvAsistencia.Rows.Clear();
-        }
+            if (dtgvAsistencia.SelectedRows.Count > 0)
+            {
+                // Obtén la fila seleccionada
+                DataGridViewRow selectedRow = dtgvAsistencia.SelectedRows[0];
 
+                // Elimina la fila seleccionada
+                dtgvAsistencia.Rows.Remove(selectedRow);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila para limpiar.");
+            }
+        }
         private void btnGuardarAsistencias_Click(object sender, EventArgs e)
         {
             if (dtgvAsistencia.SelectedRows.Count > 0)
@@ -92,6 +102,32 @@ namespace CapaPresentacion.Vistas_Asistencias
             else
             {
                 MessageBox.Show("Seleccione un registro para guardar o actualizar.");
+            }
+        }
+        private void btnCargarAsistencias_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Obtener el mes y año seleccionados en los ComboBox
+                int mesSeleccionado = Convert.ToInt32(cmbBoxMesAsistencia.SelectedItem);
+                int añoSeleccionado = Convert.ToInt32(cmbBoxAñoAsistencia.SelectedItem);
+
+                // Llamar al método para obtener los datos de asistencia filtrados por mes y año
+                CN_Asistencia cnAsistencia = new CN_Asistencia();
+                DataTable dtAsistencia = cnAsistencia.ObtenerDatosAsistenciaPorMesYAño(mesSeleccionado, añoSeleccionado);
+                // Verificar si se encontraron datos
+                if (dtAsistencia.Rows.Count == 0)
+                {
+                    // Mostrar un mensaje indicando que no se encontraron datos
+                    MessageBox.Show("No se encontraron datos para el mes " + mesSeleccionado + " y año " + añoSeleccionado, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                // Mostrar los datos en el DataGridView
+                dtgvAsistencia.DataSource = dtAsistencia;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos de asistencia: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

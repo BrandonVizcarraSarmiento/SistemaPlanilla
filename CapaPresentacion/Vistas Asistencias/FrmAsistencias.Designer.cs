@@ -254,6 +254,7 @@
             this.btnCargarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCargarAsistencias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCargarAsistencias.UseVisualStyleBackColor = false;
+            this.btnCargarAsistencias.Click += new System.EventHandler(this.btnCargarAsistencias_Click);
             // 
             // FrmAsistencias
             // 

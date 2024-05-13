@@ -21,6 +21,8 @@ namespace CapaPresentacion.Vistas_Usuarios
         }
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
+            cboBusquedaUsuario.Items.Add("Nombre");
+            cboBusquedaUsuario.Items.Add("Correo");
             CargarDatos();
         }
         private void CargarDatos()
@@ -31,10 +33,8 @@ namespace CapaPresentacion.Vistas_Usuarios
         private void btnLimpiarBuscador_Click(object sender, EventArgs e)
         {
             txtBusquedaUsuario.Text = "";
-            foreach (DataGridViewRow row in dtgvUsuario.Rows)
-            {
-                row.Visible = true;
-            }
+            cboBusquedaUsuario.SelectedIndex = -1;
+            CargarDatos();
         }
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
@@ -83,6 +83,30 @@ namespace CapaPresentacion.Vistas_Usuarios
             else
             {
                 MessageBox.Show("Seleccione un usuario para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnBuscarUsuario_Click(object sender, EventArgs e)
+        {
+            string tipoBusqueda = cboBusquedaUsuario.SelectedItem.ToString();
+            string valorBusqueda = txtBusquedaUsuario.Text.Trim();
+
+            if (string.IsNullOrEmpty(valorBusqueda))
+            {
+                MessageBox.Show("Por favor, ingrese un valor para buscar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            CN_Usuario cnUsuarios = new CN_Usuario();
+            DataTable dtResultado = cnUsuarios.BuscarUsuario(tipoBusqueda == "Nombre" ? valorBusqueda : null, tipoBusqueda == "Correo" ? valorBusqueda : null);
+
+            if (dtResultado.Rows.Count > 0)
+            {
+                dtgvUsuario.DataSource = dtResultado;
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron usuarios que coincidan con la búsqueda.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
