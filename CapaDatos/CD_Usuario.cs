@@ -158,5 +158,32 @@ namespace CapaDatos
                 throw new Exception("Error al eliminar el usuario: " + ex.Message);
             }
         }
+        public DataTable BuscarUsuario(string nombre, string correo)
+        {
+            DataTable resultados = new DataTable();
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    conexion.Open();
+                    using (SqlCommand comando = new SqlCommand("BuscarUsuario", conexion))
+                    {
+                        comando.CommandType = CommandType.StoredProcedure;
+                        comando.Parameters.AddWithValue("@Nombre", nombre ?? (object)DBNull.Value);
+                        comando.Parameters.AddWithValue("@Correo", correo ?? (object)DBNull.Value);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(comando))
+                        {
+                            adapter.Fill(resultados);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar usuarios: " + ex.Message);
+            }
+            return resultados;
+        }
     }
 }

@@ -83,5 +83,16 @@ namespace CapaNegocio
         {
             objcd_usuario.EliminarUsuario(id);
         }
+        public DataTable BuscarUsuario(string nombre, string correo)
+        {
+            try
+            {
+                return objcd_usuario.BuscarUsuario(nombre, correo);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al buscar usuario en la capa de negocio: " + ex.Message);
+            }
+        }
     }
 }

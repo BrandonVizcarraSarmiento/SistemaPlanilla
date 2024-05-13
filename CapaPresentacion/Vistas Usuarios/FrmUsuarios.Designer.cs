@@ -134,6 +134,7 @@
             this.btnBuscarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscarUsuario.UseVisualStyleBackColor = false;
+            this.btnBuscarUsuario.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
             // 
             // txtBusquedaUsuario
             // 
