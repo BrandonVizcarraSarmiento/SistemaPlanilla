@@ -50,5 +50,42 @@ namespace CapaDatos
             }
             return resultados;
         }
+        public DataTable ObtenerDatosAsistenciaPorMesYAño(int mes, int año)
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                string consulta = "SELECT * FROM Asistencia WHERE Mes = @Mes AND Ano = @Ano";
+
+                SqlCommand comando = new SqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@Mes", mes);
+                comando.Parameters.AddWithValue("@Ano", año);
+
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                adaptador.Fill(dt);
+            }
+
+            return dt;
+        }
+
+        public void GuardarOActualizarAsistencia(Asistencia asistencia)
+        {
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                string consulta = "INSERT INTO Asistencia (Mes, Ano, DiasLaborados, DiasNoLaborados, DiasEfectivos) " +
+                                  "VALUES (@Mes, @Ano, @DiasLaborados, @DiasNoLaborados, @DiasEfectivos)";
+
+                SqlCommand comando = new SqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@Mes", asistencia.Mes);
+                comando.Parameters.AddWithValue("@Ano", asistencia.Ano);
+                comando.Parameters.AddWithValue("@DiasLaborados", asistencia.DiasLaborados);
+                comando.Parameters.AddWithValue("@DiasNoLaborados", asistencia.DiasNoLaborados);
+                comando.Parameters.AddWithValue("@DiasEfectivos", asistencia.DiasEfectivos);
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+        }
     }
 }
