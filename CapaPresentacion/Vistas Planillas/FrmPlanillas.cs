@@ -13,11 +13,14 @@ namespace CapaPresentacion.Vistas_Planillas
 {
     public partial class FrmPlanillas : Form
     {
+        private CN_Planilla cnPlanilla;
         public FrmPlanillas()
         {
             InitializeComponent();
             CargarComboBoxMeses();
             CargarComboBoxAños();
+            cnPlanilla = new CN_Planilla(); // Instanciar la clase de la capa de negocio
+            MostrarTodosLosDatos();
         }
         private void CargarComboBoxMeses()
         {
@@ -54,6 +57,22 @@ namespace CapaPresentacion.Vistas_Planillas
 
                 // Mostrar los datos en un DataGridView u otro control apropiado en tu formulario
                 // Por ejemplo, si tienes un DataGridView llamado dtgvPlanilla:
+                dtgvPlanilla.DataSource = planilla;
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción, por ejemplo, mostrando un mensaje de error al usuario
+                MessageBox.Show("Error al cargar la planilla: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void MostrarTodosLosDatos()
+        {
+            try
+            {
+                // Obtener los datos de la planilla
+                DataTable planilla = cnPlanilla.ObtenerDatosPlanilla();
+
+                // Mostrar los datos en el DataGridView
                 dtgvPlanilla.DataSource = planilla;
             }
             catch (Exception ex)

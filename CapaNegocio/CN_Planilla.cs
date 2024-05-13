@@ -23,5 +23,18 @@ namespace CapaNegocio
                 throw ex;
             }
         }
+        public DataTable ObtenerDatosPlanilla()
+        {
+            try
+            {
+                // Llamar al método estático de la capa de datos para obtener todos los datos de la planilla
+                return CD_Planilla.ObtenerDatosPlanilla();
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción, puedes lanzarla nuevamente o registrarla en un archivo de registro
+                throw ex;
+            }
+        }
     }
 }
