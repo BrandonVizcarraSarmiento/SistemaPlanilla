@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing.Printing;
+using System.IO;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace CapaPresentacion.Vistas_Planillas
 {
     public partial class FrmPlanillas : Form
     {
         private CN_Planilla cnPlanilla;
+
         public FrmPlanillas()
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace CapaPresentacion.Vistas_Planillas
             cnPlanilla = new CN_Planilla(); // Instanciar la clase de la capa de negocio
             MostrarTodosLosDatos();
         }
+
         private void CargarComboBoxMeses()
         {
             // Agregar los números de los meses al ComboBox, del 1 al 12
@@ -30,6 +33,7 @@ namespace CapaPresentacion.Vistas_Planillas
                 cmbBoxMesPlanilla.Items.Add(mes);
             }
         }
+
         private void CargarComboBoxAños()
         {
             // Obtener el año actual
@@ -41,6 +45,7 @@ namespace CapaPresentacion.Vistas_Planillas
                 cmbBoxAñoPlanilla.Items.Add(año);
             }
         }
+
         private void btnCargarPlanilla_Click(object sender, EventArgs e)
         {
             try
@@ -65,6 +70,7 @@ namespace CapaPresentacion.Vistas_Planillas
                 MessageBox.Show("Error al cargar la planilla: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void MostrarTodosLosDatos()
         {
             try
@@ -79,6 +85,86 @@ namespace CapaPresentacion.Vistas_Planillas
             {
                 // Manejar la excepción, por ejemplo, mostrando un mensaje de error al usuario
                 MessageBox.Show("Error al cargar la planilla: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnPDFPlanilla_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Configurar el cuadro de diálogo para guardar el archivo PDF
+                SaveFileDialog savefile = new SaveFileDialog();
+                savefile.FileName = string.Format("Planilla_{0}.pdf", DateTime.Now.ToString("ddMMyyyy"));
+                savefile.Filter = "PDF files (*.pdf)|*.pdf";
+
+                if (savefile.ShowDialog() == DialogResult.OK)
+                {
+                    // Crear un nuevo documento PDF
+                    using (FileStream fs = new FileStream(savefile.FileName, FileMode.Create))
+                    {
+                        Document document = new Document();
+                        PdfWriter.GetInstance(document, fs);
+                        document.Open();
+
+                        // Agregar título al documento
+                        iTextSharp.text.Paragraph title = new iTextSharp.text.Paragraph("Planilla ");
+                        title.Alignment = Element.ALIGN_CENTER;
+                        title.Font = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 18f);
+                        document.Add(title);
+
+                        //Agregamos la imagen del banner al documento
+                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.ETLOGO, System.Drawing.Imaging.ImageFormat.Png);
+                        img.ScaleToFit(50, 50);
+                        img.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                        //img.SetAbsolutePosition(10,100);
+                        img.SetAbsolutePosition(document.LeftMargin, document.Top - 50);
+                        document.Add(img);
+
+                        // Agregar un espacio en blanco
+                        document.Add(new iTextSharp.text.Chunk("\n"));
+
+                        // Crear una tabla para mostrar los datos
+                        PdfPTable table = new PdfPTable(dtgvPlanilla.Columns.Count);
+                        table.WidthPercentage = 100; // Establecer el ancho de la tabla al 100% del ancho de la página
+
+                        // Establecer propiedades de la tabla
+                        table.DefaultCell.BorderWidth = 1;
+                        table.DefaultCell.Padding = 5;
+                        table.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
+
+
+                        // Agregar encabezados de columna
+                        for (int i = 0; i < dtgvPlanilla.Columns.Count; i++)
+                        {
+                            table.AddCell(new PdfPCell(new Phrase(dtgvPlanilla.Columns[i].HeaderText, FontFactory.GetFont(FontFactory.HELVETICA_BOLD))));
+                        }
+
+                        // Agregar filas y celdas con datos
+                        for (int i = 0; i < dtgvPlanilla.Rows.Count; i++)
+                        {
+                            for (int j = 0; j < dtgvPlanilla.Columns.Count; j++)
+                            {
+                                if (dtgvPlanilla.Rows[i].Cells[j].Value != null)
+                                {
+                                    table.AddCell(new PdfPCell(new Phrase(dtgvPlanilla.Rows[i].Cells[j].Value.ToString())));
+                                }
+                            }
+                        }
+
+                        // Agregar la tabla al documento
+                        document.Add(table);
+
+                        // Cerrar el documento
+                        document.Close();
+                    }
+
+                    MessageBox.Show("Archivo PDF creado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al crear el archivo PDF: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

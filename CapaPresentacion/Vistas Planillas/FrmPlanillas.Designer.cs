@@ -36,7 +36,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvPlanilla = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnLimpiarPlanilla = new FontAwesome.Sharp.IconButton();
+            this.btnPDFPlanilla = new FontAwesome.Sharp.IconButton();
             this.btnGuardarPlanilla = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblMesPlanilla = new System.Windows.Forms.Label();
@@ -57,8 +57,9 @@
             this.paneltitulo.Controls.Add(this.lblTituloAsistencias);
             this.paneltitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitulo.Location = new System.Drawing.Point(0, 0);
+            this.paneltitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.paneltitulo.Name = "paneltitulo";
-            this.paneltitulo.Size = new System.Drawing.Size(800, 80);
+            this.paneltitulo.Size = new System.Drawing.Size(1067, 98);
             this.paneltitulo.TabIndex = 8;
             // 
             // lblTituloAsistencias
@@ -66,9 +67,10 @@
             this.lblTituloAsistencias.AutoSize = true;
             this.lblTituloAsistencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloAsistencias.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTituloAsistencias.Location = new System.Drawing.Point(27, 25);
+            this.lblTituloAsistencias.Location = new System.Drawing.Point(36, 31);
+            this.lblTituloAsistencias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTituloAsistencias.Name = "lblTituloAsistencias";
-            this.lblTituloAsistencias.Size = new System.Drawing.Size(109, 31);
+            this.lblTituloAsistencias.Size = new System.Drawing.Size(137, 39);
             this.lblTituloAsistencias.TabIndex = 1;
             this.lblTituloAsistencias.Text = "Planilla";
             // 
@@ -80,9 +82,10 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.ForeColor = System.Drawing.SystemColors.Window;
-            this.panel1.Location = new System.Drawing.Point(0, 80);
+            this.panel1.Location = new System.Drawing.Point(0, 98);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 370);
+            this.panel1.Size = new System.Drawing.Size(1067, 456);
             this.panel1.TabIndex = 9;
             // 
             // dtgvPlanilla
@@ -116,8 +119,8 @@
             this.dtgvPlanilla.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvPlanilla.EnableHeadersVisualStyles = false;
             this.dtgvPlanilla.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvPlanilla.Location = new System.Drawing.Point(117, 61);
-            this.dtgvPlanilla.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvPlanilla.Location = new System.Drawing.Point(156, 75);
+            this.dtgvPlanilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvPlanilla.Name = "dtgvPlanilla";
             this.dtgvPlanilla.ReadOnly = true;
             this.dtgvPlanilla.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -132,38 +135,41 @@
             this.dtgvPlanilla.RowHeadersWidth = 51;
             this.dtgvPlanilla.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
             this.dtgvPlanilla.RowTemplate.Height = 24;
-            this.dtgvPlanilla.Size = new System.Drawing.Size(567, 204);
+            this.dtgvPlanilla.Size = new System.Drawing.Size(756, 252);
             this.dtgvPlanilla.TabIndex = 16;
             // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel3.Controls.Add(this.btnLimpiarPlanilla);
+            this.panel3.Controls.Add(this.btnPDFPlanilla);
             this.panel3.Controls.Add(this.btnGuardarPlanilla);
-            this.panel3.Location = new System.Drawing.Point(209, 275);
+            this.panel3.Location = new System.Drawing.Point(279, 339);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(387, 51);
+            this.panel3.Size = new System.Drawing.Size(516, 63);
             this.panel3.TabIndex = 11;
             // 
-            // btnLimpiarPlanilla
+            // btnPDFPlanilla
             // 
-            this.btnLimpiarPlanilla.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnLimpiarPlanilla.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarPlanilla.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLimpiarPlanilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarPlanilla.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarPlanilla.IconChar = FontAwesome.Sharp.IconChar.Cancel;
-            this.btnLimpiarPlanilla.IconColor = System.Drawing.Color.White;
-            this.btnLimpiarPlanilla.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLimpiarPlanilla.IconSize = 21;
-            this.btnLimpiarPlanilla.Location = new System.Drawing.Point(219, 8);
-            this.btnLimpiarPlanilla.Name = "btnLimpiarPlanilla";
-            this.btnLimpiarPlanilla.Size = new System.Drawing.Size(99, 36);
-            this.btnLimpiarPlanilla.TabIndex = 9;
-            this.btnLimpiarPlanilla.Text = "Cancelar";
-            this.btnLimpiarPlanilla.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiarPlanilla.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpiarPlanilla.UseVisualStyleBackColor = false;
+            this.btnPDFPlanilla.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnPDFPlanilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPDFPlanilla.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPDFPlanilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPDFPlanilla.ForeColor = System.Drawing.Color.White;
+            this.btnPDFPlanilla.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.btnPDFPlanilla.IconColor = System.Drawing.Color.White;
+            this.btnPDFPlanilla.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPDFPlanilla.IconSize = 21;
+            this.btnPDFPlanilla.Location = new System.Drawing.Point(292, 10);
+            this.btnPDFPlanilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPDFPlanilla.Name = "btnPDFPlanilla";
+            this.btnPDFPlanilla.Size = new System.Drawing.Size(132, 44);
+            this.btnPDFPlanilla.TabIndex = 9;
+            this.btnPDFPlanilla.Text = "PDF";
+            this.btnPDFPlanilla.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPDFPlanilla.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPDFPlanilla.UseVisualStyleBackColor = false;
+            this.btnPDFPlanilla.Click += new System.EventHandler(this.btnPDFPlanilla_Click);
             // 
             // btnGuardarPlanilla
             // 
@@ -176,9 +182,10 @@
             this.btnGuardarPlanilla.IconColor = System.Drawing.Color.White;
             this.btnGuardarPlanilla.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarPlanilla.IconSize = 21;
-            this.btnGuardarPlanilla.Location = new System.Drawing.Point(57, 8);
+            this.btnGuardarPlanilla.Location = new System.Drawing.Point(76, 10);
+            this.btnGuardarPlanilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardarPlanilla.Name = "btnGuardarPlanilla";
-            this.btnGuardarPlanilla.Size = new System.Drawing.Size(99, 36);
+            this.btnGuardarPlanilla.Size = new System.Drawing.Size(132, 44);
             this.btnGuardarPlanilla.TabIndex = 10;
             this.btnGuardarPlanilla.Text = "Guardar";
             this.btnGuardarPlanilla.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -193,17 +200,19 @@
             this.panel2.Controls.Add(this.cmbBoxMesPlanilla);
             this.panel2.Controls.Add(this.cmbBoxAñoPlanilla);
             this.panel2.Controls.Add(this.lblPlanilla);
-            this.panel2.Location = new System.Drawing.Point(209, 17);
+            this.panel2.Location = new System.Drawing.Point(279, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(387, 39);
+            this.panel2.Size = new System.Drawing.Size(516, 48);
             this.panel2.TabIndex = 10;
             // 
             // lblMesPlanilla
             // 
             this.lblMesPlanilla.AutoSize = true;
-            this.lblMesPlanilla.Location = new System.Drawing.Point(17, 14);
+            this.lblMesPlanilla.Location = new System.Drawing.Point(23, 17);
+            this.lblMesPlanilla.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMesPlanilla.Name = "lblMesPlanilla";
-            this.lblMesPlanilla.Size = new System.Drawing.Size(27, 13);
+            this.lblMesPlanilla.Size = new System.Drawing.Size(33, 16);
             this.lblMesPlanilla.TabIndex = 2;
             this.lblMesPlanilla.Text = "Mes";
             // 
@@ -218,9 +227,10 @@
             this.btnCargarPlanilla.IconColor = System.Drawing.Color.White;
             this.btnCargarPlanilla.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCargarPlanilla.IconSize = 21;
-            this.btnCargarPlanilla.Location = new System.Drawing.Point(264, 6);
+            this.btnCargarPlanilla.Location = new System.Drawing.Point(352, 7);
+            this.btnCargarPlanilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCargarPlanilla.Name = "btnCargarPlanilla";
-            this.btnCargarPlanilla.Size = new System.Drawing.Size(99, 27);
+            this.btnCargarPlanilla.Size = new System.Drawing.Size(132, 33);
             this.btnCargarPlanilla.TabIndex = 9;
             this.btnCargarPlanilla.Text = "Cargar";
             this.btnCargarPlanilla.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -231,35 +241,39 @@
             // cmbBoxMesPlanilla
             // 
             this.cmbBoxMesPlanilla.FormattingEnabled = true;
-            this.cmbBoxMesPlanilla.Location = new System.Drawing.Point(50, 10);
+            this.cmbBoxMesPlanilla.Location = new System.Drawing.Point(67, 12);
+            this.cmbBoxMesPlanilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbBoxMesPlanilla.Name = "cmbBoxMesPlanilla";
-            this.cmbBoxMesPlanilla.Size = new System.Drawing.Size(63, 21);
+            this.cmbBoxMesPlanilla.Size = new System.Drawing.Size(83, 24);
             this.cmbBoxMesPlanilla.TabIndex = 3;
             // 
             // cmbBoxAñoPlanilla
             // 
             this.cmbBoxAñoPlanilla.FormattingEnabled = true;
-            this.cmbBoxAñoPlanilla.Location = new System.Drawing.Point(174, 9);
+            this.cmbBoxAñoPlanilla.Location = new System.Drawing.Point(232, 11);
+            this.cmbBoxAñoPlanilla.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbBoxAñoPlanilla.Name = "cmbBoxAñoPlanilla";
-            this.cmbBoxAñoPlanilla.Size = new System.Drawing.Size(63, 21);
+            this.cmbBoxAñoPlanilla.Size = new System.Drawing.Size(83, 24);
             this.cmbBoxAñoPlanilla.TabIndex = 5;
             // 
             // lblPlanilla
             // 
             this.lblPlanilla.AutoSize = true;
-            this.lblPlanilla.Location = new System.Drawing.Point(142, 15);
+            this.lblPlanilla.Location = new System.Drawing.Point(189, 18);
+            this.lblPlanilla.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlanilla.Name = "lblPlanilla";
-            this.lblPlanilla.Size = new System.Drawing.Size(26, 13);
+            this.lblPlanilla.Size = new System.Drawing.Size(31, 16);
             this.lblPlanilla.TabIndex = 4;
             this.lblPlanilla.Text = "Año";
             // 
             // FrmPlanillas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.paneltitulo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPlanillas";
             this.Text = "FrmPlanillas";
             this.paneltitulo.ResumeLayout(false);
@@ -279,7 +293,7 @@
         private System.Windows.Forms.Label lblTituloAsistencias;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private FontAwesome.Sharp.IconButton btnLimpiarPlanilla;
+        private FontAwesome.Sharp.IconButton btnPDFPlanilla;
         private FontAwesome.Sharp.IconButton btnGuardarPlanilla;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblMesPlanilla;

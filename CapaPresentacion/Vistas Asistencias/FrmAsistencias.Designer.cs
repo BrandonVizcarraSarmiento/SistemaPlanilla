@@ -44,6 +44,7 @@
             this.btnGuardarAsistencias = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCargarAsistencias = new FontAwesome.Sharp.IconButton();
+            this.btnPDFAsistencia = new FontAwesome.Sharp.IconButton();
             this.paneltitulo.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAsistencia)).BeginInit();
@@ -56,9 +57,10 @@
             this.lblTituloAsistencias.AutoSize = true;
             this.lblTituloAsistencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloAsistencias.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTituloAsistencias.Location = new System.Drawing.Point(27, 25);
+            this.lblTituloAsistencias.Location = new System.Drawing.Point(36, 31);
+            this.lblTituloAsistencias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTituloAsistencias.Name = "lblTituloAsistencias";
-            this.lblTituloAsistencias.Size = new System.Drawing.Size(164, 31);
+            this.lblTituloAsistencias.Size = new System.Drawing.Size(201, 39);
             this.lblTituloAsistencias.TabIndex = 1;
             this.lblTituloAsistencias.Text = "Asistencias";
             // 
@@ -66,36 +68,40 @@
             // 
             this.lblMes.AutoSize = true;
             this.lblMes.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblMes.Location = new System.Drawing.Point(17, 14);
+            this.lblMes.Location = new System.Drawing.Point(23, 17);
+            this.lblMes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMes.Name = "lblMes";
-            this.lblMes.Size = new System.Drawing.Size(27, 13);
+            this.lblMes.Size = new System.Drawing.Size(33, 16);
             this.lblMes.TabIndex = 2;
             this.lblMes.Text = "Mes";
             // 
             // cmbBoxMesAsistencia
             // 
             this.cmbBoxMesAsistencia.FormattingEnabled = true;
-            this.cmbBoxMesAsistencia.Location = new System.Drawing.Point(50, 10);
+            this.cmbBoxMesAsistencia.Location = new System.Drawing.Point(67, 12);
+            this.cmbBoxMesAsistencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbBoxMesAsistencia.Name = "cmbBoxMesAsistencia";
-            this.cmbBoxMesAsistencia.Size = new System.Drawing.Size(63, 21);
+            this.cmbBoxMesAsistencia.Size = new System.Drawing.Size(83, 24);
             this.cmbBoxMesAsistencia.TabIndex = 3;
             // 
             // lblAño
             // 
             this.lblAño.AutoSize = true;
             this.lblAño.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblAño.Location = new System.Drawing.Point(142, 15);
+            this.lblAño.Location = new System.Drawing.Point(189, 18);
+            this.lblAño.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAño.Name = "lblAño";
-            this.lblAño.Size = new System.Drawing.Size(26, 13);
+            this.lblAño.Size = new System.Drawing.Size(31, 16);
             this.lblAño.TabIndex = 4;
             this.lblAño.Text = "Año";
             // 
             // cmbBoxAñoAsistencia
             // 
             this.cmbBoxAñoAsistencia.FormattingEnabled = true;
-            this.cmbBoxAñoAsistencia.Location = new System.Drawing.Point(174, 9);
+            this.cmbBoxAñoAsistencia.Location = new System.Drawing.Point(232, 11);
+            this.cmbBoxAñoAsistencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbBoxAñoAsistencia.Name = "cmbBoxAñoAsistencia";
-            this.cmbBoxAñoAsistencia.Size = new System.Drawing.Size(63, 21);
+            this.cmbBoxAñoAsistencia.Size = new System.Drawing.Size(83, 24);
             this.cmbBoxAñoAsistencia.TabIndex = 5;
             // 
             // paneltitulo
@@ -104,8 +110,9 @@
             this.paneltitulo.Controls.Add(this.lblTituloAsistencias);
             this.paneltitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitulo.Location = new System.Drawing.Point(0, 0);
+            this.paneltitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.paneltitulo.Name = "paneltitulo";
-            this.paneltitulo.Size = new System.Drawing.Size(567, 80);
+            this.paneltitulo.Size = new System.Drawing.Size(756, 98);
             this.paneltitulo.TabIndex = 7;
             // 
             // panel1
@@ -115,9 +122,10 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 80);
+            this.panel1.Location = new System.Drawing.Point(0, 98);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(567, 370);
+            this.panel1.Size = new System.Drawing.Size(756, 456);
             this.panel1.TabIndex = 8;
             // 
             // dtgvAsistencia
@@ -151,8 +159,8 @@
             this.dtgvAsistencia.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvAsistencia.EnableHeadersVisualStyles = false;
             this.dtgvAsistencia.GridColor = System.Drawing.Color.SteelBlue;
-            this.dtgvAsistencia.Location = new System.Drawing.Point(65, 61);
-            this.dtgvAsistencia.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvAsistencia.Location = new System.Drawing.Point(87, 75);
+            this.dtgvAsistencia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvAsistencia.Name = "dtgvAsistencia";
             this.dtgvAsistencia.ReadOnly = true;
             this.dtgvAsistencia.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -167,17 +175,19 @@
             this.dtgvAsistencia.RowHeadersWidth = 51;
             this.dtgvAsistencia.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSeaGreen;
             this.dtgvAsistencia.RowTemplate.Height = 24;
-            this.dtgvAsistencia.Size = new System.Drawing.Size(434, 204);
+            this.dtgvAsistencia.Size = new System.Drawing.Size(579, 252);
             this.dtgvAsistencia.TabIndex = 16;
             // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel3.Controls.Add(this.btnPDFAsistencia);
             this.panel3.Controls.Add(this.btnLimpiarAsistencias);
             this.panel3.Controls.Add(this.btnGuardarAsistencias);
-            this.panel3.Location = new System.Drawing.Point(92, 275);
+            this.panel3.Location = new System.Drawing.Point(54, 333);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(387, 51);
+            this.panel3.Size = new System.Drawing.Size(666, 63);
             this.panel3.TabIndex = 11;
             // 
             // btnLimpiarAsistencias
@@ -191,9 +201,10 @@
             this.btnLimpiarAsistencias.IconColor = System.Drawing.Color.White;
             this.btnLimpiarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarAsistencias.IconSize = 21;
-            this.btnLimpiarAsistencias.Location = new System.Drawing.Point(219, 8);
+            this.btnLimpiarAsistencias.Location = new System.Drawing.Point(261, 10);
+            this.btnLimpiarAsistencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpiarAsistencias.Name = "btnLimpiarAsistencias";
-            this.btnLimpiarAsistencias.Size = new System.Drawing.Size(99, 36);
+            this.btnLimpiarAsistencias.Size = new System.Drawing.Size(132, 44);
             this.btnLimpiarAsistencias.TabIndex = 9;
             this.btnLimpiarAsistencias.Text = "Limpiar";
             this.btnLimpiarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -212,9 +223,10 @@
             this.btnGuardarAsistencias.IconColor = System.Drawing.Color.White;
             this.btnGuardarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarAsistencias.IconSize = 21;
-            this.btnGuardarAsistencias.Location = new System.Drawing.Point(57, 8);
+            this.btnGuardarAsistencias.Location = new System.Drawing.Point(33, 10);
+            this.btnGuardarAsistencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardarAsistencias.Name = "btnGuardarAsistencias";
-            this.btnGuardarAsistencias.Size = new System.Drawing.Size(99, 36);
+            this.btnGuardarAsistencias.Size = new System.Drawing.Size(132, 44);
             this.btnGuardarAsistencias.TabIndex = 10;
             this.btnGuardarAsistencias.Text = "Guardar";
             this.btnGuardarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -230,9 +242,10 @@
             this.panel2.Controls.Add(this.cmbBoxMesAsistencia);
             this.panel2.Controls.Add(this.cmbBoxAñoAsistencia);
             this.panel2.Controls.Add(this.lblAño);
-            this.panel2.Location = new System.Drawing.Point(92, 17);
+            this.panel2.Location = new System.Drawing.Point(123, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(387, 39);
+            this.panel2.Size = new System.Drawing.Size(516, 48);
             this.panel2.TabIndex = 10;
             // 
             // btnCargarAsistencias
@@ -246,9 +259,10 @@
             this.btnCargarAsistencias.IconColor = System.Drawing.Color.White;
             this.btnCargarAsistencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCargarAsistencias.IconSize = 21;
-            this.btnCargarAsistencias.Location = new System.Drawing.Point(264, 6);
+            this.btnCargarAsistencias.Location = new System.Drawing.Point(352, 7);
+            this.btnCargarAsistencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCargarAsistencias.Name = "btnCargarAsistencias";
-            this.btnCargarAsistencias.Size = new System.Drawing.Size(99, 27);
+            this.btnCargarAsistencias.Size = new System.Drawing.Size(132, 33);
             this.btnCargarAsistencias.TabIndex = 9;
             this.btnCargarAsistencias.Text = "Cargar";
             this.btnCargarAsistencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -256,13 +270,36 @@
             this.btnCargarAsistencias.UseVisualStyleBackColor = false;
             this.btnCargarAsistencias.Click += new System.EventHandler(this.btnCargarAsistencias_Click);
             // 
+            // btnPDFAsistencia
+            // 
+            this.btnPDFAsistencia.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnPDFAsistencia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPDFAsistencia.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPDFAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPDFAsistencia.ForeColor = System.Drawing.Color.White;
+            this.btnPDFAsistencia.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.btnPDFAsistencia.IconColor = System.Drawing.Color.White;
+            this.btnPDFAsistencia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPDFAsistencia.IconSize = 21;
+            this.btnPDFAsistencia.Location = new System.Drawing.Point(480, 10);
+            this.btnPDFAsistencia.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPDFAsistencia.Name = "btnPDFAsistencia";
+            this.btnPDFAsistencia.Size = new System.Drawing.Size(132, 44);
+            this.btnPDFAsistencia.TabIndex = 11;
+            this.btnPDFAsistencia.Text = "PDF";
+            this.btnPDFAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPDFAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPDFAsistencia.UseVisualStyleBackColor = false;
+            this.btnPDFAsistencia.Click += new System.EventHandler(this.btnPDFAsistencia_Click);
+            // 
             // FrmAsistencias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 450);
+            this.ClientSize = new System.Drawing.Size(756, 554);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.paneltitulo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmAsistencias";
             this.Text = "FrmAsistencias";
             this.Load += new System.EventHandler(this.FrmAsistencias_Load);
@@ -292,5 +329,6 @@
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton btnLimpiarAsistencias;
         private System.Windows.Forms.DataGridView dtgvAsistencia;
+        private FontAwesome.Sharp.IconButton btnPDFAsistencia;
     }
 }
