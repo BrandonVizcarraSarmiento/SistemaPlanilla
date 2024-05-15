@@ -9,20 +9,23 @@ using System.IO;
 using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using CapaEntidad;
 
 namespace CapaPresentacion.Vistas_Planillas
 {
     public partial class FrmPlanillas : Form
     {
+        private Usuario usuarioActual;
         private CN_Planilla cnPlanilla;
 
-        public FrmPlanillas()
+        public FrmPlanillas(Usuario usuario)
         {
             InitializeComponent();
             CargarComboBoxMeses();
             CargarComboBoxAños();
             cnPlanilla = new CN_Planilla(); // Instanciar la clase de la capa de negocio
             MostrarTodosLosDatos();
+            usuarioActual = usuario;
         }
 
         private void CargarComboBoxMeses()
@@ -107,9 +110,14 @@ namespace CapaPresentacion.Vistas_Planillas
                         document.Open();
 
                         // Agregar título al documento
-                        iTextSharp.text.Paragraph title = new iTextSharp.text.Paragraph("Planilla ");
+                        // Crear un Chunk para el título con estilo de fuente personalizado
+                        Chunk tituloChunk = new Chunk("Planilla ", FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 24f));
+
+                        // Crear un párrafo para el título y agregar el Chunk
+                        Paragraph title = new Paragraph(tituloChunk);
                         title.Alignment = Element.ALIGN_CENTER;
-                        title.Font = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 18f);
+
+                        // Agregar el título al documento
                         document.Add(title);
 
                         //Agregamos la imagen del banner al documento
@@ -120,8 +128,33 @@ namespace CapaPresentacion.Vistas_Planillas
                         //img.SetAbsolutePosition(10,100);
                         img.SetAbsolutePosition(document.LeftMargin, document.Top - 50);
                         document.Add(img);
+                        document.Add(new iTextSharp.text.Chunk("\n"));
+
+                        // Agregar el nombre del usuario al PDF
+                        Paragraph usuario = new Paragraph();
+                        usuario.Add(new Chunk("Usuario: ", FontFactory.GetFont(FontFactory.HELVETICA_BOLD)));
+                        usuario.Add(usuarioActual.Nombre);
+
+                        document.Add(usuario);
+
+                        // Obtener la fecha y hora actual
+                        DateTime fechaActual = DateTime.Now;
+
+                        // Crear un párrafo para mostrar la fecha
+                        Paragraph fecha = new Paragraph();
+                        fecha.Add(new Chunk("Fecha de creación del reporte: ", FontFactory.GetFont(FontFactory.HELVETICA_BOLD)));
+                        fecha.Add(fechaActual.ToString("dd/MM/yyyy"));
+                        document.Add(fecha);
 
                         // Agregar un espacio en blanco
+                        document.Add(new Paragraph(""));
+
+                        // Crear un párrafo para mostrar la hora
+                        Paragraph hora = new Paragraph();
+                        hora.Add(new Chunk("Hora de creación del reporte: ", FontFactory.GetFont(FontFactory.HELVETICA_BOLD)));
+                        hora.Add(fechaActual.ToString("HH:mm:ss"));
+                        document.Add(hora);
+
                         document.Add(new iTextSharp.text.Chunk("\n"));
 
                         // Crear una tabla para mostrar los datos

@@ -13,16 +13,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
 using System.Windows.Forms;
+using Paragraph = iTextSharp.text.Paragraph;
 
 namespace CapaPresentacion.Vistas_Asistencias
 {
     public partial class FrmAsistencias : Form
     {
-        public FrmAsistencias()
+        private Usuario usuarioActual;
+        public FrmAsistencias(Usuario usuario)
         {
             InitializeComponent();
             CargarComboBoxMeses();
             CargarComboBoxAños();
+            usuarioActual = usuario;
         }
         private void CargarComboBoxMeses()
         {
@@ -153,9 +156,14 @@ namespace CapaPresentacion.Vistas_Asistencias
                         document.Open();
 
                         // Agregar título al documento
-                        iTextSharp.text.Paragraph title = new iTextSharp.text.Paragraph("ASISTENCIAS DE EMPLEADOS");
+                        // Crear un Chunk para el título con estilo de fuente personalizado
+                        Chunk tituloChunk = new Chunk("Asistencias", FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 24f));
+
+                        // Crear un párrafo para el título y agregar el Chunk
+                        Paragraph title = new Paragraph(tituloChunk);
                         title.Alignment = Element.ALIGN_CENTER;
-                        title.Font = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 18f);
+
+                        // Agregar el título al documento
                         document.Add(title);
 
                         //Agregamos la imagen del banner al documento
@@ -166,8 +174,33 @@ namespace CapaPresentacion.Vistas_Asistencias
                         //img.SetAbsolutePosition(10,100);
                         img.SetAbsolutePosition(document.LeftMargin, document.Top - 50);
                         document.Add(img);
+                        document.Add(new iTextSharp.text.Chunk("\n"));
+
+                        // Agregar el nombre del usuario al PDF
+                        Paragraph usuario = new Paragraph();
+                        usuario.Add(new Chunk("Usuario: ", FontFactory.GetFont(FontFactory.HELVETICA_BOLD)));
+                        usuario.Add(usuarioActual.Nombre);
+
+                        document.Add(usuario);
+
+                        // Obtener la fecha y hora actual
+                        DateTime fechaActual = DateTime.Now;
+
+                        // Crear un párrafo para mostrar la fecha
+                        Paragraph fecha = new Paragraph();
+                        fecha.Add(new Chunk("Fecha de creación del reporte: ", FontFactory.GetFont(FontFactory.HELVETICA_BOLD)));
+                        fecha.Add(fechaActual.ToString("dd/MM/yyyy"));
+                        document.Add(fecha);
 
                         // Agregar un espacio en blanco
+                        document.Add(new Paragraph(""));
+
+                        // Crear un párrafo para mostrar la hora
+                        Paragraph hora = new Paragraph();
+                        hora.Add(new Chunk("Hora de creación del reporte: ", FontFactory.GetFont(FontFactory.HELVETICA_BOLD)));
+                        hora.Add(fechaActual.ToString("HH:mm:ss"));
+                        document.Add(hora);
+
                         document.Add(new iTextSharp.text.Chunk("\n"));
 
                         // Crear una tabla para mostrar los datos

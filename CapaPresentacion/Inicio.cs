@@ -142,12 +142,12 @@ namespace CapaPresentacion
 
         private void btnAsistencias_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconButton)sender, new FrmAsistencias());
+            AbrirFormulario((IconButton)sender, new FrmAsistencias(usuarioActual));
         }
 
         private void btnPlanillas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconButton)sender, new FrmPlanillas());
+            AbrirFormulario((IconButton)sender, new FrmPlanillas(usuarioActual));
         }
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
