@@ -23,7 +23,7 @@ namespace CapaPresentacion.Vistas_Planillas
             InitializeComponent();
             CargarComboBoxMeses();
             CargarComboBoxAños();
-            cnPlanilla = new CN_Planilla(); // Instanciar la clase de la capa de negocio
+            cnPlanilla = new CN_Planilla();
             MostrarTodosLosDatos();
             usuarioActual = usuario;
         }
